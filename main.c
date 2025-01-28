@@ -41,6 +41,33 @@
 int main(void)
 {
     SYSTEM_Initialize();
+    SPI1_Initialize();
+    
+    if (SPI1_Open(ADXL345)) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
+    
+    CLRWDT();
+    __delay_ms(250);
+    CLRWDT();
+    
+    CS_ACC_SetLow();
+    if (SPI1_ByteExchange(0x00) == 0xE5) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
+    CS_ACC_SetHigh();
     
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
@@ -60,9 +87,7 @@ int main(void)
 
 
     while(1)
-    {   
-        RED_LED_Toggle();
-        
+    {           
         PIN_MANAGER_IOC();
         
         NOP();

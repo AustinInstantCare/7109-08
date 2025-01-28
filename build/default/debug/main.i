@@ -4367,11 +4367,36 @@ void SYSTEM_Initialize(void);
 int main(void)
 {
     SYSTEM_Initialize();
-# 62 "main.c"
+    SPI1_Initialize();
+
+    if (SPI1_Open(ADXL345)) {
+        do { LATAbits.LATA4 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA4 = 0; } while(0);
+    } else {
+        do { LATAbits.LATA5 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA5 = 0; } while(0);
+    }
+
+    __asm("clrwdt");
+    _delay((unsigned long)((250)*(4000000/4000.0)));
+    __asm("clrwdt");
+
+    do { LATCbits.LATC4 = 0; } while(0);
+    if (SPI1_ByteExchange(0x00) == 0xE5) {
+        do { LATAbits.LATA4 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA4 = 0; } while(0);
+    } else {
+        do { LATAbits.LATA5 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA5 = 0; } while(0);
+    }
+    do { LATCbits.LATC4 = 1; } while(0);
+# 89 "main.c"
     while(1)
     {
-        do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-
         PIN_MANAGER_IOC();
 
         __nop();
