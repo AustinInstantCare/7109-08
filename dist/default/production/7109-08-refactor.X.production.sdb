@@ -5,6 +5,8 @@
 [d frameptr 6 ]
 "10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
@@ -13,6 +15,30 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "41 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\main.c
 [v _main main `(i  1 e 2 0 ]
+"60 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"72
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"81
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"102
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"107
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"125
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"142
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"160
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"171
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"176
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"185
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"199
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
 "39 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 "40 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/interrupt.c
@@ -25,16 +51,18 @@
 [v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
 "40 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"101
+"102
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
-"113
+"114
 [v _SW1_ISR SW1_ISR `(v  1 e 1 0 ]
-"128
+"129
 [v _SW1_SetInterruptHandler SW1_SetInterruptHandler `(v  1 e 1 0 ]
-"135
+"136
 [v _SW1_DefaultInterruptHandler SW1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "39 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"36 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/watchdog.c
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 [s S23 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -52,7 +80,7 @@
 ]
 [u S37 . 1 `S23 1 . 1 0 `S32 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES37  1 e 1 @11 ]
-[s S227 . 1 `uc 1 RA0 1 0 :1:0 
+[s S228 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -60,12 +88,36 @@
 `uc 1 RA5 1 0 :1:5 
 ]
 "444
-[u S234 . 1 `S227 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES234  1 e 1 @12 ]
+[u S235 . 1 `S228 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES235  1 e 1 @12 ]
+[s S483 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"546
+[u S492 . 1 `S483 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES492  1 e 1 @17 ]
 "1108
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1158
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S462 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1225
+[u S471 . 1 `S462 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES471  1 e 1 @145 ]
 [s S55 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
@@ -83,26 +135,15 @@
 ]
 [u S69 . 1 `S55 1 . 1 0 `S64 1 . 1 0 ]
 [v _OPTION_REGbits OPTION_REGbits `VES69  1 e 1 @149 ]
-[s S294 . 1 `uc 1 SWDTEN 1 0 :1:0 
-`uc 1 WDTPS0 1 0 :1:1 
-`uc 1 WDTPS1 1 0 :1:2 
-`uc 1 WDTPS2 1 0 :1:3 
-`uc 1 WDTPS3 1 0 :1:4 
-`uc 1 WDTPS4 1 0 :1:5 
-]
-"1514
-[s S301 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 WDTPS 1 0 :5:1 
-]
-[u S304 . 1 `S294 1 . 1 0 `S301 1 . 1 0 ]
-[v _WDTCONbits WDTCONbits `VES304  1 e 1 @151 ]
+"1495
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1554
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
 "1612
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1945
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S244 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S245 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -110,12 +151,14 @@
 `uc 1 LATA5 1 0 :1:5 
 ]
 "1960
-[u S251 . 1 `S244 1 . 1 0 ]
-[v _LATAbits LATAbits `VES251  1 e 1 @268 ]
+[u S252 . 1 `S245 1 . 1 0 ]
+[v _LATAbits LATAbits `VES252  1 e 1 @268 ]
 "1990
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2312
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2651
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
 "2735
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2782
@@ -124,6 +167,30 @@
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3343
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"3393
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3431
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3507
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"3629
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S508 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3658
+[s S517 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S519 . 1 `S508 1 . 1 0 `S517 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES519  1 e 1 @533 ]
+"3955
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @535 ]
 "5203
 [v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
 "5261
@@ -134,7 +201,7 @@
 [v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
 "5435
 [v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
-[s S192 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[s S193 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -142,10 +209,13 @@
 `uc 1 IOCAF5 1 0 :1:5 
 ]
 "5453
-[s S199 . 1 `uc 1 IOCAF 1 0 :6:0 
+[s S200 . 1 `uc 1 IOCAF 1 0 :6:0 
 ]
-[u S201 . 1 `S192 1 . 1 0 `S199 1 . 1 0 ]
-[v _IOCAFbits IOCAFbits `VES201  1 e 1 @915 ]
+[u S202 . 1 `S193 1 . 1 0 `S200 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES202  1 e 1 @915 ]
+[s S456 . 5 `uc 1 stat 1 0 `uc 1 con1 1 1 `uc 1 con3 1 2 `uc 1 baud 1 3 `uc 1 clock 1 4 ]
+"55 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
+[v _spi1_configuration spi1_configuration `DC[2]S456  1 s 10 spi1_configuration ]
 "38 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
 "38 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/pins.c
@@ -158,18 +228,28 @@
 "39 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"47
+"46
+} 0
+"36 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/watchdog.c
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"40
+} 0
+"60 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"70
 } 0
 "40 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"99
+"100
 } 0
-"128
+"129
 [v _SW1_SetInterruptHandler SW1_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v SW1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"130
+"131
 } 0
 "40 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
@@ -187,18 +267,18 @@
 {
 "46
 } 0
-"101 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/pins.c
+"102 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"108
+"109
 } 0
-"113
+"114
 [v _SW1_ISR SW1_ISR `(v  1 e 1 0 ]
 {
-"123
+"124
 } 0
-"135
+"136
 [v _SW1_DefaultInterruptHandler SW1_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"142
+"143
 } 0

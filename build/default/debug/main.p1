@@ -1,8 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"74 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 74: void SYSTEM_Initialize(void);
+"56 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 56: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"1951 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
+[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S106 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
+"1950
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1950: typedef union {
+[u S105 `S106 1 ]
+[n S105 . . ]
+"1960
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
+[v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
 "276 ./mcc_generated_files/system/../system/pins.h
 [; ;./mcc_generated_files/system/../system/pins.h: 276: void PIN_MANAGER_IOC(void);
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
@@ -464,10 +475,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SYSTEM_Initialize ..  ]
 "62
 [; ;main.c: 62:     while(1)
-[e :U 333 ]
+[e :U 334 ]
 "63
 [; ;main.c: 63:     {
 {
+"64
+[; ;main.c: 64:         do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
+[e :U 338 ]
+{
+[e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
+}
+[e :U 337 ]
 "66
 [; ;main.c: 66:         PIN_MANAGER_IOC();
 [e ( _PIN_MANAGER_IOC ..  ]
@@ -480,10 +498,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "70
 [; ;main.c: 70:     }
 }
-[e :U 332 ]
-[e $U 333  ]
-[e :U 334 ]
+[e :U 333 ]
+[e $U 334  ]
+[e :U 335 ]
 "71
 [; ;main.c: 71: }
-[e :UE 331 ]
+[e :UE 332 ]
 }

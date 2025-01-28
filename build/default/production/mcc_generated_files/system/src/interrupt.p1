@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F2405 `(v ~T0 @X0 0 tf ]
+[v F2475 `(v ~T0 @X0 0 tf ]
 "357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 357:     struct {
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -40,9 +40,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "148
 [; ;mcc_generated_files/system/src/../../system/interrupt.h: 148: void INT_CallBack(void);
 [v _INT_CallBack `(v ~T0 @X0 0 ef ]
-[v F2410 `(v ~T0 @X0 0 tf ]
-[v F2412 `(v ~T0 @X0 0 tf ]
-[v F2414 `(v ~T0 @X0 0 tf ]
+[v F2480 `(v ~T0 @X0 0 tf ]
+[v F2482 `(v ~T0 @X0 0 tf ]
+[v F2484 `(v ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -486,7 +486,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FEFh ;# ">
 "38 mcc_generated_files/system/src/interrupt.c
 [; ;mcc_generated_files/system/src/interrupt.c: 38: void (*INT_InterruptHandler)(void);
-[v _INT_InterruptHandler `*F2405 ~T0 @X0 1 e ]
+[v _INT_InterruptHandler `*F2475 ~T0 @X0 1 e ]
 "40
 [; ;mcc_generated_files/system/src/interrupt.c: 40: void INTERRUPT_Initialize (void)
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
@@ -506,7 +506,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _INT_SetInterruptHandler (1 &U _INT_DefaultInterruptHandler ]
 "50
 [; ;mcc_generated_files/system/src/interrupt.c: 50: }
-[e :UE 331 ]
+[e :UE 332 ]
 }
 "53
 [; ;mcc_generated_files/system/src/interrupt.c: 53: void INT_ISR(void)
@@ -524,7 +524,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _INT_CallBack ..  ]
 "59
 [; ;mcc_generated_files/system/src/interrupt.c: 59: }
-[e :UE 332 ]
+[e :UE 333 ]
 }
 "62
 [; ;mcc_generated_files/system/src/interrupt.c: 62: void INT_CallBack(void)
@@ -536,7 +536,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "65
 [; ;mcc_generated_files/system/src/interrupt.c: 65:     if(INT_InterruptHandler)
-[e $ ! != _INT_InterruptHandler -> -> 0 `i `*F2410 334  ]
+[e $ ! != _INT_InterruptHandler -> -> 0 `i `*F2480 335  ]
 "66
 [; ;mcc_generated_files/system/src/interrupt.c: 66:     {
 {
@@ -546,24 +546,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68
 [; ;mcc_generated_files/system/src/interrupt.c: 68:     }
 }
-[e :U 334 ]
+[e :U 335 ]
 "69
 [; ;mcc_generated_files/system/src/interrupt.c: 69: }
-[e :UE 333 ]
+[e :UE 334 ]
 }
 "71
 [; ;mcc_generated_files/system/src/interrupt.c: 71: void INT_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _INT_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2412 ]
+[v _INT_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2482 ]
 {
 [e :U _INT_SetInterruptHandler ]
-[v _InterruptHandler `*F2414 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F2484 ~T0 @X0 1 r1 ]
 [f ]
 "72
 [; ;mcc_generated_files/system/src/interrupt.c: 72:     INT_InterruptHandler = InterruptHandler;
 [e = _INT_InterruptHandler _InterruptHandler ]
 "73
 [; ;mcc_generated_files/system/src/interrupt.c: 73: }
-[e :UE 335 ]
+[e :UE 336 ]
 }
 "75
 [; ;mcc_generated_files/system/src/interrupt.c: 75: void INT_DefaultInterruptHandler(void){
@@ -573,5 +573,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "78
 [; ;mcc_generated_files/system/src/interrupt.c: 78: }
-[e :UE 336 ]
+[e :UE 337 ]
 }

@@ -61,7 +61,7 @@ int main(void)
 
     while(1)
     {   
-//        RED_LED_Toggle();
+        RED_LED_Toggle();
         
         PIN_MANAGER_IOC();
         

@@ -40,9 +40,8 @@ void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
+    SPI1_Initialize();
+    WDT_Initialize();
     INTERRUPT_Initialize();
-    
-    WDTCONbits.SWDTEN = 1;
-    WDTCONbits.WDTPS = WATCHDOG_SLEEP_4S;
 }
 

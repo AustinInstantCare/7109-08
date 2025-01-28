@@ -84,6 +84,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     APFCON registers
     */
+    APFCON0 = 0x0; //RC2->MSSP:SDO;
 
    /**
     IOCx registers 

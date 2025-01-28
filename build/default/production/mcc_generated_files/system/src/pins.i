@@ -4237,6 +4237,112 @@ void CLOCK_Initialize(void);
 # 40 "mcc_generated_files/system/src/../config_bits.h" 2
 # 43 "mcc_generated_files/system/src/../system.h" 2
 
+# 1 "mcc_generated_files/system/src/../../spi/mssp.h" 1
+# 38 "mcc_generated_files/system/src/../../spi/mssp.h"
+# 1 "mcc_generated_files/system/src/../../spi/spi_interface.h" 1
+# 39 "mcc_generated_files/system/src/../../spi/spi_interface.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 40 "mcc_generated_files/system/src/../../spi/spi_interface.h" 2
+
+
+
+
+
+
+struct SPI_INTERFACE
+{
+    void (*Initialize)(void);
+    void (*Deinitialize)(void);
+    _Bool (*Open)(uint8_t spiConfigIndex);
+    void (*Close)(void);
+    void (*BufferExchange)(void *bufferData, size_t bufferSize);
+    void (*BufferRead)(void *bufferData, size_t bufferSize);
+    void (*BufferWrite)(void *bufferData, size_t bufferSize);
+    uint8_t (*ByteExchange)(uint8_t byteData);
+    uint8_t (*ByteRead)(void);
+    void (*ByteWrite)(uint8_t byteData);
+    _Bool (*IsRxReady)(void);
+    _Bool (*IsTxReady)(void);
+    void (*RxCompleteCallbackRegister)(void (*callbackHandler)(void));
+    void (*TxCompleteCallbackRegister)(void (*callbackHandler)(void));
+};
+# 39 "mcc_generated_files/system/src/../../spi/mssp.h" 2
+
+
+
+
+
+
+extern const struct SPI_INTERFACE SPI1_Host;
+# 115 "mcc_generated_files/system/src/../../spi/mssp.h"
+typedef enum {
+    ADXL345,
+    MSSP_DEFAULT
+} spi1_configuration_name_t;
+
+
+
+
+
+
+
+void SPI1_Initialize(void);
+
+
+
+
+
+
+
+void SPI1_Deinitialize(void);
+# 144 "mcc_generated_files/system/src/../../spi/mssp.h"
+_Bool SPI1_Open(uint8_t spiConfigIndex);
+
+
+
+
+
+
+
+void SPI1_Close(void);
+# 161 "mcc_generated_files/system/src/../../spi/mssp.h"
+void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
+# 170 "mcc_generated_files/system/src/../../spi/mssp.h"
+void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
+# 179 "mcc_generated_files/system/src/../../spi/mssp.h"
+void SPI1_BufferRead(void *bufferData, size_t bufferSize);
+
+
+
+
+
+
+
+uint8_t SPI1_ByteExchange(uint8_t byteData);
+# 197 "mcc_generated_files/system/src/../../spi/mssp.h"
+void SPI1_ByteWrite(uint8_t byteData);
+
+
+
+
+
+
+
+uint8_t SPI1_ByteRead(void);
+# 214 "mcc_generated_files/system/src/../../spi/mssp.h"
+_Bool SPI1_IsRxReady(void);
+# 223 "mcc_generated_files/system/src/../../spi/mssp.h"
+_Bool SPI1_IsTxReady(void);
+# 45 "mcc_generated_files/system/src/../system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/watchdog.h" 1
+# 52 "mcc_generated_files/system/src/../../system/watchdog.h"
+void WDT_Initialize(void);
+# 46 "mcc_generated_files/system/src/../system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/interrupt.h" 1
 # 85 "mcc_generated_files/system/src/../../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -4250,8 +4356,8 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "mcc_generated_files/system/src/../../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 45 "mcc_generated_files/system/src/../system.h" 2
-# 74 "mcc_generated_files/system/src/../system.h"
+# 47 "mcc_generated_files/system/src/../system.h" 2
+# 56 "mcc_generated_files/system/src/../system.h"
 void SYSTEM_Initialize(void);
 # 37 "mcc_generated_files/system/src/pins.c" 2
 
@@ -4286,7 +4392,12 @@ void PIN_MANAGER_Initialize(void)
 # 77 "mcc_generated_files/system/src/pins.c"
     INLVLA = 0x0;
     INLVLC = 0x0;
-# 91 "mcc_generated_files/system/src/pins.c"
+# 87 "mcc_generated_files/system/src/pins.c"
+    APFCON0 = 0x0;
+
+
+
+
     IOCAP = 0x0;
     IOCAN = 0x2;
     IOCAF = 0x0;

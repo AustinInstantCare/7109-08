@@ -41,28 +41,10 @@
 #include <stdbool.h>
 #include "config_bits.h"
 #include "../system/pins.h"
+#include "../spi/mssp.h"
+#include "../system/watchdog.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
-
-#define WATCHDOG_SLEEP_1ms      0b00000
-#define WATCHDOG_SLEEP_2ms      0b00001
-#define WATCHDOG_SLEEP_4ms      0b00010
-#define WATCHDOG_SLEEP_8ms      0b00011
-#define WATCHDOG_SLEEP_16ms     0b00100
-#define WATCHDOG_SLEEP_32ms     0b00101
-#define WATCHDOG_SLEEP_64ms     0b00110
-#define WATCHDOG_SLEEP_128ms    0b00111
-#define WATCHDOG_SLEEP_256ms    0b01000
-#define WATCHDOG_SLEEP_512ms    0b01001
-#define WATCHDOG_SLEEP_1S       0b01010
-#define WATCHDOG_SLEEP_2S       0b01011 // <-- Default Value
-#define WATCHDOG_SLEEP_4S       0b01100
-#define WATCHDOG_SLEEP_8S       0b01101
-#define WATCHDOG_SLEEP_16S      0b01110
-#define WATCHDOG_SLEEP_32S      0b01111
-#define WATCHDOG_SLEEP_64S      0b10000
-#define WATCHDOG_SLEEP_128S     0b10001
-#define WATCHDOG_SLEEP_256S     0b10010
 
 /**
  * @ingroup systemdriver
