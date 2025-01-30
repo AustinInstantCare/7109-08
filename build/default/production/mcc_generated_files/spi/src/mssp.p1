@@ -19,46 +19,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/spi/src/../spi_interface.h: 47: {
 [s S331 `*F2385 1 `*F2387 1 `*F2389 1 `*F2392 1 `*F2394 1 `*F2398 1 `*F2402 1 `*F2406 1 `*F2409 1 `*F2411 1 `*F2414 1 `*F2416 1 `*F2418 1 `*F2422 1 ]
 [n S331 SPI_INTERFACE Initialize Deinitialize Open Close BufferExchange BufferRead BufferWrite ByteExchange ByteRead ByteWrite IsRxReady IsTxReady RxCompleteCallbackRegister TxCompleteCallbackRegister ]
-"126 mcc_generated_files/spi/src/../mssp.h
-[; ;mcc_generated_files/spi/src/../mssp.h: 126: void SPI1_Initialize(void);
+"127 mcc_generated_files/spi/src/../mssp.h
+[; ;mcc_generated_files/spi/src/../mssp.h: 127: void SPI1_Initialize(void);
 [v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"134
-[; ;mcc_generated_files/spi/src/../mssp.h: 134: void SPI1_Deinitialize(void);
+"135
+[; ;mcc_generated_files/spi/src/../mssp.h: 135: void SPI1_Deinitialize(void);
 [v _SPI1_Deinitialize `(v ~T0 @X0 0 ef ]
-"144
-[; ;mcc_generated_files/spi/src/../mssp.h: 144: _Bool SPI1_Open(uint8_t spiConfigIndex);
+"145
+[; ;mcc_generated_files/spi/src/../mssp.h: 145: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"152
-[; ;mcc_generated_files/spi/src/../mssp.h: 152: void SPI1_Close(void);
+"153
+[; ;mcc_generated_files/spi/src/../mssp.h: 153: void SPI1_Close(void);
 [v _SPI1_Close `(v ~T0 @X0 0 ef ]
-"161
-[; ;mcc_generated_files/spi/src/../mssp.h: 161: void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
+"162
+[; ;mcc_generated_files/spi/src/../mssp.h: 162: void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
 [v _SPI1_BufferExchange `(v ~T0 @X0 0 ef2`*v`ui ]
-"179
-[; ;mcc_generated_files/spi/src/../mssp.h: 179: void SPI1_BufferRead(void *bufferData, size_t bufferSize);
+"180
+[; ;mcc_generated_files/spi/src/../mssp.h: 180: void SPI1_BufferRead(void *bufferData, size_t bufferSize);
 [v _SPI1_BufferRead `(v ~T0 @X0 0 ef2`*v`ui ]
-"170
-[; ;mcc_generated_files/spi/src/../mssp.h: 170: void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
+"171
+[; ;mcc_generated_files/spi/src/../mssp.h: 171: void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
 [v _SPI1_BufferWrite `(v ~T0 @X0 0 ef2`*v`ui ]
-"187
-[; ;mcc_generated_files/spi/src/../mssp.h: 187: uint8_t SPI1_ByteExchange(uint8_t byteData);
+"188
+[; ;mcc_generated_files/spi/src/../mssp.h: 188: uint8_t SPI1_ByteExchange(uint8_t byteData);
 [v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
-"205
-[; ;mcc_generated_files/spi/src/../mssp.h: 205: uint8_t SPI1_ByteRead(void);
+"206
+[; ;mcc_generated_files/spi/src/../mssp.h: 206: uint8_t SPI1_ByteRead(void);
 [v _SPI1_ByteRead `(uc ~T0 @X0 0 ef ]
-"197
-[; ;mcc_generated_files/spi/src/../mssp.h: 197: void SPI1_ByteWrite(uint8_t byteData);
+"198
+[; ;mcc_generated_files/spi/src/../mssp.h: 198: void SPI1_ByteWrite(uint8_t byteData);
 [v _SPI1_ByteWrite `(v ~T0 @X0 0 ef1`uc ]
-"214
-[; ;mcc_generated_files/spi/src/../mssp.h: 214: _Bool SPI1_IsRxReady(void);
+"215
+[; ;mcc_generated_files/spi/src/../mssp.h: 215: _Bool SPI1_IsRxReady(void);
 [v _SPI1_IsRxReady `(a ~T0 @X0 0 ef ]
-"223
-[; ;mcc_generated_files/spi/src/../mssp.h: 223: _Bool SPI1_IsTxReady(void);
+"224
+[; ;mcc_generated_files/spi/src/../mssp.h: 224: _Bool SPI1_IsTxReady(void);
 [v _SPI1_IsTxReady `(a ~T0 @X0 0 ef ]
-[v F2481 `(v ~T0 @X0 0 tf ]
-[v F2480 `(v ~T0 @X0 0 tf1`*F2481 ]
-[v F2484 `(v ~T0 @X0 0 tf ]
-[v F2483 `(v ~T0 @X0 0 tf1`*F2484 ]
+[v F2482 `(v ~T0 @X0 0 tf ]
+[v F2481 `(v ~T0 @X0 0 tf1`*F2482 ]
+[v F2485 `(v ~T0 @X0 0 tf ]
+[v F2484 `(v ~T0 @X0 0 tf1`*F2485 ]
 "43 mcc_generated_files/spi/src/../spi_polling_types.h
 [; ;mcc_generated_files/spi/src/../spi_polling_types.h: 43: typedef struct {
 [s S332 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -574,19 +574,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 &U _SPI1_ByteWrite
 &U _SPI1_IsRxReady
 &U _SPI1_IsTxReady
--> -> -> 0 `i `*v `*F2480
--> -> -> 0 `i `*v `*F2483
+-> -> -> 0 `i `*v `*F2481
+-> -> -> 0 `i `*v `*F2484
 ..
 ..
 ]
 "55
 [; ;mcc_generated_files/spi/src/mssp.c: 55: static const spi_configuration_t spi1_configuration[] = {
-[v _spi1_configuration `CS332 ~T0 @X0 -> 2 `i s ]
+[v _spi1_configuration `CS332 ~T0 @X0 -> 3 `i s ]
 [i _spi1_configuration
 :U ..
 :U ..
 -> -> 0 `i `uc
 -> -> 26 `i `uc
+-> -> 16 `i `uc
+-> -> 7 `i `uc
+..
+:U ..
+-> -> 64 `i `uc
+-> -> 10 `i `uc
 -> -> 16 `i `uc
 -> -> 7 `i `uc
 ..
@@ -598,531 +604,531 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"60
-[; ;mcc_generated_files/spi/src/mssp.c: 60: void SPI1_Initialize(void)
-[v _SPI1_Initialize `(v ~T0 @X0 1 ef ]
 "61
-[; ;mcc_generated_files/spi/src/mssp.c: 61: {
+[; ;mcc_generated_files/spi/src/mssp.c: 61: void SPI1_Initialize(void)
+[v _SPI1_Initialize `(v ~T0 @X0 1 ef ]
+"62
+[; ;mcc_generated_files/spi/src/mssp.c: 62: {
 {
 [e :U _SPI1_Initialize ]
 [f ]
-"63
-[; ;mcc_generated_files/spi/src/mssp.c: 63:     PIE1bits.SSP1IE = 0;
-[e = . . _PIE1bits 0 3 -> -> 0 `i `uc ]
 "64
-[; ;mcc_generated_files/spi/src/mssp.c: 64:     PIR1bits.SSP1IF = 0;
+[; ;mcc_generated_files/spi/src/mssp.c: 64:     PIE1bits.SSP1IE = 0;
+[e = . . _PIE1bits 0 3 -> -> 0 `i `uc ]
+"65
+[; ;mcc_generated_files/spi/src/mssp.c: 65:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"66
-[; ;mcc_generated_files/spi/src/mssp.c: 66:     SSP1STAT = 0x00;
-[e = _SSP1STAT -> -> 0 `i `uc ]
 "67
-[; ;mcc_generated_files/spi/src/mssp.c: 67:     SSP1CON1 = 0x00;
-[e = _SSP1CON1 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 67:     SSP1STAT = 0x00;
+[e = _SSP1STAT -> -> 0 `i `uc ]
 "68
-[; ;mcc_generated_files/spi/src/mssp.c: 68:     SSP1CON3 = 0x00;
-[e = _SSP1CON3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 68:     SSP1CON1 = 0x00;
+[e = _SSP1CON1 -> -> 0 `i `uc ]
 "69
-[; ;mcc_generated_files/spi/src/mssp.c: 69:     SSP1ADD = 0x00;
-[e = _SSP1ADD -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 69:     SSP1CON3 = 0x00;
+[e = _SSP1CON3 -> -> 0 `i `uc ]
 "70
-[; ;mcc_generated_files/spi/src/mssp.c: 70: }
+[; ;mcc_generated_files/spi/src/mssp.c: 70:     SSP1ADD = 0x00;
+[e = _SSP1ADD -> -> 0 `i `uc ]
+"71
+[; ;mcc_generated_files/spi/src/mssp.c: 71: }
 [e :UE 333 ]
 }
-"72
-[; ;mcc_generated_files/spi/src/mssp.c: 72: void SPI1_Deinitialize(void)
-[v _SPI1_Deinitialize `(v ~T0 @X0 1 ef ]
 "73
-[; ;mcc_generated_files/spi/src/mssp.c: 73: {
+[; ;mcc_generated_files/spi/src/mssp.c: 73: void SPI1_Deinitialize(void)
+[v _SPI1_Deinitialize `(v ~T0 @X0 1 ef ]
+"74
+[; ;mcc_generated_files/spi/src/mssp.c: 74: {
 {
 [e :U _SPI1_Deinitialize ]
 [f ]
-"75
-[; ;mcc_generated_files/spi/src/mssp.c: 75:     SSP1STAT = 0x00;
-[e = _SSP1STAT -> -> 0 `i `uc ]
 "76
-[; ;mcc_generated_files/spi/src/mssp.c: 76:     SSP1CON1 = 0x00;
-[e = _SSP1CON1 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 76:     SSP1STAT = 0x00;
+[e = _SSP1STAT -> -> 0 `i `uc ]
 "77
-[; ;mcc_generated_files/spi/src/mssp.c: 77:     SSP1CON3 = 0x00;
-[e = _SSP1CON3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 77:     SSP1CON1 = 0x00;
+[e = _SSP1CON1 -> -> 0 `i `uc ]
 "78
-[; ;mcc_generated_files/spi/src/mssp.c: 78:     SSP1ADD = 0x00;
-[e = _SSP1ADD -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 78:     SSP1CON3 = 0x00;
+[e = _SSP1CON3 -> -> 0 `i `uc ]
 "79
-[; ;mcc_generated_files/spi/src/mssp.c: 79: }
+[; ;mcc_generated_files/spi/src/mssp.c: 79:     SSP1ADD = 0x00;
+[e = _SSP1ADD -> -> 0 `i `uc ]
+"80
+[; ;mcc_generated_files/spi/src/mssp.c: 80: }
 [e :UE 334 ]
 }
-"81
-[; ;mcc_generated_files/spi/src/mssp.c: 81: _Bool SPI1_Open(uint8_t spiConfigIndex)
-[v _SPI1_Open `(a ~T0 @X0 1 ef1`uc ]
 "82
-[; ;mcc_generated_files/spi/src/mssp.c: 82: {
+[; ;mcc_generated_files/spi/src/mssp.c: 82: _Bool SPI1_Open(uint8_t spiConfigIndex)
+[v _SPI1_Open `(a ~T0 @X0 1 ef1`uc ]
+"83
+[; ;mcc_generated_files/spi/src/mssp.c: 83: {
 {
 [e :U _SPI1_Open ]
-"81
-[; ;mcc_generated_files/spi/src/mssp.c: 81: _Bool SPI1_Open(uint8_t spiConfigIndex)
-[v _spiConfigIndex `uc ~T0 @X0 1 r1 ]
 "82
-[; ;mcc_generated_files/spi/src/mssp.c: 82: {
-[f ]
+[; ;mcc_generated_files/spi/src/mssp.c: 82: _Bool SPI1_Open(uint8_t spiConfigIndex)
+[v _spiConfigIndex `uc ~T0 @X0 1 r1 ]
 "83
-[; ;mcc_generated_files/spi/src/mssp.c: 83:     _Bool returnValue = 0;
+[; ;mcc_generated_files/spi/src/mssp.c: 83: {
+[f ]
+"84
+[; ;mcc_generated_files/spi/src/mssp.c: 84:     _Bool returnValue = 0;
 [v _returnValue `a ~T0 @X0 1 a ]
 [e = _returnValue -> -> 0 `i `a ]
-"84
-[; ;mcc_generated_files/spi/src/mssp.c: 84:     if (SSP1CON1bits.SSPEN == 0)
-[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 0 `i 336  ]
 "85
-[; ;mcc_generated_files/spi/src/mssp.c: 85:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 85:     if (SSP1CON1bits.SSPEN == 0)
+[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 0 `i 336  ]
 "86
-[; ;mcc_generated_files/spi/src/mssp.c: 86:         SSP1STAT = spi1_configuration[spiConfigIndex].stat;
-[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 0 ]
+[; ;mcc_generated_files/spi/src/mssp.c: 86:     {
+{
 "87
-[; ;mcc_generated_files/spi/src/mssp.c: 87:         SSP1CON1 = spi1_configuration[spiConfigIndex].con1;
-[e = _SSP1CON1 . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
+[; ;mcc_generated_files/spi/src/mssp.c: 87:         SSP1STAT = spi1_configuration[spiConfigIndex].stat;
+[e = _SSP1STAT . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 0 ]
 "88
-[; ;mcc_generated_files/spi/src/mssp.c: 88:         SSP1CON3 = spi1_configuration[spiConfigIndex].con3;
-[e = _SSP1CON3 . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 2 ]
+[; ;mcc_generated_files/spi/src/mssp.c: 88:         SSP1CON1 = spi1_configuration[spiConfigIndex].con1;
+[e = _SSP1CON1 . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
 "89
-[; ;mcc_generated_files/spi/src/mssp.c: 89:         SSP1ADD = spi1_configuration[spiConfigIndex].baud;
+[; ;mcc_generated_files/spi/src/mssp.c: 89:         SSP1CON3 = spi1_configuration[spiConfigIndex].con3;
+[e = _SSP1CON3 . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 2 ]
+"90
+[; ;mcc_generated_files/spi/src/mssp.c: 90:         SSP1ADD = spi1_configuration[spiConfigIndex].baud;
 [e = _SSP1ADD . *U + &U _spi1_configuration * -> _spiConfigIndex `ux -> -> # *U &U _spi1_configuration `ui `ux 3 ]
-"91
-[; ;mcc_generated_files/spi/src/mssp.c: 91:         SSP1CON1bits.SSPEN = 1;
+"92
+[; ;mcc_generated_files/spi/src/mssp.c: 92:         SSP1CON1bits.SSPEN = 1;
 [e = . . _SSP1CON1bits 0 5 -> -> 1 `i `uc ]
-"93
-[; ;mcc_generated_files/spi/src/mssp.c: 93:         returnValue = 1;
-[e = _returnValue -> -> 1 `i `a ]
 "94
-[; ;mcc_generated_files/spi/src/mssp.c: 94:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 94:         returnValue = 1;
+[e = _returnValue -> -> 1 `i `a ]
+"95
+[; ;mcc_generated_files/spi/src/mssp.c: 95:     }
 }
 [e $U 337  ]
-"95
-[; ;mcc_generated_files/spi/src/mssp.c: 95:     else
-[e :U 336 ]
 "96
-[; ;mcc_generated_files/spi/src/mssp.c: 96:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 96:     else
+[e :U 336 ]
 "97
-[; ;mcc_generated_files/spi/src/mssp.c: 97:         returnValue = 0;
-[e = _returnValue -> -> 0 `i `a ]
+[; ;mcc_generated_files/spi/src/mssp.c: 97:     {
+{
 "98
-[; ;mcc_generated_files/spi/src/mssp.c: 98:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 98:         returnValue = 0;
+[e = _returnValue -> -> 0 `i `a ]
+"99
+[; ;mcc_generated_files/spi/src/mssp.c: 99:     }
 }
 [e :U 337 ]
-"99
-[; ;mcc_generated_files/spi/src/mssp.c: 99:     return returnValue;
+"100
+[; ;mcc_generated_files/spi/src/mssp.c: 100:     return returnValue;
 [e ) _returnValue ]
 [e $UE 335  ]
-"100
-[; ;mcc_generated_files/spi/src/mssp.c: 100: }
+"101
+[; ;mcc_generated_files/spi/src/mssp.c: 101: }
 [e :UE 335 ]
 }
-"102
-[; ;mcc_generated_files/spi/src/mssp.c: 102: void SPI1_Close(void)
-[v _SPI1_Close `(v ~T0 @X0 1 ef ]
 "103
-[; ;mcc_generated_files/spi/src/mssp.c: 103: {
+[; ;mcc_generated_files/spi/src/mssp.c: 103: void SPI1_Close(void)
+[v _SPI1_Close `(v ~T0 @X0 1 ef ]
+"104
+[; ;mcc_generated_files/spi/src/mssp.c: 104: {
 {
 [e :U _SPI1_Close ]
 [f ]
-"104
-[; ;mcc_generated_files/spi/src/mssp.c: 104:     SSP1CON1bits.SSPEN = 0;
-[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
 "105
-[; ;mcc_generated_files/spi/src/mssp.c: 105: }
+[; ;mcc_generated_files/spi/src/mssp.c: 105:     SSP1CON1bits.SSPEN = 0;
+[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
+"106
+[; ;mcc_generated_files/spi/src/mssp.c: 106: }
 [e :UE 338 ]
 }
-"107
-[; ;mcc_generated_files/spi/src/mssp.c: 107: void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
-[v _SPI1_BufferExchange `(v ~T0 @X0 1 ef2`*v`ui ]
 "108
-[; ;mcc_generated_files/spi/src/mssp.c: 108: {
+[; ;mcc_generated_files/spi/src/mssp.c: 108: void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
+[v _SPI1_BufferExchange `(v ~T0 @X0 1 ef2`*v`ui ]
+"109
+[; ;mcc_generated_files/spi/src/mssp.c: 109: {
 {
 [e :U _SPI1_BufferExchange ]
-"107
-[; ;mcc_generated_files/spi/src/mssp.c: 107: void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
+"108
+[; ;mcc_generated_files/spi/src/mssp.c: 108: void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
 [v _bufferData `*v ~T0 @X0 1 r1 ]
 [v _bufferSize `ui ~T0 @X0 1 r2 ]
-"108
-[; ;mcc_generated_files/spi/src/mssp.c: 108: {
-[f ]
 "109
-[; ;mcc_generated_files/spi/src/mssp.c: 109:     uint8_t *bufferInput = bufferData;
+[; ;mcc_generated_files/spi/src/mssp.c: 109: {
+[f ]
+"110
+[; ;mcc_generated_files/spi/src/mssp.c: 110:     uint8_t *bufferInput = bufferData;
 [v _bufferInput `*uc ~T0 @X0 1 a ]
 [e = _bufferInput -> _bufferData `*uc ]
-"110
-[; ;mcc_generated_files/spi/src/mssp.c: 110:     size_t bufferInputSize = bufferSize;
+"111
+[; ;mcc_generated_files/spi/src/mssp.c: 111:     size_t bufferInputSize = bufferSize;
 [v _bufferInputSize `ui ~T0 @X0 1 a ]
 [e = _bufferInputSize _bufferSize ]
-"111
-[; ;mcc_generated_files/spi/src/mssp.c: 111:     while (0U != bufferInputSize)
+"112
+[; ;mcc_generated_files/spi/src/mssp.c: 112:     while (0U != bufferInputSize)
 [e $U 340  ]
 [e :U 341 ]
-"112
-[; ;mcc_generated_files/spi/src/mssp.c: 112:     {
-{
 "113
-[; ;mcc_generated_files/spi/src/mssp.c: 113:         SSP1BUF = *bufferInput;
-[e = _SSP1BUF *U _bufferInput ]
+[; ;mcc_generated_files/spi/src/mssp.c: 113:     {
+{
 "114
-[; ;mcc_generated_files/spi/src/mssp.c: 114:         while (!PIR1bits.SSP1IF)
+[; ;mcc_generated_files/spi/src/mssp.c: 114:         SSP1BUF = *bufferInput;
+[e = _SSP1BUF *U _bufferInput ]
+"115
+[; ;mcc_generated_files/spi/src/mssp.c: 115:         while (!PIR1bits.SSP1IF)
 [e $U 343  ]
 [e :U 344 ]
-"115
-[; ;mcc_generated_files/spi/src/mssp.c: 115:         {
+"116
+[; ;mcc_generated_files/spi/src/mssp.c: 116:         {
 {
-"117
-[; ;mcc_generated_files/spi/src/mssp.c: 117:         }
+"118
+[; ;mcc_generated_files/spi/src/mssp.c: 118:         }
 }
 [e :U 343 ]
-"114
-[; ;mcc_generated_files/spi/src/mssp.c: 114:         while (!PIR1bits.SSP1IF)
+"115
+[; ;mcc_generated_files/spi/src/mssp.c: 115:         while (!PIR1bits.SSP1IF)
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 344  ]
 [e :U 345 ]
-"118
-[; ;mcc_generated_files/spi/src/mssp.c: 118:         PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "119
-[; ;mcc_generated_files/spi/src/mssp.c: 119:         *bufferInput = SSP1BUF;
-[e = *U _bufferInput _SSP1BUF ]
+[; ;mcc_generated_files/spi/src/mssp.c: 119:         PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "120
-[; ;mcc_generated_files/spi/src/mssp.c: 120:         bufferInput++;
-[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
+[; ;mcc_generated_files/spi/src/mssp.c: 120:         *bufferInput = SSP1BUF;
+[e = *U _bufferInput _SSP1BUF ]
 "121
-[; ;mcc_generated_files/spi/src/mssp.c: 121:         bufferInputSize--;
-[e -- _bufferInputSize -> -> 1 `i `ui ]
+[; ;mcc_generated_files/spi/src/mssp.c: 121:         bufferInput++;
+[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
 "122
-[; ;mcc_generated_files/spi/src/mssp.c: 122:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 122:         bufferInputSize--;
+[e -- _bufferInputSize -> -> 1 `i `ui ]
+"123
+[; ;mcc_generated_files/spi/src/mssp.c: 123:     }
 }
 [e :U 340 ]
-"111
-[; ;mcc_generated_files/spi/src/mssp.c: 111:     while (0U != bufferInputSize)
+"112
+[; ;mcc_generated_files/spi/src/mssp.c: 112:     while (0U != bufferInputSize)
 [e $ != -> 0 `ui _bufferInputSize 341  ]
 [e :U 342 ]
-"123
-[; ;mcc_generated_files/spi/src/mssp.c: 123: }
+"124
+[; ;mcc_generated_files/spi/src/mssp.c: 124: }
 [e :UE 339 ]
 }
-"125
-[; ;mcc_generated_files/spi/src/mssp.c: 125: void SPI1_BufferWrite(void *bufferData, size_t bufferSize)
-[v _SPI1_BufferWrite `(v ~T0 @X0 1 ef2`*v`ui ]
 "126
-[; ;mcc_generated_files/spi/src/mssp.c: 126: {
+[; ;mcc_generated_files/spi/src/mssp.c: 126: void SPI1_BufferWrite(void *bufferData, size_t bufferSize)
+[v _SPI1_BufferWrite `(v ~T0 @X0 1 ef2`*v`ui ]
+"127
+[; ;mcc_generated_files/spi/src/mssp.c: 127: {
 {
 [e :U _SPI1_BufferWrite ]
-"125
-[; ;mcc_generated_files/spi/src/mssp.c: 125: void SPI1_BufferWrite(void *bufferData, size_t bufferSize)
+"126
+[; ;mcc_generated_files/spi/src/mssp.c: 126: void SPI1_BufferWrite(void *bufferData, size_t bufferSize)
 [v _bufferData `*v ~T0 @X0 1 r1 ]
 [v _bufferSize `ui ~T0 @X0 1 r2 ]
-"126
-[; ;mcc_generated_files/spi/src/mssp.c: 126: {
-[f ]
 "127
-[; ;mcc_generated_files/spi/src/mssp.c: 127:     uint8_t *bufferInput = bufferData;
+[; ;mcc_generated_files/spi/src/mssp.c: 127: {
+[f ]
+"128
+[; ;mcc_generated_files/spi/src/mssp.c: 128:     uint8_t *bufferInput = bufferData;
 [v _bufferInput `*uc ~T0 @X0 1 a ]
 [e = _bufferInput -> _bufferData `*uc ]
-"128
-[; ;mcc_generated_files/spi/src/mssp.c: 128:     size_t bufferInputSize = bufferSize;
+"129
+[; ;mcc_generated_files/spi/src/mssp.c: 129:     size_t bufferInputSize = bufferSize;
 [v _bufferInputSize `ui ~T0 @X0 1 a ]
 [e = _bufferInputSize _bufferSize ]
-"129
-[; ;mcc_generated_files/spi/src/mssp.c: 129:     while (0U != bufferInputSize)
+"130
+[; ;mcc_generated_files/spi/src/mssp.c: 130:     while (0U != bufferInputSize)
 [e $U 347  ]
 [e :U 348 ]
-"130
-[; ;mcc_generated_files/spi/src/mssp.c: 130:     {
-{
 "131
-[; ;mcc_generated_files/spi/src/mssp.c: 131:         SSP1BUF = *bufferInput;
-[e = _SSP1BUF *U _bufferInput ]
+[; ;mcc_generated_files/spi/src/mssp.c: 131:     {
+{
 "132
-[; ;mcc_generated_files/spi/src/mssp.c: 132:         while (!PIR1bits.SSP1IF)
+[; ;mcc_generated_files/spi/src/mssp.c: 132:         SSP1BUF = *bufferInput;
+[e = _SSP1BUF *U _bufferInput ]
+"133
+[; ;mcc_generated_files/spi/src/mssp.c: 133:         while (!PIR1bits.SSP1IF)
 [e $U 350  ]
 [e :U 351 ]
-"133
-[; ;mcc_generated_files/spi/src/mssp.c: 133:         {
+"134
+[; ;mcc_generated_files/spi/src/mssp.c: 134:         {
 {
-"135
-[; ;mcc_generated_files/spi/src/mssp.c: 135:         }
+"136
+[; ;mcc_generated_files/spi/src/mssp.c: 136:         }
 }
 [e :U 350 ]
-"132
-[; ;mcc_generated_files/spi/src/mssp.c: 132:         while (!PIR1bits.SSP1IF)
+"133
+[; ;mcc_generated_files/spi/src/mssp.c: 133:         while (!PIR1bits.SSP1IF)
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 351  ]
 [e :U 352 ]
-"136
-[; ;mcc_generated_files/spi/src/mssp.c: 136:         PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "137
-[; ;mcc_generated_files/spi/src/mssp.c: 137:         bufferInput++;
-[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
+[; ;mcc_generated_files/spi/src/mssp.c: 137:         PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "138
-[; ;mcc_generated_files/spi/src/mssp.c: 138:         bufferInputSize--;
-[e -- _bufferInputSize -> -> 1 `i `ui ]
+[; ;mcc_generated_files/spi/src/mssp.c: 138:         bufferInput++;
+[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
 "139
-[; ;mcc_generated_files/spi/src/mssp.c: 139:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 139:         bufferInputSize--;
+[e -- _bufferInputSize -> -> 1 `i `ui ]
+"140
+[; ;mcc_generated_files/spi/src/mssp.c: 140:     }
 }
 [e :U 347 ]
-"129
-[; ;mcc_generated_files/spi/src/mssp.c: 129:     while (0U != bufferInputSize)
+"130
+[; ;mcc_generated_files/spi/src/mssp.c: 130:     while (0U != bufferInputSize)
 [e $ != -> 0 `ui _bufferInputSize 348  ]
 [e :U 349 ]
-"140
-[; ;mcc_generated_files/spi/src/mssp.c: 140: }
+"141
+[; ;mcc_generated_files/spi/src/mssp.c: 141: }
 [e :UE 346 ]
 }
-"142
-[; ;mcc_generated_files/spi/src/mssp.c: 142: void SPI1_BufferRead(void *bufferData, size_t bufferSize)
-[v _SPI1_BufferRead `(v ~T0 @X0 1 ef2`*v`ui ]
 "143
-[; ;mcc_generated_files/spi/src/mssp.c: 143: {
+[; ;mcc_generated_files/spi/src/mssp.c: 143: void SPI1_BufferRead(void *bufferData, size_t bufferSize)
+[v _SPI1_BufferRead `(v ~T0 @X0 1 ef2`*v`ui ]
+"144
+[; ;mcc_generated_files/spi/src/mssp.c: 144: {
 {
 [e :U _SPI1_BufferRead ]
-"142
-[; ;mcc_generated_files/spi/src/mssp.c: 142: void SPI1_BufferRead(void *bufferData, size_t bufferSize)
+"143
+[; ;mcc_generated_files/spi/src/mssp.c: 143: void SPI1_BufferRead(void *bufferData, size_t bufferSize)
 [v _bufferData `*v ~T0 @X0 1 r1 ]
 [v _bufferSize `ui ~T0 @X0 1 r2 ]
-"143
-[; ;mcc_generated_files/spi/src/mssp.c: 143: {
-[f ]
 "144
-[; ;mcc_generated_files/spi/src/mssp.c: 144:     uint8_t *bufferInput = bufferData;
+[; ;mcc_generated_files/spi/src/mssp.c: 144: {
+[f ]
+"145
+[; ;mcc_generated_files/spi/src/mssp.c: 145:     uint8_t *bufferInput = bufferData;
 [v _bufferInput `*uc ~T0 @X0 1 a ]
 [e = _bufferInput -> _bufferData `*uc ]
-"145
-[; ;mcc_generated_files/spi/src/mssp.c: 145:     size_t bufferInputSize = bufferSize;
+"146
+[; ;mcc_generated_files/spi/src/mssp.c: 146:     size_t bufferInputSize = bufferSize;
 [v _bufferInputSize `ui ~T0 @X0 1 a ]
 [e = _bufferInputSize _bufferSize ]
-"146
-[; ;mcc_generated_files/spi/src/mssp.c: 146:     while (0U != bufferInputSize)
+"147
+[; ;mcc_generated_files/spi/src/mssp.c: 147:     while (0U != bufferInputSize)
 [e $U 354  ]
 [e :U 355 ]
-"147
-[; ;mcc_generated_files/spi/src/mssp.c: 147:     {
-{
 "148
-[; ;mcc_generated_files/spi/src/mssp.c: 148:         SSP1BUF = 0x00;
-[e = _SSP1BUF -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 148:     {
+{
 "149
-[; ;mcc_generated_files/spi/src/mssp.c: 149:         while (!PIR1bits.SSP1IF)
+[; ;mcc_generated_files/spi/src/mssp.c: 149:         SSP1BUF = 0x00;
+[e = _SSP1BUF -> -> 0 `i `uc ]
+"150
+[; ;mcc_generated_files/spi/src/mssp.c: 150:         while (!PIR1bits.SSP1IF)
 [e $U 357  ]
 [e :U 358 ]
-"150
-[; ;mcc_generated_files/spi/src/mssp.c: 150:         {
+"151
+[; ;mcc_generated_files/spi/src/mssp.c: 151:         {
 {
-"152
-[; ;mcc_generated_files/spi/src/mssp.c: 152:         }
+"153
+[; ;mcc_generated_files/spi/src/mssp.c: 153:         }
 }
 [e :U 357 ]
-"149
-[; ;mcc_generated_files/spi/src/mssp.c: 149:         while (!PIR1bits.SSP1IF)
+"150
+[; ;mcc_generated_files/spi/src/mssp.c: 150:         while (!PIR1bits.SSP1IF)
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 358  ]
 [e :U 359 ]
-"153
-[; ;mcc_generated_files/spi/src/mssp.c: 153:         PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "154
-[; ;mcc_generated_files/spi/src/mssp.c: 154:         *bufferInput = SSP1BUF;
-[e = *U _bufferInput _SSP1BUF ]
+[; ;mcc_generated_files/spi/src/mssp.c: 154:         PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "155
-[; ;mcc_generated_files/spi/src/mssp.c: 155:         bufferInput++;
-[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
+[; ;mcc_generated_files/spi/src/mssp.c: 155:         *bufferInput = SSP1BUF;
+[e = *U _bufferInput _SSP1BUF ]
 "156
-[; ;mcc_generated_files/spi/src/mssp.c: 156:         bufferInputSize--;
-[e -- _bufferInputSize -> -> 1 `i `ui ]
+[; ;mcc_generated_files/spi/src/mssp.c: 156:         bufferInput++;
+[e ++ _bufferInput * -> -> 1 `i `x -> -> # *U _bufferInput `i `x ]
 "157
-[; ;mcc_generated_files/spi/src/mssp.c: 157:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 157:         bufferInputSize--;
+[e -- _bufferInputSize -> -> 1 `i `ui ]
+"158
+[; ;mcc_generated_files/spi/src/mssp.c: 158:     }
 }
 [e :U 354 ]
-"146
-[; ;mcc_generated_files/spi/src/mssp.c: 146:     while (0U != bufferInputSize)
+"147
+[; ;mcc_generated_files/spi/src/mssp.c: 147:     while (0U != bufferInputSize)
 [e $ != -> 0 `ui _bufferInputSize 355  ]
 [e :U 356 ]
-"158
-[; ;mcc_generated_files/spi/src/mssp.c: 158: }
+"159
+[; ;mcc_generated_files/spi/src/mssp.c: 159: }
 [e :UE 353 ]
 }
-"160
-[; ;mcc_generated_files/spi/src/mssp.c: 160: uint8_t SPI1_ByteExchange(uint8_t byteData)
-[v _SPI1_ByteExchange `(uc ~T0 @X0 1 ef1`uc ]
 "161
-[; ;mcc_generated_files/spi/src/mssp.c: 161: {
+[; ;mcc_generated_files/spi/src/mssp.c: 161: uint8_t SPI1_ByteExchange(uint8_t byteData)
+[v _SPI1_ByteExchange `(uc ~T0 @X0 1 ef1`uc ]
+"162
+[; ;mcc_generated_files/spi/src/mssp.c: 162: {
 {
 [e :U _SPI1_ByteExchange ]
-"160
-[; ;mcc_generated_files/spi/src/mssp.c: 160: uint8_t SPI1_ByteExchange(uint8_t byteData)
-[v _byteData `uc ~T0 @X0 1 r1 ]
 "161
-[; ;mcc_generated_files/spi/src/mssp.c: 161: {
-[f ]
+[; ;mcc_generated_files/spi/src/mssp.c: 161: uint8_t SPI1_ByteExchange(uint8_t byteData)
+[v _byteData `uc ~T0 @X0 1 r1 ]
 "162
-[; ;mcc_generated_files/spi/src/mssp.c: 162:     SSP1BUF = byteData;
-[e = _SSP1BUF _byteData ]
+[; ;mcc_generated_files/spi/src/mssp.c: 162: {
+[f ]
 "163
-[; ;mcc_generated_files/spi/src/mssp.c: 163:     while (!PIR1bits.SSP1IF)
+[; ;mcc_generated_files/spi/src/mssp.c: 163:     SSP1BUF = byteData;
+[e = _SSP1BUF _byteData ]
+"164
+[; ;mcc_generated_files/spi/src/mssp.c: 164:     while (!PIR1bits.SSP1IF)
 [e $U 361  ]
 [e :U 362 ]
-"164
-[; ;mcc_generated_files/spi/src/mssp.c: 164:     {
+"165
+[; ;mcc_generated_files/spi/src/mssp.c: 165:     {
 {
-"166
-[; ;mcc_generated_files/spi/src/mssp.c: 166:     }
+"167
+[; ;mcc_generated_files/spi/src/mssp.c: 167:     }
 }
 [e :U 361 ]
-"163
-[; ;mcc_generated_files/spi/src/mssp.c: 163:     while (!PIR1bits.SSP1IF)
+"164
+[; ;mcc_generated_files/spi/src/mssp.c: 164:     while (!PIR1bits.SSP1IF)
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 362  ]
 [e :U 363 ]
-"167
-[; ;mcc_generated_files/spi/src/mssp.c: 167:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "168
-[; ;mcc_generated_files/spi/src/mssp.c: 168:     return SSP1BUF;
+[; ;mcc_generated_files/spi/src/mssp.c: 168:     PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"169
+[; ;mcc_generated_files/spi/src/mssp.c: 169:     return SSP1BUF;
 [e ) _SSP1BUF ]
 [e $UE 360  ]
-"169
-[; ;mcc_generated_files/spi/src/mssp.c: 169: }
+"170
+[; ;mcc_generated_files/spi/src/mssp.c: 170: }
 [e :UE 360 ]
 }
-"171
-[; ;mcc_generated_files/spi/src/mssp.c: 171: void SPI1_ByteWrite(uint8_t byteData)
-[v _SPI1_ByteWrite `(v ~T0 @X0 1 ef1`uc ]
 "172
-[; ;mcc_generated_files/spi/src/mssp.c: 172: {
+[; ;mcc_generated_files/spi/src/mssp.c: 172: void SPI1_ByteWrite(uint8_t byteData)
+[v _SPI1_ByteWrite `(v ~T0 @X0 1 ef1`uc ]
+"173
+[; ;mcc_generated_files/spi/src/mssp.c: 173: {
 {
 [e :U _SPI1_ByteWrite ]
-"171
-[; ;mcc_generated_files/spi/src/mssp.c: 171: void SPI1_ByteWrite(uint8_t byteData)
-[v _byteData `uc ~T0 @X0 1 r1 ]
 "172
-[; ;mcc_generated_files/spi/src/mssp.c: 172: {
-[f ]
+[; ;mcc_generated_files/spi/src/mssp.c: 172: void SPI1_ByteWrite(uint8_t byteData)
+[v _byteData `uc ~T0 @X0 1 r1 ]
 "173
-[; ;mcc_generated_files/spi/src/mssp.c: 173:     SSP1BUF = byteData;
-[e = _SSP1BUF _byteData ]
+[; ;mcc_generated_files/spi/src/mssp.c: 173: {
+[f ]
 "174
-[; ;mcc_generated_files/spi/src/mssp.c: 174: }
+[; ;mcc_generated_files/spi/src/mssp.c: 174:     SSP1BUF = byteData;
+[e = _SSP1BUF _byteData ]
+"175
+[; ;mcc_generated_files/spi/src/mssp.c: 175: }
 [e :UE 364 ]
 }
-"176
-[; ;mcc_generated_files/spi/src/mssp.c: 176: uint8_t SPI1_ByteRead(void)
-[v _SPI1_ByteRead `(uc ~T0 @X0 1 ef ]
 "177
-[; ;mcc_generated_files/spi/src/mssp.c: 177: {
+[; ;mcc_generated_files/spi/src/mssp.c: 177: uint8_t SPI1_ByteRead(void)
+[v _SPI1_ByteRead `(uc ~T0 @X0 1 ef ]
+"178
+[; ;mcc_generated_files/spi/src/mssp.c: 178: {
 {
 [e :U _SPI1_ByteRead ]
 [f ]
-"178
-[; ;mcc_generated_files/spi/src/mssp.c: 178:     if (1U == PIR1bits.SSP1IF)
-[e $ ! == -> 1 `ui -> . . _PIR1bits 0 3 `ui 366  ]
 "179
-[; ;mcc_generated_files/spi/src/mssp.c: 179:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 179:     if (1U == PIR1bits.SSP1IF)
+[e $ ! == -> 1 `ui -> . . _PIR1bits 0 3 `ui 366  ]
 "180
-[; ;mcc_generated_files/spi/src/mssp.c: 180:         PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/spi/src/mssp.c: 180:     {
+{
 "181
-[; ;mcc_generated_files/spi/src/mssp.c: 181:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 181:         PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"182
+[; ;mcc_generated_files/spi/src/mssp.c: 182:     }
 }
 [e :U 366 ]
-"182
-[; ;mcc_generated_files/spi/src/mssp.c: 182:     return SSP1BUF;
+"183
+[; ;mcc_generated_files/spi/src/mssp.c: 183:     return SSP1BUF;
 [e ) _SSP1BUF ]
 [e $UE 365  ]
-"183
-[; ;mcc_generated_files/spi/src/mssp.c: 183: }
+"184
+[; ;mcc_generated_files/spi/src/mssp.c: 184: }
 [e :UE 365 ]
 }
-"185
-[; ;mcc_generated_files/spi/src/mssp.c: 185: _Bool SPI1_IsRxReady(void)
-[v _SPI1_IsRxReady `(a ~T0 @X0 1 ef ]
 "186
-[; ;mcc_generated_files/spi/src/mssp.c: 186: {
+[; ;mcc_generated_files/spi/src/mssp.c: 186: _Bool SPI1_IsRxReady(void)
+[v _SPI1_IsRxReady `(a ~T0 @X0 1 ef ]
+"187
+[; ;mcc_generated_files/spi/src/mssp.c: 187: {
 {
 [e :U _SPI1_IsRxReady ]
 [f ]
-"187
-[; ;mcc_generated_files/spi/src/mssp.c: 187:     _Bool returnValue = 0;
+"188
+[; ;mcc_generated_files/spi/src/mssp.c: 188:     _Bool returnValue = 0;
 [v _returnValue `a ~T0 @X0 1 a ]
 [e = _returnValue -> -> 0 `i `a ]
-"188
-[; ;mcc_generated_files/spi/src/mssp.c: 188:     if (SSP1CON1bits.SSPEN == 1)
-[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 1 `i 368  ]
 "189
-[; ;mcc_generated_files/spi/src/mssp.c: 189:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 189:     if (SSP1CON1bits.SSPEN == 1)
+[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 1 `i 368  ]
 "190
-[; ;mcc_generated_files/spi/src/mssp.c: 190:         returnValue = ((PIR1bits.SSP1IF != 0U) ? 1: 0);
-[e = _returnValue -> ? != -> . . _PIR1bits 0 3 `ui -> 0 `ui : -> 1 `i -> 0 `i `a ]
+[; ;mcc_generated_files/spi/src/mssp.c: 190:     {
+{
 "191
-[; ;mcc_generated_files/spi/src/mssp.c: 191:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 191:         returnValue = ((PIR1bits.SSP1IF != 0U) ? 1: 0);
+[e = _returnValue -> ? != -> . . _PIR1bits 0 3 `ui -> 0 `ui : -> 1 `i -> 0 `i `a ]
+"192
+[; ;mcc_generated_files/spi/src/mssp.c: 192:     }
 }
 [e $U 369  ]
-"192
-[; ;mcc_generated_files/spi/src/mssp.c: 192:     else
-[e :U 368 ]
 "193
-[; ;mcc_generated_files/spi/src/mssp.c: 193:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 193:     else
+[e :U 368 ]
 "194
-[; ;mcc_generated_files/spi/src/mssp.c: 194:         returnValue = 0;
-[e = _returnValue -> -> 0 `i `a ]
+[; ;mcc_generated_files/spi/src/mssp.c: 194:     {
+{
 "195
-[; ;mcc_generated_files/spi/src/mssp.c: 195:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 195:         returnValue = 0;
+[e = _returnValue -> -> 0 `i `a ]
+"196
+[; ;mcc_generated_files/spi/src/mssp.c: 196:     }
 }
 [e :U 369 ]
-"196
-[; ;mcc_generated_files/spi/src/mssp.c: 196:     return returnValue;
+"197
+[; ;mcc_generated_files/spi/src/mssp.c: 197:     return returnValue;
 [e ) _returnValue ]
 [e $UE 367  ]
-"197
-[; ;mcc_generated_files/spi/src/mssp.c: 197: }
+"198
+[; ;mcc_generated_files/spi/src/mssp.c: 198: }
 [e :UE 367 ]
 }
-"199
-[; ;mcc_generated_files/spi/src/mssp.c: 199: _Bool SPI1_IsTxReady(void)
-[v _SPI1_IsTxReady `(a ~T0 @X0 1 ef ]
 "200
-[; ;mcc_generated_files/spi/src/mssp.c: 200: {
+[; ;mcc_generated_files/spi/src/mssp.c: 200: _Bool SPI1_IsTxReady(void)
+[v _SPI1_IsTxReady `(a ~T0 @X0 1 ef ]
+"201
+[; ;mcc_generated_files/spi/src/mssp.c: 201: {
 {
 [e :U _SPI1_IsTxReady ]
 [f ]
-"201
-[; ;mcc_generated_files/spi/src/mssp.c: 201:     _Bool returnValue = 0;
+"202
+[; ;mcc_generated_files/spi/src/mssp.c: 202:     _Bool returnValue = 0;
 [v _returnValue `a ~T0 @X0 1 a ]
 [e = _returnValue -> -> 0 `i `a ]
-"202
-[; ;mcc_generated_files/spi/src/mssp.c: 202:     if (SSP1CON1bits.SSPEN == 1)
-[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 1 `i 371  ]
 "203
-[; ;mcc_generated_files/spi/src/mssp.c: 203:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 203:     if (SSP1CON1bits.SSPEN == 1)
+[e $ ! == -> . . _SSP1CON1bits 0 5 `i -> 1 `i 371  ]
 "204
-[; ;mcc_generated_files/spi/src/mssp.c: 204:         returnValue = ((PIR1bits.SSP1IF != 0U) ? 0: 1);
-[e = _returnValue -> ? != -> . . _PIR1bits 0 3 `ui -> 0 `ui : -> 0 `i -> 1 `i `a ]
+[; ;mcc_generated_files/spi/src/mssp.c: 204:     {
+{
 "205
-[; ;mcc_generated_files/spi/src/mssp.c: 205:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 205:         returnValue = ((PIR1bits.SSP1IF != 0U) ? 0: 1);
+[e = _returnValue -> ? != -> . . _PIR1bits 0 3 `ui -> 0 `ui : -> 0 `i -> 1 `i `a ]
+"206
+[; ;mcc_generated_files/spi/src/mssp.c: 206:     }
 }
 [e $U 372  ]
-"206
-[; ;mcc_generated_files/spi/src/mssp.c: 206:     else
-[e :U 371 ]
 "207
-[; ;mcc_generated_files/spi/src/mssp.c: 207:     {
-{
+[; ;mcc_generated_files/spi/src/mssp.c: 207:     else
+[e :U 371 ]
 "208
-[; ;mcc_generated_files/spi/src/mssp.c: 208:         returnValue = 0;
-[e = _returnValue -> -> 0 `i `a ]
+[; ;mcc_generated_files/spi/src/mssp.c: 208:     {
+{
 "209
-[; ;mcc_generated_files/spi/src/mssp.c: 209:     }
+[; ;mcc_generated_files/spi/src/mssp.c: 209:         returnValue = 0;
+[e = _returnValue -> -> 0 `i `a ]
+"210
+[; ;mcc_generated_files/spi/src/mssp.c: 210:     }
 }
 [e :U 372 ]
-"210
-[; ;mcc_generated_files/spi/src/mssp.c: 210:     return returnValue;
+"211
+[; ;mcc_generated_files/spi/src/mssp.c: 211:     return returnValue;
 [e ) _returnValue ]
 [e $UE 370  ]
-"211
-[; ;mcc_generated_files/spi/src/mssp.c: 211: }
+"212
+[; ;mcc_generated_files/spi/src/mssp.c: 212: }
 [e :UE 370 ]
 }

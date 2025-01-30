@@ -4245,6 +4245,7 @@ extern const struct SPI_INTERFACE SPI1_Host;
 # 115 "mcc_generated_files/spi/src/../mssp.h"
 typedef enum {
     ADXL345,
+    SI4055,
     MSSP_DEFAULT
 } spi1_configuration_name_t;
 
@@ -4263,7 +4264,7 @@ void SPI1_Initialize(void);
 
 
 void SPI1_Deinitialize(void);
-# 144 "mcc_generated_files/spi/src/../mssp.h"
+# 145 "mcc_generated_files/spi/src/../mssp.h"
 _Bool SPI1_Open(uint8_t spiConfigIndex);
 
 
@@ -4273,11 +4274,11 @@ _Bool SPI1_Open(uint8_t spiConfigIndex);
 
 
 void SPI1_Close(void);
-# 161 "mcc_generated_files/spi/src/../mssp.h"
+# 162 "mcc_generated_files/spi/src/../mssp.h"
 void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
-# 170 "mcc_generated_files/spi/src/../mssp.h"
+# 171 "mcc_generated_files/spi/src/../mssp.h"
 void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
-# 179 "mcc_generated_files/spi/src/../mssp.h"
+# 180 "mcc_generated_files/spi/src/../mssp.h"
 void SPI1_BufferRead(void *bufferData, size_t bufferSize);
 
 
@@ -4287,7 +4288,7 @@ void SPI1_BufferRead(void *bufferData, size_t bufferSize);
 
 
 uint8_t SPI1_ByteExchange(uint8_t byteData);
-# 197 "mcc_generated_files/spi/src/../mssp.h"
+# 198 "mcc_generated_files/spi/src/../mssp.h"
 void SPI1_ByteWrite(uint8_t byteData);
 
 
@@ -4297,9 +4298,9 @@ void SPI1_ByteWrite(uint8_t byteData);
 
 
 uint8_t SPI1_ByteRead(void);
-# 214 "mcc_generated_files/spi/src/../mssp.h"
+# 215 "mcc_generated_files/spi/src/../mssp.h"
 _Bool SPI1_IsRxReady(void);
-# 223 "mcc_generated_files/spi/src/../mssp.h"
+# 224 "mcc_generated_files/spi/src/../mssp.h"
 _Bool SPI1_IsTxReady(void);
 # 36 "mcc_generated_files/spi/src/mssp.c" 2
 # 1 "mcc_generated_files/spi/src/../spi_polling_types.h" 1
@@ -4332,6 +4333,7 @@ const struct SPI_INTERFACE SPI1_Host = {
 
 static const spi_configuration_t spi1_configuration[] = {
     { 0x0, 0x1a, 0x10, 0x7 },
+    { 0x40, 0xa, 0x10, 0x7 },
     { 0x64, 0x0, 0x10, 0x1 }
 };
 

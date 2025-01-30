@@ -3,16 +3,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 ./mcc_generated_files/system/system.h
 [; ;./mcc_generated_files/system/system.h: 56: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"126 ./mcc_generated_files/system/../spi/mssp.h
-[; ;./mcc_generated_files/system/../spi/mssp.h: 126: void SPI1_Initialize(void);
+"127 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 127: void SPI1_Initialize(void);
 [v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"144
-[; ;./mcc_generated_files/system/../spi/mssp.h: 144: _Bool SPI1_Open(uint8_t spiConfigIndex);
+"145
+[; ;./mcc_generated_files/system/../spi/mssp.h: 145: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
 "46 main.c
 [; ;main.c: 46:     if (SPI1_Open(ADXL345)) {
-[c E2437 0 1 .. ]
-[n E2437 . ADXL345 MSSP_DEFAULT  ]
+[c E2437 0 1 2 .. ]
+[n E2437 . ADXL345 SI4055 MSSP_DEFAULT  ]
 "1951 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -39,9 +39,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2005
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2005: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS107 ~T0 @X0 0 e@270 ]
-"187 ./mcc_generated_files/system/../spi/mssp.h
-[; ;./mcc_generated_files/system/../spi/mssp.h: 187: uint8_t SPI1_ByteExchange(uint8_t byteData);
+"188 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 188: uint8_t SPI1_ByteExchange(uint8_t byteData);
 [v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
+"153
+[; ;./mcc_generated_files/system/../spi/mssp.h: 153: void SPI1_Close(void);
+[v _SPI1_Close `(v ~T0 @X0 0 ef ]
 "276 ./mcc_generated_files/system/../system/pins.h
 [; ;./mcc_generated_files/system/../system/pins.h: 276: void PIN_MANAGER_IOC(void);
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
@@ -623,28 +626,159 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 365 ]
-"89
-[; ;main.c: 89:     while(1)
-[e :U 368 ]
-"90
-[; ;main.c: 90:     {
+"72
+[; ;main.c: 72:     SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"73
+[; ;main.c: 73:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"74
+[; ;main.c: 74:     _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"75
+[; ;main.c: 75:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"77
+[; ;main.c: 77:     if (SPI1_Open(SI4055)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2437 1 `uc `i -> 0 `i 367  ]
 {
-"91
-[; ;main.c: 91:         PIN_MANAGER_IOC();
-[e ( _PIN_MANAGER_IOC ..  ]
-"93
-[; ;main.c: 93:         __nop();
-[e ( ___nop ..  ]
-"94
-[; ;main.c: 94:         __asm("sleep");
-[; <" sleep ;# ">
-"95
-[; ;main.c: 95:     }
+"78
+[; ;main.c: 78:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 370 ]
+{
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 367 ]
-[e $U 368  ]
 [e :U 369 ]
+"79
+[; ;main.c: 79:         _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"80
+[; ;main.c: 80:         do { LATAbits.LATA4 = 0; } while(0);
+[e :U 373 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 372 ]
+"81
+[; ;main.c: 81:     } else {
+}
+[e $U 374  ]
+[e :U 367 ]
+{
+"82
+[; ;main.c: 82:         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 377 ]
+{
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 376 ]
+"83
+[; ;main.c: 83:         _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"84
+[; ;main.c: 84:         do { LATAbits.LATA5 = 0; } while(0);
+[e :U 380 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 379 ]
+"85
+[; ;main.c: 85:     }
+}
+[e :U 374 ]
+"87
+[; ;main.c: 87:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"88
+[; ;main.c: 88:     _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"89
+[; ;main.c: 89:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"91
+[; ;main.c: 91:     do { LATCbits.LATC3 = 0; } while(0);
+[e :U 383 ]
+{
+[e = . . _LATCbits 0 3 -> -> 0 `i `uc ]
+}
+[e :U 382 ]
+"92
+[; ;main.c: 92:     if (SPI1_ByteExchange(0x01) != 0x00) {
+[e $ ! != -> ( _SPI1_ByteExchange (1 -> -> 1 `i `uc `i -> 0 `i 384  ]
+{
+"93
+[; ;main.c: 93:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 387 ]
+{
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 386 ]
+"94
+[; ;main.c: 94:         _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"95
+[; ;main.c: 95:         do { LATAbits.LATA4 = 0; } while(0);
+[e :U 390 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 389 ]
 "96
-[; ;main.c: 96: }
+[; ;main.c: 96:     } else {
+}
+[e $U 391  ]
+[e :U 384 ]
+{
+"97
+[; ;main.c: 97:         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 394 ]
+{
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+}
+[e :U 393 ]
+"98
+[; ;main.c: 98:         _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"99
+[; ;main.c: 99:         do { LATAbits.LATA5 = 0; } while(0);
+[e :U 397 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 396 ]
+"100
+[; ;main.c: 100:     }
+}
+[e :U 391 ]
+"101
+[; ;main.c: 101:     do { LATCbits.LATC3 = 1; } while(0);
+[e :U 400 ]
+{
+[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+}
+[e :U 399 ]
+"120
+[; ;main.c: 120:     while(1)
+[e :U 402 ]
+"121
+[; ;main.c: 121:     {
+{
+"122
+[; ;main.c: 122:         PIN_MANAGER_IOC();
+[e ( _PIN_MANAGER_IOC ..  ]
+"124
+[; ;main.c: 124:         __nop();
+[e ( ___nop ..  ]
+"125
+[; ;main.c: 125:         __asm("sleep");
+[; <" sleep ;# ">
+"126
+[; ;main.c: 126:     }
+}
+[e :U 401 ]
+[e $U 402  ]
+[e :U 403 ]
+"127
+[; ;main.c: 127: }
 [e :UE 332 ]
 }

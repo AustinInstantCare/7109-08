@@ -4281,6 +4281,7 @@ extern const struct SPI_INTERFACE SPI1_Host;
 # 115 "./mcc_generated_files/system/../spi/mssp.h"
 typedef enum {
     ADXL345,
+    SI4055,
     MSSP_DEFAULT
 } spi1_configuration_name_t;
 
@@ -4299,7 +4300,7 @@ void SPI1_Initialize(void);
 
 
 void SPI1_Deinitialize(void);
-# 144 "./mcc_generated_files/system/../spi/mssp.h"
+# 145 "./mcc_generated_files/system/../spi/mssp.h"
 _Bool SPI1_Open(uint8_t spiConfigIndex);
 
 
@@ -4309,11 +4310,11 @@ _Bool SPI1_Open(uint8_t spiConfigIndex);
 
 
 void SPI1_Close(void);
-# 161 "./mcc_generated_files/system/../spi/mssp.h"
+# 162 "./mcc_generated_files/system/../spi/mssp.h"
 void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
-# 170 "./mcc_generated_files/system/../spi/mssp.h"
+# 171 "./mcc_generated_files/system/../spi/mssp.h"
 void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
-# 179 "./mcc_generated_files/system/../spi/mssp.h"
+# 180 "./mcc_generated_files/system/../spi/mssp.h"
 void SPI1_BufferRead(void *bufferData, size_t bufferSize);
 
 
@@ -4323,7 +4324,7 @@ void SPI1_BufferRead(void *bufferData, size_t bufferSize);
 
 
 uint8_t SPI1_ByteExchange(uint8_t byteData);
-# 197 "./mcc_generated_files/system/../spi/mssp.h"
+# 198 "./mcc_generated_files/system/../spi/mssp.h"
 void SPI1_ByteWrite(uint8_t byteData);
 
 
@@ -4333,9 +4334,9 @@ void SPI1_ByteWrite(uint8_t byteData);
 
 
 uint8_t SPI1_ByteRead(void);
-# 214 "./mcc_generated_files/system/../spi/mssp.h"
+# 215 "./mcc_generated_files/system/../spi/mssp.h"
 _Bool SPI1_IsRxReady(void);
-# 223 "./mcc_generated_files/system/../spi/mssp.h"
+# 224 "./mcc_generated_files/system/../spi/mssp.h"
 _Bool SPI1_IsTxReady(void);
 # 45 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/watchdog.h" 1
@@ -4394,7 +4395,38 @@ int main(void)
         do { LATAbits.LATA5 = 0; } while(0);
     }
     do { LATCbits.LATC4 = 1; } while(0);
-# 89 "main.c"
+
+    SPI1_Close();
+    __asm("clrwdt");
+    _delay((unsigned long)((250)*(4000000/4000.0)));
+    __asm("clrwdt");
+
+    if (SPI1_Open(SI4055)) {
+        do { LATAbits.LATA4 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA4 = 0; } while(0);
+    } else {
+        do { LATAbits.LATA5 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA5 = 0; } while(0);
+    }
+
+    __asm("clrwdt");
+    _delay((unsigned long)((250)*(4000000/4000.0)));
+    __asm("clrwdt");
+
+    do { LATCbits.LATC3 = 0; } while(0);
+    if (SPI1_ByteExchange(0x01) != 0x00) {
+        do { LATAbits.LATA4 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA4 = 0; } while(0);
+    } else {
+        do { LATAbits.LATA5 = 1; } while(0);
+        _delay((unsigned long)((250)*(4000000/4000.0)));
+        do { LATAbits.LATA5 = 0; } while(0);
+    }
+    do { LATCbits.LATC3 = 1; } while(0);
+# 120 "main.c"
     while(1)
     {
         PIN_MANAGER_IOC();

@@ -69,6 +69,37 @@ int main(void)
     }
     CS_ACC_SetHigh();
     
+    SPI1_Close();
+    CLRWDT();
+    __delay_ms(250);
+    CLRWDT();
+    
+    if (SPI1_Open(SI4055)) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
+    
+    CLRWDT();
+    __delay_ms(250);
+    CLRWDT();
+    
+    CS_RF_SetLow();
+    if (SPI1_ByteExchange(0x01) != 0x00) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
+    CS_RF_SetHigh();
+    
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
     // Use the following macros to: 

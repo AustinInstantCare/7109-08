@@ -114,6 +114,7 @@ extern const struct SPI_INTERFACE SPI1_Host;
  */
 typedef enum {
     ADXL345,
+    SI4055,
     MSSP_DEFAULT
 } spi1_configuration_name_t;
 
