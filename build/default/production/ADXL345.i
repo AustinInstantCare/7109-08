@@ -4444,7 +4444,7 @@ struct Message {
 };
 
 _Bool ADXL345_validation(void);
-void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data);
+_Bool ADXL345_init(void);
 # 8 "ADXL345.c" 2
 
 
@@ -4485,7 +4485,6 @@ _Bool ADXL345_init(void) {
     msg.registerAddr = 0x24;
     memset(msg.data, 0, sizeof(msg.data));
     memcpy(msg.data, ADXL345_init_settings, sizeof(ADXL345_init_settings));
-
     do { LATCbits.LATC4 = 0; } while(0);
     SPI1_BufferWrite(&msg, sizeof(ADXL345_init_settings) + 1);
     do { LATCbits.LATC4 = 1; } while(0);
@@ -4493,9 +4492,9 @@ _Bool ADXL345_init(void) {
     msg.registerAddr = 0x31;
     memset(msg.data, 0, sizeof(msg.data));
     msg.data[0] = 0x0B;
-
     do { LATCbits.LATC4 = 0; } while(0);
     SPI1_BufferWrite(&msg, 2);
     do { LATCbits.LATC4 = 1; } while(0);
+
     return 1;
 }

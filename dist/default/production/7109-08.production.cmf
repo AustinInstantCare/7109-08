@@ -13,31 +13,36 @@
 %PSECTS
 $dist/default/production\7109-08.production.o
 cinit CODE 0 7F2 7F2 E 2 1
-text1 CODE 0 6C2 6C2 10 2 1
-text2 CODE 0 665 665 4 2 1
-text3 CODE 0 686 686 A 2 1
-text4 CODE 0 729 729 25 2 1
-text5 CODE 0 66F 66F 6 2 1
-text6 CODE 0 690 690 B 2 1
-text7 CODE 0 669 669 6 2 1
-text8 CODE 0 675 675 8 2 1
-text9 CODE 0 67D 67D 9 2 1
-text10 CODE 0 6B3 6B3 F 2 1
-text11 CODE 0 6D2 6D2 1A 2 1
-text12 CODE 0 6EC 6EC 1E 2 1
-text13 CODE 0 786 786 6C 2 1
-text14 CODE 0 70A 70A 1F 2 1
-text15 CODE 0 662 662 3 2 1
-text16 CODE 0 69B 69B C 2 1
-nvBANK0 BANK0 1 20 20 4 1 1
-maintext CODE 0 74E 74E 38 2 1
+text1 CODE 0 60B 60B 10 2 1
+text2 CODE 0 5AE 5AE 4 2 1
+text3 CODE 0 5CF 5CF A 2 1
+text4 CODE 0 6AE 6AE 25 2 1
+text5 CODE 0 5B8 5B8 6 2 1
+text6 CODE 0 5D9 5D9 B 2 1
+text7 CODE 0 5B2 5B2 6 2 1
+text8 CODE 0 5BE 5BE 8 2 1
+text9 CODE 0 5C6 5C6 9 2 1
+text10 CODE 0 5FC 5FC F 2 1
+text11 CODE 0 635 635 1A 2 1
+text12 CODE 0 64F 64F 1E 2 1
+text13 CODE 0 5AB 5AB 3 2 1
+text14 CODE 0 5E4 5E4 C 2 1
+text15 CODE 0 736 736 50 2 1
+text16 CODE 0 61B 61B 1A 2 1
+text17 CODE 0 6D3 6D3 28 2 1
+text18 CODE 0 786 786 6C 2 1
+text19 CODE 0 66D 66D 1F 2 1
+text20 CODE 0 68C 68C 22 2 1
+nvBANK0 BANK0 1 3A 3A 4 1 1
+maintext CODE 0 6FB 6FB 3B 2 1
 cstackCOMMON COMMON 1 70 70 D 1 1
+cstackBANK0 BANK0 1 20 20 1A 1 1
 stringtext1 STRCODE 0 800 800 1C 2 1
 stringtext2 STRCODE 0 81C 81C F 2 1
 stringtext3 STRCODE 0 82B 82B C 2 1
-clrtext CODE 0 6A7 6A7 C 2 1
+clrtext CODE 0 5F0 5F0 C 2 1
 config CONFIG 4 8007 8007 2 2 1
-$C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
+$C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
 config CONFIG 4 8007 8007 2 2 1
@@ -47,7 +52,7 @@ config CONFIG 4 8007 8007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 24-6F 1
+RAM 3E-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -57,7 +62,7 @@ RAM 320-36F 1
 RAM 3A0-3EF 1
 RAM 420-46F 1
 RAM 4A0-4BF 1
-BANK0 24-6F 1
+BANK0 3E-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -67,9 +72,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4BF 1
-CONST 4-661 2
+CONST 4-5AA 2
 CONST 837-1FFF 2
-ENTRY 4-661 2
+ENTRY 4-5AA 2
 ENTRY 837-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -94,7 +99,7 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 4-661 2
+CODE 4-5AA 2
 CODE 837-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -109,9 +114,9 @@ SFR9 480-49F 1
 BIGRAM 2000-23EF 1
 COMMON 7D-7D 1
 EEDATA F000-F0FF 2
-STRCODE 4-661 2
+STRCODE 4-5AA 2
 STRCODE 837-1FFF 2
-STRING 4-661 2
+STRING 4-5AA 2
 STRING 837-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -127,162 +132,207 @@ STRING 837-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\7109-08.production.o
-7F2 cinit CODE >2992:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F2 cinit CODE >2995:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F2 cinit CODE >3020:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F3 cinit CODE >3021:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F4 cinit CODE >3022:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F5 cinit CODE >3023:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F6 cinit CODE >3024:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F7 cinit CODE >3025:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F8 cinit CODE >3026:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7F9 cinit CODE >3027:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7FA cinit CODE >3028:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7FD cinit CODE >3034:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7FD cinit CODE >3036:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-7FE cinit CODE >3037:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-69B text16 CODE >161:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-69B text16 CODE >163:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-69E text16 CODE >164:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-69E text16 CODE >167:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-6A3 text16 CODE >168:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-6A4 text16 CODE >169:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-6A6 text16 CODE >170:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-662 text15 CODE >103:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-662 text15 CODE >105:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-664 text15 CODE >106:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-70A text14 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-70A text14 CODE >43:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-70C text14 CODE >45:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-710 text14 CODE >46:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-714 text14 CODE >47:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-719 text14 CODE >48:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-71E text14 CODE >49:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-724 text14 CODE >52:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-728 text14 CODE >53:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
-786 text13 CODE >82:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-786 text13 CODE >84:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-786 text13 CODE >85:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-78B text13 CODE >87:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7A3 text13 CODE >88:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7BB text13 CODE >89:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7D3 text13 CODE >90:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7EB text13 CODE >92:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7EC text13 CODE >94:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7EE text13 CODE >95:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7EF text13 CODE >98:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7F0 text13 CODE >100:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-7F1 text13 CODE >101:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-6EC text12 CODE >25:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6EC text12 CODE >26:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6ED text12 CODE >27:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6F2 text12 CODE >27:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6F6 text12 CODE >28:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6F8 text12 CODE >29:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6FD text12 CODE >29:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-701 text12 CODE >30:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-703 text12 CODE >32:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-705 text12 CODE >34:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-708 text12 CODE >35:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-709 text12 CODE >36:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
-6D2 text11 CODE >136:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6D2 text11 CODE >139:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6DA text11 CODE >140:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6DF text11 CODE >141:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6E2 text11 CODE >141:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6EB text11 CODE >143:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6B3 text10 CODE >114:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6B3 text10 CODE >119:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6BA text10 CODE >121:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6BF text10 CODE >123:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-6C1 text10 CODE >124:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-67D text9 CODE >102:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-67D text9 CODE >105:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-682 text9 CODE >107:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-685 text9 CODE >109:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-675 text8 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
-675 text8 CODE >41:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
-678 text8 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
-67A text8 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
-67C text8 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
-669 text7 CODE >71:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-669 text7 CODE >72:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-66E text7 CODE >73:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-690 text6 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-690 text6 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-691 text6 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-693 text6 CODE >47:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-69A text6 CODE >50:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
-66F text5 CODE >129:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-66F text5 CODE >130:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-674 text5 CODE >131:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-729 text4 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-729 text4 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-72B text4 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-72D text4 CODE >51:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-730 text4 CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-732 text4 CODE >57:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-734 text4 CODE >58:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-735 text4 CODE >63:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-738 text4 CODE >64:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-739 text4 CODE >65:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-73B text4 CODE >77:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-73D text4 CODE >78:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-73E text4 CODE >87:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-740 text4 CODE >92:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-742 text4 CODE >93:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-744 text4 CODE >94:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-745 text4 CODE >96:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-74C text4 CODE >99:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-74D text4 CODE >100:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
-686 text3 CODE >61:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-686 text3 CODE >64:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-688 text3 CODE >65:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-68A text3 CODE >67:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-68C text3 CODE >68:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-68D text3 CODE >69:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-68E text3 CODE >70:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-68F text3 CODE >71:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-665 text2 CODE >36:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
-665 text2 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
-668 text2 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
-6C2 text1 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6C2 text1 CODE >41:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6C5 text1 CODE >42:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6C8 text1 CODE >43:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6CB text1 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6CE text1 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-6D1 text1 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
-74E maintext CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-74E maintext CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-751 maintext CODE >47:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-754 maintext CODE >49:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-756 maintext CODE >50:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-757 maintext CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-75B maintext CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-75F maintext CODE >53:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-761 maintext CODE >54:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-76C maintext CODE >55:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-76F maintext CODE >57:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-771 maintext CODE >58:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-77C maintext CODE >59:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-77E maintext CODE >81:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-781 maintext CODE >83:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-782 maintext CODE >84:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
-6A7 clrtext CODE >3003:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6A7 clrtext CODE >3004:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6A8 clrtext CODE >3005:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6A8 clrtext CODE >3006:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6A9 clrtext CODE >3007:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AA clrtext CODE >3008:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AB clrtext CODE >3009:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AC clrtext CODE >3010:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AD clrtext CODE >3011:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AE clrtext CODE >3012:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6AF clrtext CODE >3013:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6B0 clrtext CODE >3014:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6B1 clrtext CODE >3015:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
-6B2 clrtext CODE >3016:C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_1.s
+7F2 cinit CODE >2995:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F2 cinit CODE >2998:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F2 cinit CODE >3023:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F3 cinit CODE >3024:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F4 cinit CODE >3025:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F5 cinit CODE >3026:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F6 cinit CODE >3027:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F7 cinit CODE >3028:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F8 cinit CODE >3029:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7F9 cinit CODE >3030:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7FA cinit CODE >3031:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7FD cinit CODE >3037:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7FD cinit CODE >3039:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+7FE cinit CODE >3040:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+68C text20 CODE >126:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+68C text20 CODE >128:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+68E text20 CODE >129:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+692 text20 CODE >130:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+693 text20 CODE >132:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+699 text20 CODE >133:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+699 text20 CODE >136:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+69E text20 CODE >137:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+69F text20 CODE >138:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+6A3 text20 CODE >139:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+6A7 text20 CODE >130:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+6AD text20 CODE >141:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+66D text19 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+66D text19 CODE >43:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+66F text19 CODE >45:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+673 text19 CODE >46:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+677 text19 CODE >47:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+67C text19 CODE >48:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+681 text19 CODE >49:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+687 text19 CODE >52:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+68B text19 CODE >53:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+786 text18 CODE >82:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+786 text18 CODE >84:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+786 text18 CODE >85:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+78B text18 CODE >87:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7A3 text18 CODE >88:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7BB text18 CODE >89:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7D3 text18 CODE >90:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7EB text18 CODE >92:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7EC text18 CODE >94:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7EE text18 CODE >95:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7EF text18 CODE >98:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7F0 text18 CODE >100:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+7F1 text18 CODE >101:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+6D3 text17 CODE >4:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6D4 text17 CODE >11:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6D8 text17 CODE >12:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6DA text17 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6DB text17 CODE >14:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6E5 text17 CODE >15:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6EE text17 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6F3 text17 CODE >13:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+6FA text17 CODE >18:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+61B text16 CODE >3:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+61C text16 CODE >5:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+61E text16 CODE >6:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+61F text16 CODE >7:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+628 text16 CODE >6:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+62D text16 CODE >6:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+634 text16 CODE >10:C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+736 text15 CODE >38:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+736 text15 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+73B text15 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+740 text15 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+743 text15 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+74E text15 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+75A text15 CODE >47:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+75C text15 CODE >48:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+765 text15 CODE >49:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+767 text15 CODE >51:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+76A text15 CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+775 text15 CODE >53:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+778 text15 CODE >54:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+77A text15 CODE >55:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+783 text15 CODE >56:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+785 text15 CODE >59:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+5E4 text14 CODE >161:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5E4 text14 CODE >163:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5E7 text14 CODE >164:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5E7 text14 CODE >167:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5EC text14 CODE >168:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5ED text14 CODE >169:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5EF text14 CODE >170:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5AB text13 CODE >103:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5AB text13 CODE >105:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5AD text13 CODE >106:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+64F text12 CODE >25:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+64F text12 CODE >26:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+650 text12 CODE >27:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+655 text12 CODE >27:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+659 text12 CODE >28:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+65B text12 CODE >29:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+660 text12 CODE >29:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+664 text12 CODE >30:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+666 text12 CODE >32:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+668 text12 CODE >34:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+66B text12 CODE >35:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+66C text12 CODE >36:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+635 text11 CODE >136:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+635 text11 CODE >139:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+63D text11 CODE >140:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+642 text11 CODE >141:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+645 text11 CODE >141:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+64E text11 CODE >143:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5FC text10 CODE >114:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5FC text10 CODE >119:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+603 text10 CODE >121:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+608 text10 CODE >123:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+60A text10 CODE >124:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5C6 text9 CODE >102:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5C6 text9 CODE >105:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5CB text9 CODE >107:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5CE text9 CODE >109:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5BE text8 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
+5BE text8 CODE >41:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
+5C1 text8 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
+5C3 text8 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
+5C5 text8 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/clock.c
+5B2 text7 CODE >71:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5B2 text7 CODE >72:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5B7 text7 CODE >73:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5D9 text6 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5D9 text6 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5DA text6 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5DC text6 CODE >47:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5E3 text6 CODE >50:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/interrupt.c
+5B8 text5 CODE >129:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5B8 text5 CODE >130:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5BD text5 CODE >131:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6AE text4 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6AE text4 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6B0 text4 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6B2 text4 CODE >51:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6B5 text4 CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6B7 text4 CODE >57:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6B9 text4 CODE >58:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6BA text4 CODE >63:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6BD text4 CODE >64:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6BE text4 CODE >65:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C0 text4 CODE >77:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C2 text4 CODE >78:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C3 text4 CODE >87:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C5 text4 CODE >92:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C7 text4 CODE >93:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6C9 text4 CODE >94:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6CA text4 CODE >96:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6D1 text4 CODE >99:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+6D2 text4 CODE >100:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/pins.c
+5CF text3 CODE >61:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5CF text3 CODE >64:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D1 text3 CODE >65:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D3 text3 CODE >67:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D5 text3 CODE >68:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D6 text3 CODE >69:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D7 text3 CODE >70:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5D8 text3 CODE >71:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+5AE text2 CODE >36:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
+5AE text2 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
+5B1 text2 CODE >40:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/watchdog.c
+60B text1 CODE >39:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+60B text1 CODE >41:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+60E text1 CODE >42:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+611 text1 CODE >43:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+614 text1 CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+617 text1 CODE >45:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+61A text1 CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
+6FB maintext CODE >44:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+6FB maintext CODE >46:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+6FE maintext CODE >47:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+701 maintext CODE >49:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+703 maintext CODE >50:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+704 maintext CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+708 maintext CODE >52:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+70C maintext CODE >53:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+70E maintext CODE >54:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+719 maintext CODE >55:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+71C maintext CODE >57:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+71E maintext CODE >58:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+729 maintext CODE >59:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+72B maintext CODE >62:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+72E maintext CODE >66:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+731 maintext CODE >68:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+732 maintext CODE >69:C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
+5F0 clrtext CODE >3006:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F0 clrtext CODE >3007:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F1 clrtext CODE >3008:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F1 clrtext CODE >3009:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F2 clrtext CODE >3010:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F3 clrtext CODE >3011:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F4 clrtext CODE >3012:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F5 clrtext CODE >3013:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F6 clrtext CODE >3014:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F7 clrtext CODE >3015:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F8 clrtext CODE >3016:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5F9 clrtext CODE >3017:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5FA clrtext CODE >3018:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
+5FB clrtext CODE >3019:C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -301,66 +351,74 @@ __Hspace_1 7D 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
+ADXL345_init@msg 20 0 BANK0 1 cstackBANK0 dist/default/production\7109-08.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_INTERRUPT_Initialize D36 0 CODE 0 text6 dist/default/production\7109-08.production.o
-__end_of_PIN_MANAGER_IOC D0C 0 CODE 0 text9 dist/default/production\7109-08.production.o
+__end_of_INTERRUPT_Initialize BC8 0 CODE 0 text6 dist/default/production\7109-08.production.o
+__end_of_PIN_MANAGER_IOC B9E 0 CODE 0 text9 dist/default/production\7109-08.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
-__end_of_WDT_Initialize CD2 0 CODE 0 text2 dist/default/production\7109-08.production.o
+__end_of_WDT_Initialize B64 0 CODE 0 text2 dist/default/production\7109-08.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\7109-08.production.o
 _LATC 10E 0 ABS 0 - dist/default/production\7109-08.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\7109-08.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\7109-08.production.o
-___sp 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-_main E9C 0 CODE 0 maintext dist/default/production\7109-08.production.o
+___sp 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+_main DF6 0 CODE 0 maintext dist/default/production\7109-08.production.o
 btemp 7E 0 ABS 0 - dist/default/production\7109-08.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-___stack_lo 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-start 4 0 CODE 0 init C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-__end_of_SPI1_Initialize D20 0 CODE 0 text3 dist/default/production\7109-08.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+___stack_lo 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+start 4 0 CODE 0 init C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+__end_of_SPI1_Initialize BB2 0 CODE 0 text3 dist/default/production\7109-08.production.o
+__end_of_ADXL345_init F0C 0 CODE 0 text15 dist/default/production\7109-08.production.o
 ?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\7109-08.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __end_of_spi1_configuration 1056 0 STRCODE 0 stringtext2 dist/default/production\7109-08.production.o
-_SPI1_Close CC4 0 CODE 0 text15 dist/default/production\7109-08.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
+_SPI1_Close B56 0 CODE 0 text13 dist/default/production\7109-08.production.o
+SPI1_BufferWrite@bufferInput 76 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
 wtemp0 7E 0 ABS 0 - dist/default/production\7109-08.production.o
+SPI1_BufferWrite@bufferInputSize 74 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-_PIN_MANAGER_IOC CFA 0 CODE 0 text9 dist/default/production\7109-08.production.o
+_PIN_MANAGER_IOC B8C 0 CODE 0 text9 dist/default/production\7109-08.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 ___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
-_SPI1_Initialize D0C 0 CODE 0 text3 dist/default/production\7109-08.production.o
+_SPI1_Initialize B9E 0 CODE 0 text3 dist/default/production\7109-08.production.o
 _spi1_configuration 1038 0 STRCODE 0 stringtext2 dist/default/production\7109-08.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\7109-08.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\7109-08.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\7109-08.production.o
-__end_of___wmul E52 0 CODE 0 text14 dist/default/production\7109-08.production.o
-_SW1_InterruptHandler 20 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
+__end_of___wmul D18 0 CODE 0 text19 dist/default/production\7109-08.production.o
+_SW1_InterruptHandler 3A 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_SPI1_Close CCA 0 CODE 0 text15 dist/default/production\7109-08.production.o
+__end_of_SPI1_Close B5C 0 CODE 0 text13 dist/default/production\7109-08.production.o
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
 _SPI1_BufferRead 0 0 ABS 0 - dist/default/production\7109-08.production.o
 _INLVLA 38C 0 ABS 0 - dist/default/production\7109-08.production.o
 _INLVLC 38E 0 ABS 0 - dist/default/production\7109-08.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-___stacklo 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-_SW1_DefaultInterruptHandler DA4 0 CODE 0 text11 dist/default/production\7109-08.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+___stacklo 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+_SW1_DefaultInterruptHandler C6A 0 CODE 0 text11 dist/default/production\7109-08.production.o
 _SPI1_BufferExchange 0 0 ABS 0 - dist/default/production\7109-08.production.o
+memcpy@tmp 77 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 _SPI1_IsRxReady 0 0 ABS 0 - dist/default/production\7109-08.production.o
-_PIN_MANAGER_Initialize E52 0 CODE 0 text4 dist/default/production\7109-08.production.o
+_PIN_MANAGER_Initialize D5C 0 CODE 0 text4 dist/default/production\7109-08.production.o
 start_initialization FE4 0 CODE 0 cinit dist/default/production\7109-08.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\7109-08.production.o
 ADXL345_validation@passed 7A 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
-__end_of_SYSTEM_Initialize DA4 0 CODE 0 text1 dist/default/production\7109-08.production.o
-clear_ram0 D4E 0 CODE 0 clrtext dist/default/production\7109-08.production.o
+__end_of_memcpy DF6 0 CODE 0 text17 dist/default/production\7109-08.production.o
+__end_of_memset C6A 0 CODE 0 text16 dist/default/production\7109-08.production.o
+__end_of_SYSTEM_Initialize C36 0 CODE 0 text1 dist/default/production\7109-08.production.o
+clear_ram0 BE0 0 CODE 0 clrtext dist/default/production\7109-08.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\7109-08.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\7109-08.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-_SPI1_BufferWrite 0 0 ABS 0 - dist/default/production\7109-08.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+_SPI1_BufferWrite D18 0 CODE 0 text20 dist/default/production\7109-08.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -420,6 +478,8 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
+SPI1_BufferWrite@bufferData 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+SPI1_BufferWrite@bufferSize 71 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -457,10 +517,12 @@ __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
 _APFCON0 11D 0 ABS 0 - dist/default/production\7109-08.production.o
-__end_of_SPI1_ByteExchange D4E 0 CODE 0 text16 dist/default/production\7109-08.production.o
+__end_of_SPI1_ByteExchange BE0 0 CODE 0 text14 dist/default/production\7109-08.production.o
 _PORTAbits C 0 ABS 0 - dist/default/production\7109-08.production.o
+memcpy@d1 78 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+memcpy@s1 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\7109-08.production.o
-_INTERRUPT_Initialize D20 0 CODE 0 text6 dist/default/production\7109-08.production.o
+_INTERRUPT_Initialize BB2 0 CODE 0 text6 dist/default/production\7109-08.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
@@ -491,46 +553,61 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
+memcpy@d 79 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+memcpy@n 72 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+memcpy@s 75 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\7109-08.production.o
 __pstringtext2 1038 0 STRCODE 0 stringtext2 dist/default/production\7109-08.production.o
 __pstringtext3 1056 0 STRCODE 0 stringtext3 dist/default/production\7109-08.production.o
-__pnvBANK0 20 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
+__pnvBANK0 3A 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
+memset@dest 76 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 _SSP1CON1 215 0 ABS 0 - dist/default/production\7109-08.production.o
 _SSP1CON3 217 0 ABS 0 - dist/default/production\7109-08.production.o
 _SSP1STAT 214 0 ABS 0 - dist/default/production\7109-08.production.o
-___wmul E14 0 CODE 0 text14 dist/default/production\7109-08.production.o
+memset@c 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+memset@n 72 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+memset@p 75 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+___wmul CDA 0 CODE 0 text19 dist/default/production\7109-08.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _SPI1_ByteRead 0 0 ABS 0 - dist/default/production\7109-08.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 837 0 ABS 0 - -
 __S1 7D 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_CLOCK_Initialize CEA 0 CODE 0 text8 dist/default/production\7109-08.production.o
+_CLOCK_Initialize B7C 0 CODE 0 text8 dist/default/production\7109-08.production.o
 SPI1_Open@spiConfigIndex 76 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
-_SW1_SetInterruptHandler CDE 0 CODE 0 text5 dist/default/production\7109-08.production.o
-_SYSTEM_Initialize D84 0 CODE 0 text1 dist/default/production\7109-08.production.o
-__end_of_SW1_SetInterruptHandler CEA 0 CODE 0 text5 dist/default/production\7109-08.production.o
+_SW1_SetInterruptHandler B70 0 CODE 0 text5 dist/default/production\7109-08.production.o
+_SYSTEM_Initialize C16 0 CODE 0 text1 dist/default/production\7109-08.production.o
+__end_of_SW1_SetInterruptHandler B7C 0 CODE 0 text5 dist/default/production\7109-08.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 4 0 CODE 0 intentry -
 __end_of_ADXL345_init_settings 106E 0 STRCODE 0 stringtext3 dist/default/production\7109-08.production.o
-__end_of_SW1_ISR D84 0 CODE 0 text10 dist/default/production\7109-08.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
+__end_of_SW1_ISR C16 0 CODE 0 text10 dist/default/production\7109-08.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+__end_of_SPI1_BufferWrite D5C 0 CODE 0 text20 dist/default/production\7109-08.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
-_INT_InterruptHandler 22 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
+_INT_InterruptHandler 3C 0 BANK0 1 nvBANK0 dist/default/production\7109-08.production.o
 _IOCAFbits 393 0 ABS 0 - dist/default/production\7109-08.production.o
 _PIE1bits 91 0 ABS 0 - dist/default/production\7109-08.production.o
 _SPI1_Deinitialize 0 0 ABS 0 - dist/default/production\7109-08.production.o
-__end_of_ADXL345_validation E14 0 CODE 0 text12 dist/default/production\7109-08.production.o
+_memcpy DA6 0 CODE 0 text17 dist/default/production\7109-08.production.o
+_memset C36 0 CODE 0 text16 dist/default/production\7109-08.production.o
+__end_of_ADXL345_validation CDA 0 CODE 0 text12 dist/default/production\7109-08.production.o
 _ADXL345_init_settings 1056 0 STRCODE 0 stringtext3 dist/default/production\7109-08.production.o
-__ptext10 D66 0 CODE 0 text10 dist/default/production\7109-08.production.o
-__ptext11 DA4 0 CODE 0 text11 dist/default/production\7109-08.production.o
-__ptext12 DD8 0 CODE 0 text12 dist/default/production\7109-08.production.o
-__ptext13 F0C 0 CODE 0 text13 dist/default/production\7109-08.production.o
-__ptext14 E14 0 CODE 0 text14 dist/default/production\7109-08.production.o
-__ptext15 CC4 0 CODE 0 text15 dist/default/production\7109-08.production.o
-__ptext16 D36 0 CODE 0 text16 dist/default/production\7109-08.production.o
-__end_of_PIN_MANAGER_Initialize E9C 0 CODE 0 text4 dist/default/production\7109-08.production.o
+__ptext10 BF8 0 CODE 0 text10 dist/default/production\7109-08.production.o
+__ptext11 C6A 0 CODE 0 text11 dist/default/production\7109-08.production.o
+__ptext12 C9E 0 CODE 0 text12 dist/default/production\7109-08.production.o
+__ptext13 B56 0 CODE 0 text13 dist/default/production\7109-08.production.o
+__ptext14 BC8 0 CODE 0 text14 dist/default/production\7109-08.production.o
+__ptext15 E6C 0 CODE 0 text15 dist/default/production\7109-08.production.o
+__ptext16 C36 0 CODE 0 text16 dist/default/production\7109-08.production.o
+__ptext17 DA6 0 CODE 0 text17 dist/default/production\7109-08.production.o
+__ptext18 F0C 0 CODE 0 text18 dist/default/production\7109-08.production.o
+__ptext19 CDA 0 CODE 0 text19 dist/default/production\7109-08.production.o
+__ptext20 D18 0 CODE 0 text20 dist/default/production\7109-08.production.o
+__end_of_PIN_MANAGER_Initialize DA6 0 CODE 0 text4 dist/default/production\7109-08.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -553,20 +630,20 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext E9C 0 CODE 0 maintext dist/default/production\7109-08.production.o
+__pmaintext DF6 0 CODE 0 maintext dist/default/production\7109-08.production.o
 __Lbigram 0 0 ABS 0 bigram -
 SPI1_ByteExchange@byteData 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 ___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
-_SPI1_ByteExchange D36 0 CODE 0 text16 dist/default/production\7109-08.production.o
+_SPI1_ByteExchange BC8 0 CODE 0 text14 dist/default/production\7109-08.production.o
 _LATAbits 10C 0 ABS 0 - dist/default/production\7109-08.production.o
 _LATCbits 10E 0 ABS 0 - dist/default/production\7109-08.production.o
-__end_of_CLOCK_Initialize CFA 0 CODE 0 text8 dist/default/production\7109-08.production.o
+__end_of_CLOCK_Initialize B8C 0 CODE 0 text8 dist/default/production\7109-08.production.o
 __end_of_SPI1_Host 1038 0 STRCODE 0 stringtext1 dist/default/production\7109-08.production.o
-__end_of_SPI1_Open FE4 0 CODE 0 text13 dist/default/production\7109-08.production.o
+__end_of_SPI1_Open FE4 0 CODE 0 text18 dist/default/production\7109-08.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\7109-08.production.o
-_ADXL345_validation DD8 0 CODE 0 text12 dist/default/production\7109-08.production.o
+_ADXL345_validation C9E 0 CODE 0 text12 dist/default/production\7109-08.production.o
 __pbssBIGRAM 22F0 0 ABS 0 - dist/default/production\7109-08.production.o
 SW1_SetInterruptHandler@InterruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -574,26 +651,27 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _SPI1_ByteWrite 0 0 ABS 0 - dist/default/production\7109-08.production.o
 _PIR1bits 11 0 ABS 0 - dist/default/production\7109-08.production.o
 __Lend_init 4 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\7109-08.production.o
-_SPI1_Open F0C 0 CODE 0 text13 dist/default/production\7109-08.production.o
+_SPI1_Open F0C 0 CODE 0 text18 dist/default/production\7109-08.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-_INT_SetInterruptHandler CD2 0 CODE 0 text7 dist/default/production\7109-08.production.o
-__end_of_INT_SetInterruptHandler CDE 0 CODE 0 text7 dist/default/production\7109-08.production.o
-__ptext1 D84 0 CODE 0 text1 dist/default/production\7109-08.production.o
-__ptext2 CCA 0 CODE 0 text2 dist/default/production\7109-08.production.o
-__ptext3 D0C 0 CODE 0 text3 dist/default/production\7109-08.production.o
-__ptext4 E52 0 CODE 0 text4 dist/default/production\7109-08.production.o
-__ptext5 CDE 0 CODE 0 text5 dist/default/production\7109-08.production.o
-__ptext6 D20 0 CODE 0 text6 dist/default/production\7109-08.production.o
-__ptext7 CD2 0 CODE 0 text7 dist/default/production\7109-08.production.o
-__ptext8 CEA 0 CODE 0 text8 dist/default/production\7109-08.production.o
-__ptext9 CFA 0 CODE 0 text9 dist/default/production\7109-08.production.o
+_INT_SetInterruptHandler B64 0 CODE 0 text7 dist/default/production\7109-08.production.o
+__end_of_INT_SetInterruptHandler B70 0 CODE 0 text7 dist/default/production\7109-08.production.o
+__ptext1 C16 0 CODE 0 text1 dist/default/production\7109-08.production.o
+__ptext2 B5C 0 CODE 0 text2 dist/default/production\7109-08.production.o
+__ptext3 B9E 0 CODE 0 text3 dist/default/production\7109-08.production.o
+__ptext4 D5C 0 CODE 0 text4 dist/default/production\7109-08.production.o
+__ptext5 B70 0 CODE 0 text5 dist/default/production\7109-08.production.o
+__ptext6 BB2 0 CODE 0 text6 dist/default/production\7109-08.production.o
+__ptext7 B64 0 CODE 0 text7 dist/default/production\7109-08.production.o
+__ptext8 B7C 0 CODE 0 text8 dist/default/production\7109-08.production.o
+__ptext9 B8C 0 CODE 0 text9 dist/default/production\7109-08.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
@@ -601,11 +679,11 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __Hstringtext3 0 0 ABS 0 stringtext3 -
-___heap_hi 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-___heap_lo 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
+___heap_hi 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+___heap_lo 0 0 ABS 0 - C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\7109-08.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__end_of_SW1_DefaultInterruptHandler DD8 0 CODE 0 text11 dist/default/production\7109-08.production.o
+__end_of_SW1_DefaultInterruptHandler C9E 0 CODE 0 text11 dist/default/production\7109-08.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 _SSP1CON1bits 215 0 ABS 0 - dist/default/production\7109-08.production.o
 INT_SetInterruptHandler@InterruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
@@ -613,23 +691,24 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.produ
 _SSP1ADD 212 0 ABS 0 - dist/default/production\7109-08.production.o
 _SSP1BUF 211 0 ABS 0 - dist/default/production\7109-08.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_main F0C 0 CODE 0 maintext dist/default/production\7109-08.production.o
+__end_of_main E6C 0 CODE 0 maintext dist/default/production\7109-08.production.o
 _SPI1_IsTxReady 0 0 ABS 0 - dist/default/production\7109-08.production.o
 SPI1_Open@returnValue 79 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
+_ADXL345_init E6C 0 CODE 0 text15 dist/default/production\7109-08.production.o
 _IOCAF 393 0 ABS 0 - dist/default/production\7109-08.production.o
 _IOCAN 392 0 ABS 0 - dist/default/production\7109-08.production.o
 _IOCAP 391 0 ABS 0 - dist/default/production\7109-08.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\7109-08.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\7109-08.production.o
-_SW1_ISR D66 0 CODE 0 text10 dist/default/production\7109-08.production.o
+_SW1_ISR BF8 0 CODE 0 text10 dist/default/production\7109-08.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_WDT_Initialize CCA 0 CODE 0 text2 dist/default/production\7109-08.production.o
+_WDT_Initialize B5C 0 CODE 0 text2 dist/default/production\7109-08.production.o
 __initialization FE4 0 CODE 0 cinit dist/default/production\7109-08.production.o
 ___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\7109-08.production.o
 _dataBuffer 22F0 0 ABS 1 - dist/default/production\7109-08.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\Austin\AppData\Local\Temp\xcAs1tig.\driver_tmp_15.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -661,28 +740,32 @@ _dataBuffer 1 22F0 0
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F2 FE4 E 2
-text1 0 6C2 D84 10 2
-text2 0 665 CCA 4 2
-text3 0 686 D0C A 2
-text4 0 729 E52 25 2
-text5 0 66F CDE 6 2
-text6 0 690 D20 B 2
-text7 0 669 CD2 6 2
-text8 0 675 CEA 8 2
-text9 0 67D CFA 9 2
-text10 0 6B3 D66 F 2
-text11 0 6D2 DA4 1A 2
-text12 0 6EC DD8 1E 2
-text13 0 786 F0C 6C 2
-text14 0 70A E14 1F 2
-text15 0 662 CC4 3 2
-text16 0 69B D36 C 2
-nvBANK0 1 20 20 4 1
-maintext 0 74E E9C 38 2
+text1 0 60B C16 10 2
+text2 0 5AE B5C 4 2
+text3 0 5CF B9E A 2
+text4 0 6AE D5C 25 2
+text5 0 5B8 B70 6 2
+text6 0 5D9 BB2 B 2
+text7 0 5B2 B64 6 2
+text8 0 5BE B7C 8 2
+text9 0 5C6 B8C 9 2
+text10 0 5FC BF8 F 2
+text11 0 635 C6A 1A 2
+text12 0 64F C9E 1E 2
+text13 0 5AB B56 3 2
+text14 0 5E4 BC8 C 2
+text15 0 736 E6C 50 2
+text16 0 61B C36 1A 2
+text17 0 6D3 DA6 28 2
+text18 0 786 F0C 6C 2
+text19 0 66D CDA 1F 2
+text20 0 68C D18 22 2
+maintext 0 6FB DF6 3B 2
 cstackCOMMON 1 70 70 D 1
+cstackBANK0 1 20 20 1E 1
 stringtext1 0 800 1000 37 2
 reset_vec 0 0 0 4 2
-clrtext 0 6A7 D4E C 2
+clrtext 0 5F0 BE0 C 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

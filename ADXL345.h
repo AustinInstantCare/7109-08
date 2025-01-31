@@ -70,7 +70,7 @@ struct Message {
 };
 
 bool ADXL345_validation(void);
-void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data);
+bool ADXL345_init(void);
 
 #endif	/* ADXL345_H */
 

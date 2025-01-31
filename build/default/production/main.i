@@ -4438,7 +4438,7 @@ struct Message {
 };
 
 _Bool ADXL345_validation(void);
-void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data);
+_Bool ADXL345_init(void);
 # 36 "main.c" 2
 
 
@@ -4465,7 +4465,9 @@ int main(void)
         _delay((unsigned long)((250)*(4000000/4000.0)));
         do { LATAbits.LATA5 = 0; } while(0);
     }
-# 79 "main.c"
+
+    ADXL345_init();
+
     while(1)
     {
         PIN_MANAGER_IOC();

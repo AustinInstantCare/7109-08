@@ -580,54 +580,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46
 [; ;ADXL345.c: 46:     memcpy(msg.data, ADXL345_init_settings, sizeof(ADXL345_init_settings));
 [e ( _memcpy (3 , , -> &U . _msg 1 `*v -> &U _ADXL345_init_settings `*Cv -> # _ADXL345_init_settings `ui ]
-"48
-[; ;ADXL345.c: 48:     do { LATCbits.LATC4 = 0; } while(0);
+"47
+[; ;ADXL345.c: 47:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 347 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 346 ]
-"49
-[; ;ADXL345.c: 49:     SPI1_BufferWrite(&msg, sizeof(ADXL345_init_settings) + 1);
+"48
+[; ;ADXL345.c: 48:     SPI1_BufferWrite(&msg, sizeof(ADXL345_init_settings) + 1);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v + -> # _ADXL345_init_settings `ui -> -> 1 `i `ui ]
-"50
-[; ;ADXL345.c: 50:     do { LATCbits.LATC4 = 1; } while(0);
+"49
+[; ;ADXL345.c: 49:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 350 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 349 ]
-"52
-[; ;ADXL345.c: 52:     msg.registerAddr = 0x31;
+"51
+[; ;ADXL345.c: 51:     msg.registerAddr = 0x31;
 [e = . _msg 0 -> -> 49 `i `uc ]
-"53
-[; ;ADXL345.c: 53:     memset(msg.data, 0, sizeof(msg.data));
+"52
+[; ;ADXL345.c: 52:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"54
-[; ;ADXL345.c: 54:     msg.data[0] = 0x0B;
+"53
+[; ;ADXL345.c: 53:     msg.data[0] = 0x0B;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 11 `i `uc ]
-"56
-[; ;ADXL345.c: 56:     do { LATCbits.LATC4 = 0; } while(0);
+"54
+[; ;ADXL345.c: 54:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 353 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 352 ]
-"57
-[; ;ADXL345.c: 57:     SPI1_BufferWrite(&msg, 2);
+"55
+[; ;ADXL345.c: 55:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"58
-[; ;ADXL345.c: 58:     do { LATCbits.LATC4 = 1; } while(0);
+"56
+[; ;ADXL345.c: 56:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 356 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 355 ]
-"59
-[; ;ADXL345.c: 59:     return 1;
+"58
+[; ;ADXL345.c: 58:     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 343  ]
-"60
-[; ;ADXL345.c: 60: }
+"59
+[; ;ADXL345.c: 59: }
 [e :UE 343 ]
 }

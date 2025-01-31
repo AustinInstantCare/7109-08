@@ -11,6 +11,8 @@ MSSP_DEFAULT 2
 ]
 "25
 [v _ADXL345_validation ADXL345_validation `(a  1 e 1 0 ]
+"38
+[v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.4v  1 e 2 0 ]
 "3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
@@ -249,7 +251,7 @@ MSSP_DEFAULT 2
 "44 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"86
+"71
 } 0
 "39 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -315,6 +317,57 @@ MSSP_DEFAULT 2
 [v ADXL345_validation@passed passed `a  1 a 1 10 ]
 "36
 } 0
+"103 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+{
+"106
+} 0
+"161
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+{
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 0 ]
+"170
+} 0
+"38 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\ADXL345.c
+[v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
+{
+[s S664 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"43
+[v ADXL345_init@msg msg `S664  1 a 26 0 ]
+"59
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memset.c
+[v _memset memset `(*.4v  1 e 2 0 ]
+{
+[v memset@dest dest `*.4v  1 a 1 wreg ]
+"5
+[v memset@p p `*.4uc  1 a 1 5 ]
+"3
+[v memset@dest dest `*.4v  1 a 1 wreg ]
+[v memset@c c `i  1 p 2 0 ]
+[v memset@n n `ui  1 p 2 2 ]
+"5
+[v memset@dest dest `*.4v  1 a 1 6 ]
+"10
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.4v  1 e 2 0 ]
+{
+[v memcpy@d1 d1 `*.4v  1 a 1 wreg ]
+"8
+[v memcpy@s s `*.25DCuc  1 a 2 5 ]
+"7
+[v memcpy@d d `*.4uc  1 a 1 9 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 7 ]
+"4
+[v memcpy@d1 d1 `*.4v  1 a 1 wreg ]
+[v memcpy@s1 s1 `*.25DCv  1 p 2 0 ]
+[v memcpy@n n `ui  1 p 2 2 ]
+"11
+[v memcpy@d1 d1 `*.4v  1 a 1 8 ]
+"18
+} 0
 "82 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
 {
@@ -334,14 +387,15 @@ MSSP_DEFAULT 2
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"103 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
-[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"126 C:\Users\Austin\Documents\Instant_Care\Lifeline\7109-08\mcc_generated_files/spi/src/mssp.c
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
 {
-"106
-} 0
-"161
-[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
-{
-[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 0 ]
-"170
+"129
+[v SPI1_BufferWrite@bufferInputSize bufferInputSize `ui  1 a 2 4 ]
+"128
+[v SPI1_BufferWrite@bufferInput bufferInput `*.4uc  1 a 1 6 ]
+"126
+[v SPI1_BufferWrite@bufferData bufferData `*.4v  1 p 1 0 ]
+[v SPI1_BufferWrite@bufferSize bufferSize `ui  1 p 2 1 ]
+"141
 } 0

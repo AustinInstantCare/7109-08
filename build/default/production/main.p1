@@ -35,6 +35,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v2.45\pic\include\builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
 [p i __delay ]
+"73 ./ADXL345.h
+[; ;./ADXL345.h: 73: _Bool ADXL345_init(void);
+[v _ADXL345_init `(a ~T0 @X0 0 ef ]
 "276 ./mcc_generated_files/system/../system/pins.h
 [; ;./mcc_generated_files/system/../system/pins.h: 276: void PIN_MANAGER_IOC(void);
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
@@ -567,28 +570,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 60:     }
 }
 [e :U 348 ]
-"79
-[; ;main.c: 79:     while(1)
+"62
+[; ;main.c: 62:     ADXL345_init();
+[e ( _ADXL345_init ..  ]
+"64
+[; ;main.c: 64:     while(1)
 [e :U 356 ]
-"80
-[; ;main.c: 80:     {
+"65
+[; ;main.c: 65:     {
 {
-"81
-[; ;main.c: 81:         PIN_MANAGER_IOC();
+"66
+[; ;main.c: 66:         PIN_MANAGER_IOC();
 [e ( _PIN_MANAGER_IOC ..  ]
-"83
-[; ;main.c: 83:         __asm("sleep");
+"68
+[; ;main.c: 68:         __asm("sleep");
 [; <" sleep ;# ">
-"84
-[; ;main.c: 84:         __nop();
+"69
+[; ;main.c: 69:         __nop();
 [e ( ___nop ..  ]
-"85
-[; ;main.c: 85:     }
+"70
+[; ;main.c: 70:     }
 }
 [e :U 355 ]
 [e $U 356  ]
 [e :U 357 ]
-"86
-[; ;main.c: 86: }
+"71
+[; ;main.c: 71: }
 [e :UE 334 ]
 }
