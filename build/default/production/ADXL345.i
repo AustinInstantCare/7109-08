@@ -4463,6 +4463,10 @@ const uint8_t ADXL345_init_settings[12] = {
  0x00
 };
 
+const uint8_t fall_init[4] = {0x18, 0x03, 0xFF, 0x7F};
+const uint8_t impact_init[4] = {0x30, 0x03, 0x01, 0x7F};
+const uint8_t no_motion_init[4] = {0x08, 0x03, 0x02, 0xFF};
+
 _Bool ADXL345_validation(void) {
     _Bool passed = 0;
     if (SPI1_Open(ADXL345)) {
@@ -4495,6 +4499,57 @@ _Bool ADXL345_init(void) {
     do { LATCbits.LATC4 = 0; } while(0);
     SPI1_BufferWrite(&msg, 2);
     do { LATCbits.LATC4 = 1; } while(0);
+
+    SPI1_Close();
+    return 1;
+}
+
+_Bool SetupForFreefall(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return 0;
+    }
+
+
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_ByteExchange(0x30);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
+
+
+
+
+
+    struct Message msg;
+    msg.registerAddr = 0x24;
+    memset(msg.data, 0, sizeof(msg.data));
+    memcpy(msg.data, fall_init, sizeof(fall_init));
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(&msg, sizeof(fall_init) + 1);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
+    msg.registerAddr = 0x2C;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x17;
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(&msg, 2);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
+    msg.registerAddr = 0x2E;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x10;
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(&msg, 2);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_ByteExchange(0x30);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
 
     return 1;
 }

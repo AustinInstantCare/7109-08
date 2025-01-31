@@ -22,6 +22,10 @@ const uint8_t ADXL345_init_settings[12] = {
 	0x00	// all interrupts are handled by INT1 pin
 };
 
+const uint8_t fall_init[4] = {0x18, 0x03, 0xFF, 0x7F};
+const uint8_t impact_init[4] = {0x30, 0x03, 0x01, 0x7F};
+const uint8_t no_motion_init[4] = {0x08, 0x03, 0x02, 0xFF};
+
 bool ADXL345_validation(void) {
     bool passed = false;
     if (SPI1_Open(ADXL345)) {
@@ -54,6 +58,57 @@ bool ADXL345_init(void) {
     CS_ACC_SetLow();
     SPI1_BufferWrite(&msg, 2);
     CS_ACC_SetHigh();
+    
+    SPI1_Close();
+    return true;
+}
+
+bool SetupForFreefall(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return false;
+    }
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    /* Setup free fall parameters
+     * Addr: 0x24 (Activity Threshold) = 1.5 g
+     * Addr: 0x25 (Inactivity Threshold) = 0.1875 g
+     * Addr: 0x26 (Inactivity Time) = 1 sec
+     * Addr: 0x27 (Axis enable control) = 0b01111111
+     */
+    struct Message msg;
+    msg.registerAddr = THRESH_ACT;
+    memset(msg.data, 0, sizeof(msg.data));
+    memcpy(msg.data, fall_init, sizeof(fall_init));
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, sizeof(fall_init) + 1);
+    CS_ACC_SetHigh();
+    
+    // Low power enabled & data rate of 12.5 Hz
+    msg.registerAddr = BW_RATE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x17;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Set interrupt to trigger on Activity
+    msg.registerAddr = INT_ENABLE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x10;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    //Motion_State = Waiting_For_Freefall;
     
     return true;
 }
