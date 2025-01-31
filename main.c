@@ -33,72 +33,31 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
+#include "ADXL345.h"
 
 /*
     Main application
 */
+
+uint8_t dataBuffer[256] = {0};
 
 int main(void)
 {
     SYSTEM_Initialize();
     SPI1_Initialize();
     
-    if (SPI1_Open(ADXL345)) {
-        GRN_LED_SetHigh();
-        __delay_ms(250);
-        GRN_LED_SetLow();
-    } else {
-        RED_LED_SetHigh();
-        __delay_ms(250);
-        RED_LED_SetLow();
-    }
-    
-    CLRWDT();
-    __delay_ms(250);
-    CLRWDT();
-    
-    CS_ACC_SetLow();
-    if (SPI1_ByteExchange(0x00) == 0xE5) {
-        GRN_LED_SetHigh();
-        __delay_ms(250);
-        GRN_LED_SetLow();
-    } else {
-        RED_LED_SetHigh();
-        __delay_ms(250);
-        RED_LED_SetLow();
-    }
     CS_ACC_SetHigh();
-    
-    SPI1_Close();
-    CLRWDT();
-    __delay_ms(250);
-    CLRWDT();
-    
-    if (SPI1_Open(SI4055)) {
-        GRN_LED_SetHigh();
-        __delay_ms(250);
-        GRN_LED_SetLow();
-    } else {
-        RED_LED_SetHigh();
-        __delay_ms(250);
-        RED_LED_SetLow();
-    }
-    
-    CLRWDT();
-    __delay_ms(250);
-    CLRWDT();
-    
-    CS_RF_SetLow();
-    if (SPI1_ByteExchange(0x01) != 0x00) {
-        GRN_LED_SetHigh();
-        __delay_ms(250);
-        GRN_LED_SetLow();
-    } else {
-        RED_LED_SetHigh();
-        __delay_ms(250);
-        RED_LED_SetLow();
-    }
     CS_RF_SetHigh();
+    
+    if (ADXL345_validation()) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
     
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
     // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts 
@@ -121,7 +80,7 @@ int main(void)
     {           
         PIN_MANAGER_IOC();
         
-        NOP();
         SLEEP();
+        NOP();
     }    
 }

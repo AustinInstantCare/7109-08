@@ -1,11 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"56 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 56: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"127 ./mcc_generated_files/system/../spi/mssp.h
-[; ;./mcc_generated_files/system/../spi/mssp.h: 127: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
+"145 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 145: _Bool SPI1_Open(uint8_t spiConfigIndex);
+[v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
+"33 ADXL345.c
+[; ;ADXL345.c: 33:     if (SPI1_Open(ADXL345)) {
+[c E2437 0 1 2 .. ]
+[n E2437 . ADXL345 SI4055 MSSP_DEFAULT  ]
 "1996 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1996:     struct {
 [s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -17,30 +17,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2005
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2005: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS107 ~T0 @X0 0 e@270 ]
-"67 ./ADXL345.h
-[; ;./ADXL345.h: 67: _Bool ADXL345_validation(void);
-[v _ADXL345_validation `(a ~T0 @X0 0 ef ]
-"1951 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
-[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S106 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"1950
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1950: typedef union {
-[u S105 `S106 1 ]
-[n S105 . . ]
-"1960
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
-"276 ./mcc_generated_files/system/../system/pins.h
-[; ;./mcc_generated_files/system/../system/pins.h: 276: void PIN_MANAGER_IOC(void);
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
+"188 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 188: uint8_t SPI1_ByteExchange(uint8_t byteData);
+[v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
+"153
+[; ;./mcc_generated_files/system/../spi/mssp.h: 153: void SPI1_Close(void);
+[v _SPI1_Close `(v ~T0 @X0 0 ef ]
+"171
+[; ;./mcc_generated_files/system/../spi/mssp.h: 171: void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
+[v _SPI1_BufferWrite `(v ~T0 @X0 0 ef2`*v`ui ]
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
+"162 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 162: void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
+[v _SPI1_BufferExchange `(v ~T0 @X0 0 ef2`*v`ui ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -482,113 +473,188 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 6239: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"42 main.c
-[; ;main.c: 42: uint8_t dataBuffer[256] = {0};
-[v _dataBuffer `uc ~T0 @X0 -> 256 `i e ]
-[i _dataBuffer
+"10 ADXL345.c
+[; ;ADXL345.c: 10: const uint8_t ADXL345_init_settings[13] = {
+[v _ADXL345_init_settings `Cuc ~T0 @X0 -> 13 `i e ]
+[i _ADXL345_init_settings
 :U ..
+-> -> 36 `i `uc
+-> -> 24 `i `uc
+-> -> 3 `i `uc
+-> -> 255 `i `uc
+-> -> 127 `i `uc
+-> -> 7 `i `uc
+-> -> 24 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 23 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
 -> -> 0 `i `uc
 ..
 ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"44
-[; ;main.c: 44: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
-"45
-[; ;main.c: 45: {
+"26
+[; ;ADXL345.c: 26: const uint8_t ADXL345_data_format[2] = {
+[v _ADXL345_data_format `Cuc ~T0 @X0 -> 2 `i e ]
+[i _ADXL345_data_format
+:U ..
+-> -> 49 `i `uc
+-> -> 11 `i `uc
+..
+]
+"31
+[; ;ADXL345.c: 31: _Bool ADXL345_validation(void) {
+[v _ADXL345_validation `(a ~T0 @X0 1 ef ]
 {
-[e :U _main ]
+[e :U _ADXL345_validation ]
 [f ]
-"46
-[; ;main.c: 46:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"47
-[; ;main.c: 47:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"49
-[; ;main.c: 49:     do { LATCbits.LATC4 = 1; } while(0);
+"32
+[; ;ADXL345.c: 32:     _Bool passed = 0;
+[v _passed `a ~T0 @X0 1 a ]
+[e = _passed -> -> 0 `i `a ]
+"33
+[; ;ADXL345.c: 33:     if (SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2437 0 `uc `i -> 0 `i 333  ]
+{
+"34
+[; ;ADXL345.c: 34:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 336 ]
+{
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+}
 [e :U 335 ]
+"35
+[; ;ADXL345.c: 35:         if (SPI1_ByteExchange(0x00) == 0xE5) {
+[e $ ! == -> ( _SPI1_ByteExchange (1 -> -> 0 `i `uc `i -> 229 `i 337  ]
+{
+"36
+[; ;ADXL345.c: 36:             passed = 1;
+[e = _passed -> -> 1 `i `a ]
+"37
+[; ;ADXL345.c: 37:         }
+}
+[e :U 337 ]
+"38
+[; ;ADXL345.c: 38:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 340 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 334 ]
-"50
-[; ;main.c: 50:     do { LATCbits.LATC3 = 1; } while(0);
-[e :U 338 ]
-{
-[e = . . _LATCbits 0 3 -> -> 1 `i `uc ]
+[e :U 339 ]
+"39
+[; ;ADXL345.c: 39:     }
 }
-[e :U 337 ]
-"52
-[; ;main.c: 52:     if (ADXL345_validation()) {
-[e $ ! != -> ( _ADXL345_validation ..  `i -> 0 `i 339  ]
+[e :U 333 ]
+"40
+[; ;ADXL345.c: 40:     SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"41
+[; ;ADXL345.c: 41:     return passed;
+[e ) _passed ]
+[e $UE 332  ]
+"42
+[; ;ADXL345.c: 42: }
+[e :UE 332 ]
+}
+"44
+[; ;ADXL345.c: 44: _Bool ADXL345_init(void) {
+[v _ADXL345_init `(a ~T0 @X0 1 ef ]
 {
-"53
-[; ;main.c: 53:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U _ADXL345_init ]
+[f ]
+"45
+[; ;ADXL345.c: 45:     if (!SPI1_Open(ADXL345)) {
+[e $ ! ! != -> ( _SPI1_Open (1 -> . `E2437 0 `uc `i -> 0 `i 342  ]
+{
+"46
+[; ;ADXL345.c: 46:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 341  ]
+"47
+[; ;ADXL345.c: 47:     }
+}
 [e :U 342 ]
-{
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 341 ]
-"54
-[; ;main.c: 54:         _delay((unsigned long)((250)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"55
-[; ;main.c: 55:         do { LATAbits.LATA4 = 0; } while(0);
+"48
+[; ;ADXL345.c: 48:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 345 ]
 {
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 344 ]
-"56
-[; ;main.c: 56:     } else {
-}
-[e $U 346  ]
-[e :U 339 ]
-{
-"57
-[; ;main.c: 57:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 349 ]
-{
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-}
+"49
+[; ;ADXL345.c: 49:     SPI1_BufferWrite(ADXL345_init_settings, sizeof(ADXL345_init_settings));
+[e ( _SPI1_BufferWrite (2 , -> &U _ADXL345_init_settings `*v -> # _ADXL345_init_settings `ui ]
+"50
+[; ;ADXL345.c: 50:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 348 ]
-"58
-[; ;main.c: 58:         _delay((unsigned long)((250)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"59
-[; ;main.c: 59:         do { LATAbits.LATA5 = 0; } while(0);
-[e :U 352 ]
 {
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 351 ]
-"60
-[; ;main.c: 60:     }
-}
-[e :U 346 ]
-"79
-[; ;main.c: 79:     while(1)
-[e :U 354 ]
-"80
-[; ;main.c: 80:     {
-{
-"81
-[; ;main.c: 81:         PIN_MANAGER_IOC();
-[e ( _PIN_MANAGER_IOC ..  ]
-"83
-[; ;main.c: 83:         __asm("sleep");
-[; <" sleep ;# ">
-"84
-[; ;main.c: 84:         __nop();
+[e :U 347 ]
+"51
+[; ;ADXL345.c: 51:     __nop();
 [e ( ___nop ..  ]
-"85
-[; ;main.c: 85:     }
+"52
+[; ;ADXL345.c: 52:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 351 ]
+{
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 350 ]
+"53
+[; ;ADXL345.c: 53:     SPI1_BufferWrite(ADXL345_data_format, sizeof(ADXL345_data_format));
+[e ( _SPI1_BufferWrite (2 , -> &U _ADXL345_data_format `*v -> # _ADXL345_data_format `ui ]
+"54
+[; ;ADXL345.c: 54:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 354 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 353 ]
-[e $U 354  ]
-[e :U 355 ]
-"86
-[; ;main.c: 86: }
-[e :UE 332 ]
+"55
+[; ;ADXL345.c: 55:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 341  ]
+"56
+[; ;ADXL345.c: 56: }
+[e :UE 341 ]
+}
+"58
+[; ;ADXL345.c: 58: void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data) {
+[v _ADXL345_write `(v ~T0 @X0 1 ef3`uc`ui`*uc ]
+{
+[e :U _ADXL345_write ]
+[v _registerAddr `uc ~T0 @X0 1 r1 ]
+[v _buffer_size `ui ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[f ]
+"59
+[; ;ADXL345.c: 59:     data[0] = registerAddr;
+[e = *U + _data * -> -> 0 `i `x -> -> # *U _data `i `x _registerAddr ]
+"61
+[; ;ADXL345.c: 61:     SPI1_Open(ADXL345);
+[e ( _SPI1_Open (1 -> . `E2437 0 `uc ]
+"62
+[; ;ADXL345.c: 62:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 358 ]
+{
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 357 ]
+"63
+[; ;ADXL345.c: 63:     SPI1_BufferExchange(data, buffer_size);
+[e ( _SPI1_BufferExchange (2 , -> _data `*v _buffer_size ]
+"64
+[; ;ADXL345.c: 64:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 361 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 360 ]
+"65
+[; ;ADXL345.c: 65:     SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"66
+[; ;ADXL345.c: 66: }
+[e :UE 355 ]
 }

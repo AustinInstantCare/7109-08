@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "ADXL345.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,8 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 35 "main.c"
+# 1 "ADXL345.c" 2
+
+
+
+
+
+
+
+# 1 "./ADXL345.h" 1
+# 34 "./ADXL345.h"
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -4359,42 +4367,66 @@ void INT_DefaultInterruptHandler(void);
 # 47 "./mcc_generated_files/system/system.h" 2
 # 56 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
-# 36 "main.c" 2
-# 1 "./ADXL345.h" 1
+# 35 "./ADXL345.h" 2
 # 67 "./ADXL345.h"
 _Bool ADXL345_validation(void);
 void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data);
-# 37 "main.c" 2
+# 9 "ADXL345.c" 2
 
+const uint8_t ADXL345_init_settings[13] = {
+    0x24,
+ 0x18,
+ 0x03,
+ 0xFF,
+ 0x7F,
+ 0x07,
+ 0x18,
+ 0x00,
+ 0x00,
+ 0x17,
+ 0x08,
+ 0x04,
+ 0x00
+};
 
+const uint8_t ADXL345_data_format[2] = {
+    0x31,
+    0x0B
+};
 
+_Bool ADXL345_validation(void) {
+    _Bool passed = 0;
+    if (SPI1_Open(ADXL345)) {
+        do { LATCbits.LATC4 = 0; } while(0);
+        if (SPI1_ByteExchange(0x00) == 0xE5) {
+            passed = 1;
+        }
+        do { LATCbits.LATC4 = 1; } while(0);
+    }
+    SPI1_Close();
+    return passed;
+}
 
-
-uint8_t dataBuffer[256] = {0};
-
-int main(void)
-{
-    SYSTEM_Initialize();
-    SPI1_Initialize();
-
+_Bool ADXL345_init(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return 0;
+    }
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(ADXL345_init_settings, sizeof(ADXL345_init_settings));
     do { LATCbits.LATC4 = 1; } while(0);
-    do { LATCbits.LATC3 = 1; } while(0);
+    __nop();
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(ADXL345_data_format, sizeof(ADXL345_data_format));
+    do { LATCbits.LATC4 = 1; } while(0);
+    return 1;
+}
 
-    if (ADXL345_validation()) {
-        do { LATAbits.LATA4 = 1; } while(0);
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        do { LATAbits.LATA4 = 0; } while(0);
-    } else {
-        do { LATAbits.LATA5 = 1; } while(0);
-        _delay((unsigned long)((250)*(4000000/4000.0)));
-        do { LATAbits.LATA5 = 0; } while(0);
-    }
-# 79 "main.c"
-    while(1)
-    {
-        PIN_MANAGER_IOC();
+void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data) {
+    data[0] = registerAddr;
 
-        __asm("sleep");
-        __nop();
-    }
+    SPI1_Open(ADXL345);
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferExchange(data, buffer_size);
+    do { LATCbits.LATC4 = 1; } while(0);
+    SPI1_Close();
 }
