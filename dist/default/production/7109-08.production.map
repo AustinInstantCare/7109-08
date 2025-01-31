@@ -1,16 +1,16 @@
-Microchip MPLAB XC8 Compiler V3.00
+Microchip MPLAB XC8 Compiler V2.45
 
 Linker command line:
 
 -W-3 \
-  --edf=C:\Program Files\Microchip\xc8\v3.00\pic\dat\20241204225717_en.msgs \
-  -cn -h+dist/default/production\7109-08-refactor.X.production.sym \
-  --cmf=dist/default/production\7109-08-refactor.X.production.cmf -z \
-  -Q16LF1825 -oC:\Users\User\AppData\Local\Temp\xcAsges.\driver_tmp_3.o \
+  --edf=C:/Users/Austin/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\dat\20230907200743_en.msgs \
+  -cn -h+dist/default/production\7109-08.production.sym \
+  --cmf=dist/default/production\7109-08.production.cmf -z -Q16LF1825 \
+  -oC:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
-  -Mdist/default/production/7109-08-refactor.X.production.map \
-  --md=C:\Users\User\AppData\Local\Temp\xcAsges.\driver_tmp_0.dat -E1 \
-  -ver=XC8 Compiler -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -Mdist/default/production/7109-08.production.map \
+  --md=C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_0.dat -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
   -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh -ABANK4=0220h-026Fh \
@@ -32,10 +32,10 @@ Linker command line:
   -ASFR31=0F80h-0FEFh -ACONFIG=08007h-08008h -DCONFIG=2 \
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE \
+  -DENTRY=2 -preset_vec=00h,intentry,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\User\AppData\Local\Temp\xcAsges.\driver_tmp_15.o \
-  dist/default/production\7109-08-refactor.X.production.o 
+  C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o \
+  dist/default/production\7109-08.production.o 
 
 Object code version is 3.11
 
@@ -44,11 +44,11 @@ Machine type is 16LF1825
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\xcAsges.\driver_tmp_15.o
+C:\Users\Austin\AppData\Local\Temp\xcAscro.\driver_tmp_15.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
-dist/default/production\7109-08-refactor.X.production.o
+dist/default/production\7109-08.production.o
                 cinit                               7F2      7F2        E      FE4       0
                 config                             8007     8007        2        0       4
                 text16                              69B      69B        C      D36       0
@@ -71,8 +71,7 @@ dist/default/production\7109-08-refactor.X.production.o
                 cstackCOMMON                         70       70        D       70       1
                 clrtext                             6A7      6A7        C      D4E       0
                 nvBANK0                              20       20        4       20       1
-                stringtext4                         838      838        2     1000       0
-                stringtext3                         82B      82B        D     1000       0
+                stringtext3                         82B      82B        C     1000       0
                 stringtext2                         81C      81C        F     1000       0
                 stringtext1                         800      800       1C     1000       0
 
@@ -101,8 +100,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 clrtext                             6A7      6A7        C         0
 
         CLASS   STRCODE        
-                stringtext4                         838      838        2         0
-                stringtext3                         82B      82B        D         0
+                stringtext3                         82B      82B        C         0
                 stringtext2                         81C      81C        F         0
                 stringtext1                         800      800       1C         0
 
@@ -293,7 +291,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 maintext                       00074E  000038  000786       E9C       0  CODE        2
                 text13                         000786  00006C  0007F2       F0C       0  CODE        2
                 cinit                          0007F2  00000E  000800       FE4       0  CODE        2
-                stringtext1                    000800  00003A  00083A      1000       0  STRCODE     2
+                stringtext1                    000800  000037  000837      1000       0  STRCODE     2
 
 
 UNUSED ADDRESS RANGES
@@ -311,13 +309,13 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004BF              20           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00004-00661             65E           2
-                         0083A-01FFF             800
+                         00837-01FFF             800
         COMMON           0007D-0007D               1           1
         CONST            00004-00661             100           2
-                         0083A-01FFF             100
+                         00837-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00004-00661             100           2
-                         0083A-01FFF             100
+                         00837-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              00024-0006F              4C           1
                          000A0-000EF              50
@@ -362,9 +360,9 @@ UNUSED ADDRESS RANGES
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
         STRCODE          00004-00661             65E           2
-                         0083A-01FFF            17C6
+                         00837-01FFF            17C9
         STRING           00004-00661             100           2
-                         0083A-01FFF             100
+                         00837-01FFF             100
 
                                   Symbol Table
 
@@ -375,7 +373,6 @@ SPI1_ByteExchange@byteData               cstackCOMMON 00070
 SPI1_Open@returnValue                    cstackCOMMON 00079
 SPI1_Open@spiConfigIndex                 cstackCOMMON 00076
 SW1_SetInterruptHandler@InterruptHandler cstackCOMMON 00070
-_ADXL345_data_format                     stringtext4  00838
 _ADXL345_init_settings                   stringtext3  0082B
 _ADXL345_validation                      text12       006EC
 _ANSELA                                  (abs)        0018C
@@ -519,8 +516,7 @@ __Hsfr6                                  sfr6         00000
 __Hsfr7                                  sfr7         00000
 __Hsfr8                                  sfr8         00000
 __Hsfr9                                  sfr9         00000
-__Hsivt                                  sivt         00002
-__Hspace_0                               (abs)        0083A
+__Hspace_0                               (abs)        00837
 __Hspace_1                               (abs)        0007D
 __Hspace_2                               (abs)        00000
 __Hspace_3                               (abs)        00000
@@ -530,7 +526,6 @@ __Hstrings                               strings      00000
 __Hstringtext1                           stringtext1  00000
 __Hstringtext2                           stringtext2  00000
 __Hstringtext3                           stringtext3  00000
-__Hstringtext4                           stringtext4  00000
 __Htext                                  text         00000
 __L__absolute__                          __absolute__ 00000
 __Labs1                                  abs1         00000
@@ -616,7 +611,6 @@ __Lsfr6                                  sfr6         00000
 __Lsfr7                                  sfr7         00000
 __Lsfr8                                  sfr8         00000
 __Lsfr9                                  sfr9         00000
-__Lsivt                                  sivt         00002
 __Lspace_0                               (abs)        00000
 __Lspace_1                               (abs)        00000
 __Lspace_2                               (abs)        00000
@@ -627,9 +621,8 @@ __Lstrings                               strings      00000
 __Lstringtext1                           stringtext1  00000
 __Lstringtext2                           stringtext2  00000
 __Lstringtext3                           stringtext3  00000
-__Lstringtext4                           stringtext4  00000
 __Ltext                                  text         00000
-__S0                                     (abs)        0083A
+__S0                                     (abs)        00837
 __S1                                     (abs)        0007D
 __S3                                     (abs)        00000
 ___heap_hi                               (abs)        00000
@@ -647,8 +640,7 @@ ___wmul                                  text14       0070A
 ___wmul@multiplicand                     cstackCOMMON 00072
 ___wmul@multiplier                       cstackCOMMON 00070
 ___wmul@product                          cstackCOMMON 00074
-__end_of_ADXL345_data_format             stringtext4  0083A
-__end_of_ADXL345_init_settings           stringtext3  00838
+__end_of_ADXL345_init_settings           stringtext3  00837
 __end_of_ADXL345_validation              text12       0070A
 __end_of_CLOCK_Initialize                text8        0067D
 __end_of_INTERRUPT_Initialize            text6        0069B
@@ -677,7 +669,6 @@ __pnvBANK0                               nvBANK0      00020
 __pstringtext1                           stringtext1  00800
 __pstringtext2                           stringtext2  0081C
 __pstringtext3                           stringtext3  0082B
-__pstringtext4                           stringtext4  00838
 __ptext1                                 text1        006C2
 __ptext10                                text10       006B3
 __ptext11                                text11       006D2
@@ -715,6 +706,11 @@ wtemp0                                   (abs)        0007E
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c
+		___wmul        		CODE           	070A	0000	31
+
+C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul16.c estimated size: 31
+
 mcc_generated_files/system/src/watchdog.c
 		_WDT_Initialize		CODE           	0665	0000	4
 
@@ -727,11 +723,6 @@ mcc_generated_files/spi/src/mssp.c
 		_SPI1_Close    		CODE           	0662	0000	3
 
 mcc_generated_files/spi/src/mssp.c estimated size: 133
-
-C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul16.c
-		___wmul        		CODE           	070A	0000	31
-
-C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul16.c estimated size: 31
 
 mcc_generated_files/system/src/interrupt.c
 		_INT_SetInterruptHandler		CODE           	0669	0000	6
@@ -754,13 +745,12 @@ mcc_generated_files/system/src/pins.c
 mcc_generated_files/system/src/pins.c estimated size: 93
 
 shared
-		_ADXL345_data_format		STRCODE        	0838	0000	2
 		__initialization		CODE           	07F2	0000	11
 		_SPI1_Host     		STRCODE        	0000	0000	0
-		_ADXL345_init_settings		STRCODE        	082B	0000	13
+		_ADXL345_init_settings		STRCODE        	082B	0000	12
 		_spi1_configuration		STRCODE        	081C	0000	15
 
-shared estimated size: 41
+shared estimated size: 38
 
 mcc_generated_files/system/src/clock.c
 		_CLOCK_Initialize		CODE           	0675	0000	8

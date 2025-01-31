@@ -37,6 +37,7 @@
 #define	SYSTEM_H
 
 #include <xc.h>
+#include <string.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include "config_bits.h"

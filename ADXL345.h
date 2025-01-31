@@ -64,6 +64,11 @@
 #define FIFO_CTL        0x38 // FIFO control
 #define FIFO_STATUS     0x39 // FIFO status
 
+struct Message {
+    uint8_t registerAddr;
+    uint8_t data[25];
+};
+
 bool ADXL345_validation(void);
 void ADXL345_write(uint8_t registerAddr, size_t buffer_size, uint8_t *data);
 
