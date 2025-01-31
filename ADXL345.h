@@ -71,6 +71,8 @@ struct Message {
 
 bool ADXL345_validation(void);
 bool ADXL345_init(void);
+bool SetupForFreefall(void);
+bool setupForImpact(void);
 
 #endif	/* ADXL345_H */
 

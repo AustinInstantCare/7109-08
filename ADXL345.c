@@ -76,7 +76,7 @@ bool SetupForFreefall(void) {
     /* Setup free fall parameters
      * Addr: 0x24 (Activity Threshold) = 1.5 g
      * Addr: 0x25 (Inactivity Threshold) = 0.1875 g
-     * Addr: 0x26 (Inactivity Time) = 1 sec
+     * Addr: 0x26 (Inactivity Time) = 255 sec
      * Addr: 0x27 (Axis enable control) = 0b01111111
      */
     struct Message msg;
@@ -110,5 +110,59 @@ bool SetupForFreefall(void) {
     
     //Motion_State = Waiting_For_Freefall;
     
+    SPI1_Close();
     return true;
+}
+
+bool setupForImpact(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return false;
+    }
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    /* Setup impact parameters
+     * Addr: 0x24 (Activity Threshold) = 3 g
+     * Addr: 0x25 (Inactivity Threshold) = 0.1875 g
+     * Addr: 0x26 (Inactivity Time) = 1 sec
+     * Addr: 0x27 (Axis enable control) = 0b01111111
+     */
+    struct Message msg;
+    msg.registerAddr = THRESH_ACT;
+    memset(msg.data, 0, sizeof(msg.data));
+    memcpy(msg.data, impact_init, sizeof(impact_init));
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, sizeof(impact_init) + 1);
+    CS_ACC_SetHigh();
+    
+    // Low power enabled & data rate of 100 Hz
+    msg.registerAddr = BW_RATE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x1A;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Set interrupt to trigger on free fall
+    msg.registerAddr = INT_ENABLE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x04;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    SPI1_Close();
+    return true;
+}
+
+bool setupForInactivity(void) {
+    
 }
