@@ -4523,7 +4523,7 @@ extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
 # 49 "./mcc_generated_files/system/system.h" 2
-# 58 "./mcc_generated_files/system/system.h"
+# 66 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 36 "./fall.h" 2
 # 1 "./ADXL345.h" 1

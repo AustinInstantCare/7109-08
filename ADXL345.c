@@ -7,6 +7,8 @@
 
 #include "ADXL345.h"
 
+#define NUM_SAMPLES 128 // number of acc readings during calibration
+
 const uint16_t acceleration_squared_threshold = 1200; // calculated by George
 
 const uint8_t ADXL345_init_settings[12] = {
@@ -288,4 +290,136 @@ bool orientation_Up(void) {
     } else {
         return false;
     }
+}
+
+bool calibrate(void) {
+    int offset_0g_X, offset_0g_Y, offset_0g_Z;
+    int acc_data[6] = {0};
+    int sum_X = 0, sum_Y = 0, sum_Z = 0;
+    int sum_X_avg, sum_Y_avg, sum_Z_avg;
+    
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
+    }
+    
+    struct Message msg;
+    msg.registerAddr = DATA_FORMAT;
+    msg.data[0] = 0x0C; // change to 2G, left justified, full resolution
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    /* Blink Green */
+    while(!SW1_GetValue()) {
+        GRN_LED_SetHigh();
+        __delay_ms(100);
+        CLRWDT();
+        GRN_LED_SetLow();
+        __delay_ms(100);
+        CLRWDT();
+    }
+    
+    CLRWDT();
+    __delay_ms(1500); // wait 1.5 seconds for device to settle;
+    CLRWDT();
+    
+    for(int i = 0; i < NUM_SAMPLES; i++) {
+        // Read accelerometer data
+        CS_ACC_SetLow();
+        SPI1_ByteWrite(DATAX0);
+        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        CS_ACC_SetHigh();
+        
+        sum_X += acc_data[1];
+        sum_Y += acc_data[3];
+        sum_Z += acc_data[5];
+        
+        __delay_ms(5); // wait before next sample
+        CLRWDT();
+    }
+    
+    // There should never be an offset of 0
+    if (sum_Z == 0) return false;
+    
+    // Bit shift instead of divide to find the average
+    sum_X_avg = sum_X >> 7;
+    sum_Y_avg = sum_Y >> 7;
+    
+    /* Check if offsets are within the datasheets spec */
+    // handle negative vs positive
+    if (sum_X_avg & 0x80) {
+        if (~(sum_X_avg) + 1 >= 0x10) return false;
+    } else {
+        if (sum_X_avg >= 0x10) return false;
+    }
+    
+    if (sum_Y_avg & 0x80) {
+        if (~(sum_Y_avg) + 1 >= 0x10) return false;
+    } else {
+        if (sum_Y_avg >= 0x10) return false;
+    }
+    
+    offset_0g_X = -sum_X_avg;
+    offset_0g_Y = -sum_Y_avg;
+    
+    sum_Z_avg = sum_Z >> 7; // average of Z samples
+    sum_Z = 0; // reset sum for next test
+    
+    /* Blink RED */
+    while(!SW1_GetValue()) {
+        RED_LED_SetHigh();
+        __delay_ms(100);
+        CLRWDT();
+        RED_LED_SetLow();
+        __delay_ms(100);
+        CLRWDT();
+    }
+    
+    CLRWDT();
+    __delay_ms(1500); // wait 1.5 seconds for device to settle;
+    CLRWDT();
+    
+    for(int i = 0; i < NUM_SAMPLES; i++) {
+        // Read accelerometer data
+        CS_ACC_SetLow();
+        SPI1_ByteWrite(DATAX0);
+        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        CS_ACC_SetHigh();
+        
+        sum_Z += acc_data[5];
+        
+        __delay_ms(5); // wait before next sample
+        CLRWDT();
+    }
+    
+    int16_t Z_n1g = sum_Z >> 7; // calculate average of Z samples
+    sum_Z_avg = (Z_n1g + sum_Z_avg) >> 1; // average of negative and positive
+    
+    /* Check if offsets are within the datasheets spec */
+    // handle negative vs positive
+    if (sum_Z_avg & 0x80) {
+        if (~(sum_Z_avg) + 1 >= 0x20) return false;
+    } else {
+        if (sum_Z_avg >= 0x20) return false;
+    }
+    
+    offset_0g_Z = -sum_Z_avg;
+    
+    saveOffsets((uint8_t)offset_0g_X, (uint8_t)offset_0g_Y, (uint8_t)offset_0g_Z); // write offsets to acc
+    
+    // save offsets to eeprom in the case of a reset
+    EEPROM_Write(EE_X_OFFSET_ADDR, (uint8_t)offset_0g_X);
+    EEPROM_Write(EE_Y_OFFSET_ADDR, (uint8_t)offset_0g_Y);
+    EEPROM_Write(EE_Z_OFFSET_ADDR, (uint8_t)offset_0g_Z);
+    
+    EEPROM_Write(EE_CAL_STATUS_ADDR, CAL_DONE);
+    
+    msg.registerAddr = DATA_FORMAT;
+    msg.data[0] = 0x0B; // change to 16G, right justified, full resolution
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    SPI1_Close();
+    return true;
 }

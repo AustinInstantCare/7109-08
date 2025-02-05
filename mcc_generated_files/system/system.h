@@ -48,6 +48,14 @@
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 
+
+#define EE_X_OFFSET_ADDR    0x02
+#define EE_Y_OFFSET_ADDR    0x04
+#define EE_Z_OFFSET_ADDR    0x06
+#define EE_CAL_STATUS_ADDR  0x10
+#define INIT_OK		0x00
+#define EE_ERASED	0xFF
+#define CAL_DONE	0x57
 /**
  * @ingroup systemdriver
  * @brief Initializes the system module.

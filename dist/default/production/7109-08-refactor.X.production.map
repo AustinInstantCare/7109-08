@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.00\pic\dat\20241204225717_en.msgs \
   -cn -h+dist/default/production\7109-08-refactor.X.production.sym \
   --cmf=dist/default/production\7109-08-refactor.X.production.cmf -z \
-  -Q16LF1825 -oC:\Users\User\AppData\Local\Temp\xcAs5q8.\driver_tmp_3.o \
+  -Q16LF1825 -oC:\Users\User\AppData\Local\Temp\xcAs1bs.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/7109-08-refactor.X.production.map \
-  --md=C:\Users\User\AppData\Local\Temp\xcAs5q8.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\User\AppData\Local\Temp\xcAs1bs.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -34,7 +34,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\User\AppData\Local\Temp\xcAs5q8.\driver_tmp_15.o \
+  C:\Users\User\AppData\Local\Temp\xcAs1bs.\driver_tmp_15.o \
   dist/default/production\7109-08-refactor.X.production.o 
 
 Object code version is 3.11
@@ -44,7 +44,7 @@ Machine type is 16LF1825
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\xcAs5q8.\driver_tmp_15.o
+C:\Users\User\AppData\Local\Temp\xcAs1bs.\driver_tmp_15.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -85,9 +85,9 @@ dist/default/production\7109-08-refactor.X.production.o
                 cstackBANK0                          20       20       2E       20       1
                 cstackCOMMON                         70       70        C       70       1
                 clrtext                             294      294        C      528       0
-                bssBANK0                             4E       4E        B       20       1
+                bssBANK0                             4E       4E       17       20       1
                 bssCOMMON                            7C       7C        2       70       1
-                nvBANK0                              59       59        4       20       1
+                nvBANK0                              65       65        4       20       1
                 stringtext8                         84D      84D        4     1000       0
                 stringtext7                         849      849        4     1000       0
                 stringtext6                         845      845        4     1000       0
@@ -157,8 +157,8 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   BANK0          
                 cstackBANK0                          20       20       2E         1
-                bssBANK0                             4E       4E        B         1
-                nvBANK0                              59       59        4         1
+                bssBANK0                             4E       4E       17         1
+                nvBANK0                              65       65        4         1
 
         CLASS   BANK1          
 
@@ -314,7 +314,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000004  000004         0       0  CODE        2
-                cstackBANK0                    000020  00003D  00005D        20       1  BANK0       1
+                cstackBANK0                    000020  000049  000069        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 text29                         000244  000003  000247       488       0  CODE        2
                 text7                          000247  000003  00024A       48E       0  CODE        2
@@ -355,7 +355,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0005D-0006F              13           1
+        BANK0            00069-0006F               7           1
         BANK1            000A0-000EF              50           1
         BANK2            00120-0016F              50           1
         BANK3            001A0-001EF              50           1
@@ -374,7 +374,7 @@ UNUSED ADDRESS RANGES
         ENTRY            00004-00243             100           2
                          00853-01FFF             100
         IDLOC            08000-08003               4           2
-        RAM              0005D-0006F              13           1
+        RAM              00069-0006F               7           1
                          000A0-000EF              50
                          00120-0016F              50
                          001A0-001EF              50
@@ -463,7 +463,7 @@ _INLVLC                                  (abs)        0038E
 _INTCONbits                              (abs)        0000B
 _INTERRUPT_Initialize                    text8        0027D
 _INT_DefaultInterruptHandler             (abs)        00000
-_INT_InterruptHandler                    nvBANK0      0005B
+_INT_InterruptHandler                    nvBANK0      00067
 _INT_SetInterruptHandler                 text9        00256
 _IOCAF                                   (abs)        00393
 _IOCAFbits                               (abs)        00393
@@ -506,7 +506,7 @@ _SSP1CON3                                (abs)        00217
 _SSP1STAT                                (abs)        00214
 _SW1_DefaultInterruptHandler             text13       002F3
 _SW1_ISR                                 text12       002A0
-_SW1_InterruptHandler                    nvBANK0      00059
+_SW1_InterruptHandler                    nvBANK0      00065
 _SW1_SetInterruptHandler                 text5        0025C
 _SYSTEM_Initialize                       text1        002AF
 _TRISA                                   (abs)        0008C
@@ -788,7 +788,7 @@ __pbssCOMMON                             bssCOMMON    0007C
 __pcstackBANK0                           cstackBANK0  00020
 __pcstackCOMMON                          cstackCOMMON 00070
 __pmaintext                              maintext     003D6
-__pnvBANK0                               nvBANK0      00059
+__pnvBANK0                               nvBANK0      00065
 __pstringtext1                           stringtext1  00800
 __pstringtext2                           stringtext2  0081C
 __pstringtext3                           stringtext3  0082B
@@ -829,19 +829,19 @@ __ptext8                                 text8        0027D
 __ptext9                                 text9        00256
 _dataBuffer                              (abs)        022F0
 _fall_init                               stringtext8  0084D
-_good_orientation_count                  bssBANK0     00058
+_good_orientation_count                  bssBANK0     00064
 _impact_init                             stringtext7  00849
 _main                                    maintext     003D6
 _memcpy                                  text26       0038C
 _memset                                  text25       002C2
 _no_motion_init                          stringtext6  00845
 _orientation_Up                          text18       0073F
-_orientation_check_timer_20ms            bssBANK0     00054
+_orientation_check_timer_20ms            bssBANK0     00060
 _setupForFreefall                        text17       0057A
 _setupForImpact                          text16       00611
 _setupForInactivity                      text15       006A8
 _spi1_configuration                      stringtext2  0081C
-_timer_20ms                              bssBANK0     00056
+_timer_20ms                              bssBANK0     00062
 _unlockKeyHigh                           bssCOMMON    0007C
 _unlockKeyLow                            bssCOMMON    0007D
 btemp                                    (abs)        0007E

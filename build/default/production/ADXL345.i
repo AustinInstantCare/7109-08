@@ -4522,7 +4522,7 @@ extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
 # 49 "./mcc_generated_files/system/system.h" 2
-# 58 "./mcc_generated_files/system/system.h"
+# 66 "./mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
 # 34 "./ADXL345.h" 2
 # 66 "./ADXL345.h"
@@ -4540,6 +4540,8 @@ void setupForImpact(void);
 void setupForInactivity(void);
 _Bool orientation_Up(void);
 # 9 "ADXL345.c" 2
+
+
 
 const uint16_t acceleration_squared_threshold = 1200;
 
@@ -4822,4 +4824,136 @@ _Bool orientation_Up(void) {
     } else {
         return 0;
     }
+}
+
+_Bool calibrate(void) {
+    int offset_0g_X, offset_0g_Y, offset_0g_Z;
+    int acc_data[6] = {0};
+    int sum_X = 0, sum_Y = 0, sum_Z = 0;
+    int sum_X_avg, sum_Y_avg, sum_Z_avg;
+
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
+    }
+
+    struct Message msg;
+    msg.registerAddr = 0x31;
+    msg.data[0] = 0x0C;
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(&msg, 2);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+
+    while(!PORTAbits.RA1) {
+        do { LATAbits.LATA4 = 1; } while(0);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+        __asm("clrwdt");
+        do { LATAbits.LATA4 = 0; } while(0);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+        __asm("clrwdt");
+    }
+
+    __asm("clrwdt");
+    _delay((unsigned long)((1500)*(4000000/4000.0)));
+    __asm("clrwdt");
+
+    for(int i = 0; i < 128; i++) {
+
+        do { LATCbits.LATC4 = 0; } while(0);
+        SPI1_ByteWrite(0x32);
+        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        do { LATCbits.LATC4 = 1; } while(0);
+
+        sum_X += acc_data[1];
+        sum_Y += acc_data[3];
+        sum_Z += acc_data[5];
+
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        __asm("clrwdt");
+    }
+
+
+    if (sum_Z == 0) return 0;
+
+
+    sum_X_avg = sum_X >> 7;
+    sum_Y_avg = sum_Y >> 7;
+
+
+
+    if (sum_X_avg & 0x80) {
+        if (~(sum_X_avg) + 1 >= 0x10) return 0;
+    } else {
+        if (sum_X_avg >= 0x10) return 0;
+    }
+
+    if (sum_Y_avg & 0x80) {
+        if (~(sum_Y_avg) + 1 >= 0x10) return 0;
+    } else {
+        if (sum_Y_avg >= 0x10) return 0;
+    }
+
+    offset_0g_X = -sum_X_avg;
+    offset_0g_Y = -sum_Y_avg;
+
+    sum_Z_avg = sum_Z >> 7;
+    sum_Z = 0;
+
+
+    while(!PORTAbits.RA1) {
+        do { LATAbits.LATA5 = 1; } while(0);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+        __asm("clrwdt");
+        do { LATAbits.LATA5 = 0; } while(0);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+        __asm("clrwdt");
+    }
+
+    __asm("clrwdt");
+    _delay((unsigned long)((1500)*(4000000/4000.0)));
+    __asm("clrwdt");
+
+    for(int i = 0; i < 128; i++) {
+
+        do { LATCbits.LATC4 = 0; } while(0);
+        SPI1_ByteWrite(0x32);
+        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        do { LATCbits.LATC4 = 1; } while(0);
+
+        sum_Z += acc_data[5];
+
+        _delay((unsigned long)((5)*(4000000/4000.0)));
+        __asm("clrwdt");
+    }
+
+    int16_t Z_n1g = sum_Z >> 7;
+    sum_Z_avg = (Z_n1g + sum_Z_avg) >> 1;
+
+
+
+    if (sum_Z_avg & 0x80) {
+        if (~(sum_Z_avg) + 1 >= 0x20) return 0;
+    } else {
+        if (sum_Z_avg >= 0x20) return 0;
+    }
+
+    offset_0g_Z = -sum_Z_avg;
+
+    saveOffsets((uint8_t)offset_0g_X, (uint8_t)offset_0g_Y, (uint8_t)offset_0g_Z);
+
+
+    EEPROM_Write(0x02, (uint8_t)offset_0g_X);
+    EEPROM_Write(0x04, (uint8_t)offset_0g_Y);
+    EEPROM_Write(0x06, (uint8_t)offset_0g_Z);
+
+    EEPROM_Write(0x10, 0x57);
+
+    msg.registerAddr = 0x31;
+    msg.data[0] = 0x0B;
+    do { LATCbits.LATC4 = 0; } while(0);
+    SPI1_BufferWrite(&msg, 2);
+    do { LATCbits.LATC4 = 1; } while(0);
+
+    SPI1_Close();
+    return 1;
 }

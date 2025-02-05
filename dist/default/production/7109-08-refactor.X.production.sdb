@@ -11,7 +11,7 @@ WAITING_FOR_INACTIVITY 2
 WAITING_FOR_TIMEOUT 3
 FALL_DETECTED 4
 ]
-"32 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"34 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [e E2635 . `uc
 ADXL345 0
 SI4055 1
@@ -35,19 +35,21 @@ NVM_ERROR 1
 NVM_OK 0
 NVM_ERROR 1
 ]
-"31 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"33 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
-"55
+"57
 [v _ADXL345_validation ADXL345_validation `(a  1 e 1 0 ]
-"96
+"70
+[v _saveOffsets saveOffsets `(v  1 e 1 0 ]
+"98
 [v _ADXL345_ClearInterrupt ADXL345_ClearInterrupt `(v  1 e 1 0 ]
-"109
+"111
 [v _setupForFreefall setupForFreefall `(v  1 e 1 0 ]
-"157
+"159
 [v _setupForImpact setupForImpact `(v  1 e 1 0 ]
-"205
+"207
 [v _setupForInactivity setupForInactivity `(v  1 e 1 0 ]
-"253
+"255
 [v _orientation_Up orientation_Up `(a  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.39v  1 e 2 0 ]
@@ -135,13 +137,13 @@ NVM_ERROR 1
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "36 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/watchdog.c
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"12 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"14 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_init_settings ADXL345_init_settings `DC[12]uc  1 e 12 0 ]
-"27
-[v _fall_init fall_init `DC[4]uc  1 e 4 0 ]
-"28
-[v _impact_init impact_init `DC[4]uc  1 e 4 0 ]
 "29
+[v _fall_init fall_init `DC[4]uc  1 e 4 0 ]
+"30
+[v _impact_init impact_init `DC[4]uc  1 e 4 0 ]
+"31
 [v _no_motion_init no_motion_init `DC[4]uc  1 e 4 0 ]
 [s S310 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -261,7 +263,7 @@ NVM_ERROR 1
 [v _EEDATL EEDATL `VEuc  1 e 1 @403 ]
 "2920
 [v _EEDATH EEDATH `VEuc  1 e 1 @404 ]
-[s S790 . 1 `uc 1 RD 1 0 :1:0 
+[s S835 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -271,8 +273,8 @@ NVM_ERROR 1
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "2957
-[u S799 . 1 `S790 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES799  1 e 1 @405 ]
+[u S844 . 1 `S835 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES844  1 e 1 @405 ]
 "3002
 [v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
 "3285
@@ -426,45 +428,45 @@ NVM_ERROR 1
 [v MotionEventHandler@state state `*.4E2687  1 p 1 40 ]
 "92
 } 0
-"205 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"207 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _setupForInactivity setupForInactivity `(v  1 e 1 0 ]
 {
 [s S669 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"221
+"223
 [v setupForInactivity@msg msg `S669  1 a 26 0 ]
-"251
+"253
 } 0
-"157
+"159
 [v _setupForImpact setupForImpact `(v  1 e 1 0 ]
 {
 [s S669 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"173
+"175
 [v setupForImpact@msg msg `S669  1 a 26 0 ]
-"203
+"205
 } 0
-"109
+"111
 [v _setupForFreefall setupForFreefall `(v  1 e 1 0 ]
 {
 [s S669 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"125
+"127
 [v setupForFreefall@msg msg `S669  1 a 26 0 ]
-"155
+"157
 } 0
-"253
+"255
 [v _orientation_Up orientation_Up `(a  1 e 1 0 ]
 {
 [s S669 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"260
+"262
 [v orientation_Up@msg msg `S669  1 a 26 8 ]
-"257
+"259
 [v orientation_Up@acc_data acc_data `[6]c  1 a 6 0 ]
-"258
+"260
 [v orientation_Up@g_deltaZ g_deltaZ `s  1 a 2 38 ]
 [v orientation_Up@g_deltaY g_deltaY `s  1 a 2 36 ]
 [v orientation_Up@g_deltaX g_deltaX `s  1 a 2 34 ]
-"285
+"287
 [v orientation_Up@g_magnitude g_magnitude `i  1 a 2 6 ]
-"291
+"293
 } 0
 "172 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
@@ -484,17 +486,17 @@ NVM_ERROR 1
 [v SPI1_BufferRead@bufferSize bufferSize `ui  1 p 2 1 ]
 "159
 } 0
-"96 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"98 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_ClearInterrupt ADXL345_ClearInterrupt `(v  1 e 1 0 ]
 {
-"107
+"109
 } 0
-"55
+"57
 [v _ADXL345_validation ADXL345_validation `(a  1 e 1 0 ]
 {
-"56
+"58
 [v ADXL345_validation@passed passed `a  1 a 1 10 ]
-"66
+"68
 } 0
 "161 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
@@ -502,13 +504,13 @@ NVM_ERROR 1
 [v SPI1_ByteExchange@byteData byteData `uc  1 p 1 0 ]
 "170
 } 0
-"31 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"33 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
 {
 [s S669 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"36
+"38
 [v ADXL345_init@msg msg `S669  1 a 26 0 ]
-"53
+"55
 } 0
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]

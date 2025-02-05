@@ -4516,7 +4516,7 @@ extern void (*INT_InterruptHandler)(void);
 # 175 "mcc_generated_files/system/src/../../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
 # 49 "mcc_generated_files/system/src/../system.h" 2
-# 58 "mcc_generated_files/system/src/../system.h"
+# 66 "mcc_generated_files/system/src/../system.h"
 void SYSTEM_Initialize(void);
 # 37 "mcc_generated_files/system/src/pins.c" 2
 

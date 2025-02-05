@@ -4514,7 +4514,7 @@ _Bool SPI1_IsTxReady(void);
 # 52 "mcc_generated_files/system/src/../../system/../system/watchdog.h"
 void WDT_Initialize(void);
 # 48 "mcc_generated_files/system/src/../../system/system.h" 2
-# 58 "mcc_generated_files/system/src/../../system/system.h"
+# 66 "mcc_generated_files/system/src/../../system/system.h"
 void SYSTEM_Initialize(void);
 # 36 "mcc_generated_files/system/src/interrupt.c" 2
 

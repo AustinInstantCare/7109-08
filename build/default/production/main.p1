@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"58 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 58: void SYSTEM_Initialize(void);
+"66 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 66: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "127 ./mcc_generated_files/system/../spi/mssp.h
 [; ;./mcc_generated_files/system/../spi/mssp.h: 127: void SPI1_Initialize(void);
