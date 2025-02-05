@@ -5,6 +5,7 @@ mcc_generated_files/system/src/../system.h  \
 mcc_generated_files/system/src/../config_bits.h  \
 mcc_generated_files/system/src/../../system/clock.h  \
 mcc_generated_files/system/src/../../system/pins.h  \
+mcc_generated_files/system/src/../../nvm/nvm.h  \
 mcc_generated_files/system/src/../../spi/mssp.h  \
 mcc_generated_files/system/src/../../spi/spi_interface.h  \
 mcc_generated_files/system/src/../../system/watchdog.h  \

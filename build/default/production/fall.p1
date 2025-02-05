@@ -1,109 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F2674 `(v ~T0 @X0 0 tf ]
-"1945 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1945: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"1990
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1990: extern volatile unsigned char LATC __attribute__((address(0x10E)));
-[v _LATC `Vuc ~T0 @X0 0 e@270 ]
-"1108
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1108: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
-[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
-"1158
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1158: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
-[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
-"2735
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2735: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"2782
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2782: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"3285
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3285: extern volatile unsigned char WPUA __attribute__((address(0x20C)));
-[v _WPUA `Vuc ~T0 @X0 0 e@524 ]
-"3343
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3343: extern volatile unsigned char WPUC __attribute__((address(0x20E)));
-[v _WPUC `Vuc ~T0 @X0 0 e@526 ]
-"1367
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1367:     struct {
-[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S79 . PS0 PS1 PS2 PSA TMR0SE TMR0CS INTEDG nWPUEN ]
-"1377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1377:     struct {
-[s S80 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S80 . PS . T0SE T0CS ]
-"1366
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1366: typedef union {
-[u S78 `S79 1 `S80 1 ]
-[n S78 . . . ]
-"1384
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1384: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x095)));
-[v _OPTION_REGbits `VS78 ~T0 @X0 0 e@149 ]
-"5203
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5203: extern volatile unsigned char INLVLA __attribute__((address(0x38C)));
-[v _INLVLA `Vuc ~T0 @X0 0 e@908 ]
-"5261
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5261: extern volatile unsigned char INLVLC __attribute__((address(0x38E)));
-[v _INLVLC `Vuc ~T0 @X0 0 e@910 ]
-"2651
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2651: extern volatile unsigned char APFCON0 __attribute__((address(0x11D)));
-[v _APFCON0 `Vuc ~T0 @X0 0 e@285 ]
-"5319
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5319: extern volatile unsigned char IOCAP __attribute__((address(0x391)));
-[v _IOCAP `Vuc ~T0 @X0 0 e@913 ]
-"5377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5377: extern volatile unsigned char IOCAN __attribute__((address(0x392)));
-[v _IOCAN `Vuc ~T0 @X0 0 e@914 ]
-"5435
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5435: extern volatile unsigned char IOCAF __attribute__((address(0x393)));
-[v _IOCAF `Vuc ~T0 @X0 0 e@915 ]
-[v F2386 `(v ~T0 @X0 0 tf ]
-"294 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 294: void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2386 ]
-"316
-[; ;mcc_generated_files/system/src/../pins.h: 316: void SW1_DefaultInterruptHandler(void);
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 357:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"367
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 367:     struct {
-[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S32 . . T0IF . T0IE ]
-"356
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 356: typedef union {
-[u S30 `S31 1 `S32 1 ]
-[n S30 . . . ]
-"374
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"5441
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5441:     struct {
-[s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S279 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 ]
-"5449
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5449:     struct {
-[s S280 :6 `uc 1 ]
-[n S280 . IOCAF ]
-"5440
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5440: typedef union {
-[u S278 `S279 1 `S280 1 ]
-[n S278 . . . ]
-"5453
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5453: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x393)));
-[v _IOCAFbits `VS278 ~T0 @X0 0 e@915 ]
-"284 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 284: void SW1_ISR(void);
-[v _SW1_ISR `(v ~T0 @X0 0 ef ]
-[v F2679 `(v ~T0 @X0 0 tf ]
-[v F2681 `(v ~T0 @X0 0 tf ]
-[v F2683 `(v ~T0 @X0 0 tf ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
+"15 fall.c
+[; ;fall.c: 15: void MotionEventHandler(State_t *state) {
+[c E2687 0 1 2 3 4 .. ]
+[n E2687 . WAITING_FOR_FREEFALL WAITING_FOR_IMPACT WAITING_FOR_INACTIVITY WAITING_FOR_TIMEOUT FALL_DETECTED  ]
 "435 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 435:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -115,7 +14,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "444
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
 [v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
-"1951
+"76 ./ADXL345.h
+[; ;./ADXL345.h: 76: void setupForImpact(void);
+[v _setupForImpact `(v ~T0 @X0 0 ef ]
+"77
+[; ;./ADXL345.h: 77: void setupForInactivity(void);
+[v _setupForInactivity `(v ~T0 @X0 0 ef ]
+"75
+[; ;./ADXL345.h: 75: void setupForFreefall(void);
+[v _setupForFreefall `(v ~T0 @X0 0 ef ]
+"78
+[; ;./ADXL345.h: 78: _Bool orientation_Up(void);
+[v _orientation_Up `(a ~T0 @X0 0 ef ]
+"1951 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S106 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
@@ -126,6 +37,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1960
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
 [v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
+[v F202 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+[v __delay `JF202 ~T0 @X0 0 e ]
+[p i __delay ]
+"74 ./ADXL345.h
+[; ;./ADXL345.h: 74: void ADXL345_ClearInterrupt(void);
+[v _ADXL345_ClearInterrupt `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -567,162 +485,267 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 6239: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"38 mcc_generated_files/system/src/pins.c
-[; ;mcc_generated_files/system/src/pins.c: 38: void (*SW1_InterruptHandler)(void);
-[v _SW1_InterruptHandler `*F2674 ~T0 @X0 1 e ]
-"40
-[; ;mcc_generated_files/system/src/pins.c: 40: void PIN_MANAGER_Initialize(void)
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"41
-[; ;mcc_generated_files/system/src/pins.c: 41: {
+"11 fall.c
+[; ;fall.c: 11: uint16_t timer_20ms;
+[v _timer_20ms `us ~T0 @X0 1 e ]
+"12
+[; ;fall.c: 12: uint16_t orientation_check_timer_20ms;
+[v _orientation_check_timer_20ms `us ~T0 @X0 1 e ]
+"13
+[; ;fall.c: 13: uint8_t good_orientation_count;
+[v _good_orientation_count `uc ~T0 @X0 1 e ]
+"15
+[; ;fall.c: 15: void MotionEventHandler(State_t *state) {
+[v _MotionEventHandler `(v ~T0 @X0 1 ef1`*E2687 ]
 {
-[e :U _PIN_MANAGER_Initialize ]
+[e :U _MotionEventHandler ]
+[v _state `*E2687 ~T0 @X0 1 r1 ]
 [f ]
-"45
-[; ;mcc_generated_files/system/src/pins.c: 45:     LATA = 0x0;
-[e = _LATA -> -> 0 `i `uc ]
-"46
-[; ;mcc_generated_files/system/src/pins.c: 46:     LATC = 0x18;
-[e = _LATC -> -> 24 `i `uc ]
-"51
-[; ;mcc_generated_files/system/src/pins.c: 51:     TRISA = 0xF;
-[e = _TRISA -> -> 15 `i `uc ]
-"52
-[; ;mcc_generated_files/system/src/pins.c: 52:     TRISC = 0x2;
-[e = _TRISC -> -> 2 `i `uc ]
-"57
-[; ;mcc_generated_files/system/src/pins.c: 57:     ANSELA = 0x0;
-[e = _ANSELA -> -> 0 `i `uc ]
-"58
-[; ;mcc_generated_files/system/src/pins.c: 58:     ANSELC = 0x0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/system/src/pins.c: 63:     WPUA = 0xA;
-[e = _WPUA -> -> 10 `i `uc ]
-"64
-[; ;mcc_generated_files/system/src/pins.c: 64:     WPUC = 0x0;
-[e = _WPUC -> -> 0 `i `uc ]
-"65
-[; ;mcc_generated_files/system/src/pins.c: 65:     OPTION_REGbits.nWPUEN = 0x0;
-[e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
-"77
-[; ;mcc_generated_files/system/src/pins.c: 77:     INLVLA = 0x0;
-[e = _INLVLA -> -> 0 `i `uc ]
-"78
-[; ;mcc_generated_files/system/src/pins.c: 78:     INLVLC = 0x0;
-[e = _INLVLC -> -> 0 `i `uc ]
-"87
-[; ;mcc_generated_files/system/src/pins.c: 87:     APFCON0 = 0x0;
-[e = _APFCON0 -> -> 0 `i `uc ]
-"92
-[; ;mcc_generated_files/system/src/pins.c: 92:     IOCAP = 0x0;
-[e = _IOCAP -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/system/src/pins.c: 93:     IOCAN = 0x2;
-[e = _IOCAN -> -> 2 `i `uc ]
-"94
-[; ;mcc_generated_files/system/src/pins.c: 94:     IOCAF = 0x0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"96
-[; ;mcc_generated_files/system/src/pins.c: 96:     SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
-[e ( _SW1_SetInterruptHandler (1 &U _SW1_DefaultInterruptHandler ]
-"99
-[; ;mcc_generated_files/system/src/pins.c: 99:     INTCONbits.IOCIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"100
-[; ;mcc_generated_files/system/src/pins.c: 100: }
-[e :UE 333 ]
-}
-"102
-[; ;mcc_generated_files/system/src/pins.c: 102: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"103
-[; ;mcc_generated_files/system/src/pins.c: 103: {
+"16
+[; ;fall.c: 16:     timer_20ms++;
+[e ++ _timer_20ms -> -> 1 `i `us ]
+"17
+[; ;fall.c: 17:     orientation_check_timer_20ms++;
+[e ++ _orientation_check_timer_20ms -> -> 1 `i `us ]
+"19
+[; ;fall.c: 19:     switch (*state) {
+[e $U 336  ]
 {
-[e :U _PIN_MANAGER_IOC ]
-[f ]
-"105
-[; ;mcc_generated_files/system/src/pins.c: 105:     if(IOCAFbits.IOCAF1 == 1)
-[e $ ! == -> . . _IOCAFbits 0 1 `i -> 1 `i 335  ]
-"106
-[; ;mcc_generated_files/system/src/pins.c: 106:     {
-{
-"107
-[; ;mcc_generated_files/system/src/pins.c: 107:         SW1_ISR();
-[e ( _SW1_ISR ..  ]
-"108
-[; ;mcc_generated_files/system/src/pins.c: 108:     }
-}
-[e :U 335 ]
-"109
-[; ;mcc_generated_files/system/src/pins.c: 109: }
-[e :UE 334 ]
-}
-"114
-[; ;mcc_generated_files/system/src/pins.c: 114: void SW1_ISR(void) {
-[v _SW1_ISR `(v ~T0 @X0 1 ef ]
-{
-[e :U _SW1_ISR ]
-[f ]
-"119
-[; ;mcc_generated_files/system/src/pins.c: 119:     if(SW1_InterruptHandler)
-[e $ ! != _SW1_InterruptHandler -> -> 0 `i `*F2679 337  ]
-"120
-[; ;mcc_generated_files/system/src/pins.c: 120:     {
-{
-"121
-[; ;mcc_generated_files/system/src/pins.c: 121:         SW1_InterruptHandler();
-[e ( *U _SW1_InterruptHandler ..  ]
-"122
-[; ;mcc_generated_files/system/src/pins.c: 122:     }
-}
+"20
+[; ;fall.c: 20:         case WAITING_FOR_FREEFALL:
 [e :U 337 ]
-"123
-[; ;mcc_generated_files/system/src/pins.c: 123:     IOCAFbits.IOCAF1 = 0;
-[e = . . _IOCAFbits 0 1 -> -> 0 `i `uc ]
-"124
-[; ;mcc_generated_files/system/src/pins.c: 124: }
-[e :UE 336 ]
+"22
+[; ;fall.c: 22:             if (PORTAbits.RA2) {
+[e $ ! != -> . . _PORTAbits 0 2 `i -> 0 `i 338  ]
+{
+"23
+[; ;fall.c: 23:                 setupForImpact();
+[e ( _setupForImpact ..  ]
+"24
+[; ;fall.c: 24:                 timer_20ms = 0;
+[e = _timer_20ms -> -> 0 `i `us ]
+"25
+[; ;fall.c: 25:                 *state = WAITING_FOR_IMPACT;
+[e = *U _state . `E2687 1 ]
+"26
+[; ;fall.c: 26:             }
 }
-"129
-[; ;mcc_generated_files/system/src/pins.c: 129: void SW1_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2681 ]
+[e :U 338 ]
+"27
+[; ;fall.c: 27:             break;
+[e $U 335  ]
+"29
+[; ;fall.c: 29:         case WAITING_FOR_IMPACT:
+[e :U 339 ]
+"31
+[; ;fall.c: 31:             if (PORTAbits.RA2) {
+[e $ ! != -> . . _PORTAbits 0 2 `i -> 0 `i 340  ]
 {
-[e :U _SW1_SetInterruptHandler ]
-[v _InterruptHandler `*F2683 ~T0 @X0 1 r1 ]
-[f ]
-"130
-[; ;mcc_generated_files/system/src/pins.c: 130:     SW1_InterruptHandler = InterruptHandler;
-[e = _SW1_InterruptHandler _InterruptHandler ]
-"131
-[; ;mcc_generated_files/system/src/pins.c: 131: }
-[e :UE 338 ]
+"32
+[; ;fall.c: 32:                 setupForInactivity();
+[e ( _setupForInactivity ..  ]
+"33
+[; ;fall.c: 33:                 *state = WAITING_FOR_INACTIVITY;
+[e = *U _state . `E2687 2 ]
+"34
+[; ;fall.c: 34:             }
 }
-"136
-[; ;mcc_generated_files/system/src/pins.c: 136: void SW1_DefaultInterruptHandler(void){
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+[e $U 341  ]
+"36
+[; ;fall.c: 36:             else if (timer_20ms >= 25) {
+[e :U 340 ]
+[e $ ! >= -> _timer_20ms `ui -> -> 25 `i `ui 342  ]
 {
-[e :U _SW1_DefaultInterruptHandler ]
-[f ]
-"139
-[; ;mcc_generated_files/system/src/pins.c: 139:     _delay((unsigned long)((60)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"140
-[; ;mcc_generated_files/system/src/pins.c: 140:     if (PORTAbits.RA1 == 0) {
-[e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 340  ]
-{
-"141
-[; ;mcc_generated_files/system/src/pins.c: 141:         do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
-[e :U 343 ]
-{
-[e = . . _LATAbits 0 4 -> ~ -> . . _LATAbits 0 4 `i `uc ]
+"37
+[; ;fall.c: 37:                 setupForFreefall();
+[e ( _setupForFreefall ..  ]
+"38
+[; ;fall.c: 38:                 *state = WAITING_FOR_FREEFALL;
+[e = *U _state . `E2687 0 ]
+"39
+[; ;fall.c: 39:             }
 }
 [e :U 342 ]
-"142
-[; ;mcc_generated_files/system/src/pins.c: 142:     }
+[e :U 341 ]
+"40
+[; ;fall.c: 40:             break;
+[e $U 335  ]
+"42
+[; ;fall.c: 42:         case WAITING_FOR_INACTIVITY:
+[e :U 343 ]
+"44
+[; ;fall.c: 44:             if (PORTAbits.RA2) {
+[e $ ! != -> . . _PORTAbits 0 2 `i -> 0 `i 344  ]
+{
+"45
+[; ;fall.c: 45:                 if (!orientation_Up()) {
+[e $ ! ! != -> ( _orientation_Up ..  `i -> 0 `i 345  ]
+{
+"46
+[; ;fall.c: 46:                     do { LATAbits.LATA5 = 1; } while(0);
+[e :U 348 ]
+{
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 340 ]
-"143
-[; ;mcc_generated_files/system/src/pins.c: 143: }
-[e :UE 339 ]
+[e :U 347 ]
+"47
+[; ;fall.c: 47:                     _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"48
+[; ;fall.c: 48:                     do { LATAbits.LATA5 = 0; } while(0);
+[e :U 351 ]
+{
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+}
+[e :U 350 ]
+"49
+[; ;fall.c: 49:                     orientation_check_timer_20ms = 0;
+[e = _orientation_check_timer_20ms -> -> 0 `i `us ]
+"50
+[; ;fall.c: 50:                     good_orientation_count = 0;
+[e = _good_orientation_count -> -> 0 `i `uc ]
+"51
+[; ;fall.c: 51:                     ADXL345_ClearInterrupt();
+[e ( _ADXL345_ClearInterrupt ..  ]
+"52
+[; ;fall.c: 52:                     *state = WAITING_FOR_TIMEOUT;
+[e = *U _state . `E2687 3 ]
+"53
+[; ;fall.c: 53:                 } else {
+}
+[e $U 352  ]
+[e :U 345 ]
+{
+"54
+[; ;fall.c: 54:                     setupForFreefall();
+[e ( _setupForFreefall ..  ]
+"55
+[; ;fall.c: 55:                     *state = WAITING_FOR_FREEFALL;
+[e = *U _state . `E2687 0 ]
+"56
+[; ;fall.c: 56:                 }
+}
+[e :U 352 ]
+"57
+[; ;fall.c: 57:             }
+}
+[e $U 353  ]
+"59
+[; ;fall.c: 59:             else if (timer_20ms >= 225) {
+[e :U 344 ]
+[e $ ! >= -> _timer_20ms `ui -> -> 225 `i `ui 354  ]
+{
+"60
+[; ;fall.c: 60:                 setupForFreefall();
+[e ( _setupForFreefall ..  ]
+"61
+[; ;fall.c: 61:                 *state = WAITING_FOR_FREEFALL;
+[e = *U _state . `E2687 0 ]
+"62
+[; ;fall.c: 62:             }
+}
+[e :U 354 ]
+[e :U 353 ]
+"63
+[; ;fall.c: 63:             break;
+[e $U 335  ]
+"65
+[; ;fall.c: 65:         case WAITING_FOR_TIMEOUT:
+[e :U 355 ]
+"67
+[; ;fall.c: 67:             if (timer_20ms >= WAITING_FOR_FREEFALL) {
+[e $ ! >= -> _timer_20ms `ui -> . `E2687 0 `ui 356  ]
+{
+"68
+[; ;fall.c: 68:                 *state = FALL_DETECTED;
+[e = *U _state . `E2687 4 ]
+"69
+[; ;fall.c: 69:             }
+}
+[e $U 357  ]
+"71
+[; ;fall.c: 71:             else if (orientation_check_timer_20ms >= 5) {
+[e :U 356 ]
+[e $ ! >= -> _orientation_check_timer_20ms `ui -> -> 5 `i `ui 358  ]
+{
+"72
+[; ;fall.c: 72:                 orientation_check_timer_20ms = 0;
+[e = _orientation_check_timer_20ms -> -> 0 `i `us ]
+"73
+[; ;fall.c: 73:                 if (orientation_Up()) {
+[e $ ! != -> ( _orientation_Up ..  `i -> 0 `i 359  ]
+{
+"75
+[; ;fall.c: 75:                     if (good_orientation_count++ >= 10) {
+[e $ ! >= -> ++ _good_orientation_count -> -> 1 `i `uc `i -> 10 `i 360  ]
+{
+"76
+[; ;fall.c: 76:                         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 363 ]
+{
+[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 362 ]
+"77
+[; ;fall.c: 77:                         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"78
+[; ;fall.c: 78:                         do { LATAbits.LATA4 = 0; } while(0);
+[e :U 366 ]
+{
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+}
+[e :U 365 ]
+"79
+[; ;fall.c: 79:                         setupForFreefall();
+[e ( _setupForFreefall ..  ]
+"80
+[; ;fall.c: 80:                         *state = WAITING_FOR_FREEFALL;
+[e = *U _state . `E2687 0 ]
+"81
+[; ;fall.c: 81:                     }
+}
+[e :U 360 ]
+"82
+[; ;fall.c: 82:                 } else {
+}
+[e $U 367  ]
+[e :U 359 ]
+{
+"83
+[; ;fall.c: 83:                     good_orientation_count = 0;
+[e = _good_orientation_count -> -> 0 `i `uc ]
+"84
+[; ;fall.c: 84:                 }
+}
+[e :U 367 ]
+"85
+[; ;fall.c: 85:             }
+}
+[e :U 358 ]
+[e :U 357 ]
+"86
+[; ;fall.c: 86:             break;
+[e $U 335  ]
+"88
+[; ;fall.c: 88:         case FALL_DETECTED:
+[e :U 368 ]
+"90
+[; ;fall.c: 90:             break;
+[e $U 335  ]
+"91
+[; ;fall.c: 91:     }
+}
+[e $U 335  ]
+[e :U 336 ]
+[e [\ -> *U _state `ui , $ -> . `E2687 0 `ui 337
+ , $ -> . `E2687 1 `ui 339
+ , $ -> . `E2687 2 `ui 343
+ , $ -> . `E2687 3 `ui 355
+ , $ -> . `E2687 4 `ui 368
+ 335 ]
+[e :U 335 ]
+"92
+[; ;fall.c: 92: }
+[e :UE 334 ]
 }

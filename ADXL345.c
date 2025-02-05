@@ -7,6 +7,8 @@
 
 #include "ADXL345.h"
 
+const uint16_t acceleration_squared_threshold = 1200; // calculated by George
+
 const uint8_t ADXL345_init_settings[12] = {
 	0x18,	// ~1.5 g
 	0x03,	// ~0.1875 g
@@ -27,8 +29,8 @@ const uint8_t impact_init[4] = {0x30, 0x03, 0x01, 0x7F};
 const uint8_t no_motion_init[4] = {0x08, 0x03, 0x02, 0xFF};
 
 bool ADXL345_init(void) {
-    if (!SPI1_Open(ADXL345)) {
-        return false;
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
     }
     
     struct Message msg;
@@ -63,9 +65,37 @@ bool ADXL345_validation(void) {
     return passed;
 }
 
-bool ADXL345_ClearInterrupt(void) {
-    if (!SPI1_Open(ADXL345)) {
-        return false;
+void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
+    }
+    
+    struct Message msg;
+    msg.registerAddr = OFSX;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = x_axis;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    msg.registerAddr = OFSY;
+    msg.data[0] = y_axis;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    msg.registerAddr = OFSZ;
+    msg.data[0] = z_axis;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    SPI1_Close();
+}
+
+void ADXL345_ClearInterrupt(void) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
     }
     
     // Clear any pending interrupts
@@ -76,9 +106,9 @@ bool ADXL345_ClearInterrupt(void) {
     SPI1_Close();
 }
 
-bool setupForFreefall(void) {
-    if (!SPI1_Open(ADXL345)) {
-        return false;
+void setupForFreefall(void) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
     }
     
     // Clear any pending interrupts
@@ -120,16 +150,13 @@ bool setupForFreefall(void) {
     CS_ACC_SetLow();
     SPI1_ByteExchange(INT_SOURCE);
     CS_ACC_SetHigh();
-    
-    //Motion_State = Waiting_For_Freefall;
-    
+        
     SPI1_Close();
-    return true;
 }
 
-bool setupForImpact(void) {
-    if (!SPI1_Open(ADXL345)) {
-        return false;
+void setupForImpact(void) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
     }
     
     // Clear any pending interrupts
@@ -173,12 +200,11 @@ bool setupForImpact(void) {
     CS_ACC_SetHigh();
     
     SPI1_Close();
-    return true;
 }
 
-bool setupForInactivity(void) {
-    if (!SPI1_Open(ADXL345)) {
-        return false;
+void setupForInactivity(void) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
     }
     
     // Clear any pending interrupts
@@ -222,5 +248,44 @@ bool setupForInactivity(void) {
     CS_ACC_SetHigh();
     
     SPI1_Close();
-    return true;
+}
+
+bool orientation_Up(void) {
+    while (!SPI1_Open(ADXL345)) {
+        SPI1_Close();
+    }
+    int8_t acc_data[6] = {0};
+    int16_t g_deltaX, g_deltaY, g_deltaZ;
+    
+    struct Message msg;
+    msg.registerAddr = DATA_FORMAT;
+    msg.data[0] = 0x0C; // change to 2G, left justified, full resolution
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    __delay_ms(10);
+    
+    // Read accelerometer data
+    CS_ACC_SetLow();
+    SPI1_ByteWrite(DATAX0);
+    SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+    CS_ACC_SetHigh();
+    SPI1_Close();
+    
+    // Save X,Y,Z readings
+    g_deltaX = (int8_t)acc_data[1] - 0x40;
+    g_deltaY = (int8_t)acc_data[3];
+    g_deltaZ = (int8_t)acc_data[5];
+    
+    // Calculate magnitude of acceleration and compare to threshold
+    g_deltaX *= g_deltaX;
+    g_deltaY *= g_deltaY;
+    g_deltaZ *= g_deltaZ;
+    int g_magnitude = g_deltaX + g_deltaY + g_deltaZ;
+    if (g_magnitude < acceleration_squared_threshold) {
+        return true;
+    } else {
+        return false;
+    }
 }

@@ -42,7 +42,7 @@ void MotionEventHandler(State_t *state) {
         case WAITING_FOR_INACTIVITY:
             // inactivity detected
             if (INT1_GetValue()) {
-                if (!Orientation_Up()) {
+                if (!orientation_Up()) {
                     RED_LED_SetHigh();
                     __delay_ms(100);
                     RED_LED_SetLow();
@@ -70,7 +70,7 @@ void MotionEventHandler(State_t *state) {
             // Check orientation every 100 ms
             else if (orientation_check_timer_20ms >= ORIENTATION_CHECK_TIMEOUT) {
                 orientation_check_timer_20ms = 0;
-                if (Orientation_Up()) {
+                if (orientation_Up()) {
                     // Cancel Fall if good orientation for 1 second straight
                     if (good_orientation_count++ >= GOOD_ORIENTATION_TIMEOUT) {
                         GRN_LED_SetHigh();

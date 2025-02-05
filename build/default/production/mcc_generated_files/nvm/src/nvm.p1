@@ -1,69 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F2674 `(v ~T0 @X0 0 tf ]
-"1945 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1945: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"1990
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1990: extern volatile unsigned char LATC __attribute__((address(0x10E)));
-[v _LATC `Vuc ~T0 @X0 0 e@270 ]
-"1108
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1108: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
-[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
-"1158
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1158: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
-[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
-"2735
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2735: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"2782
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2782: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"3285
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3285: extern volatile unsigned char WPUA __attribute__((address(0x20C)));
-[v _WPUA `Vuc ~T0 @X0 0 e@524 ]
-"3343
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3343: extern volatile unsigned char WPUC __attribute__((address(0x20E)));
-[v _WPUC `Vuc ~T0 @X0 0 e@526 ]
-"1367
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1367:     struct {
-[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S79 . PS0 PS1 PS2 PSA TMR0SE TMR0CS INTEDG nWPUEN ]
-"1377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1377:     struct {
-[s S80 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S80 . PS . T0SE T0CS ]
-"1366
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1366: typedef union {
-[u S78 `S79 1 `S80 1 ]
-[n S78 . . . ]
-"1384
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1384: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x095)));
-[v _OPTION_REGbits `VS78 ~T0 @X0 0 e@149 ]
-"5203
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5203: extern volatile unsigned char INLVLA __attribute__((address(0x38C)));
-[v _INLVLA `Vuc ~T0 @X0 0 e@908 ]
-"5261
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5261: extern volatile unsigned char INLVLC __attribute__((address(0x38E)));
-[v _INLVLC `Vuc ~T0 @X0 0 e@910 ]
-"2651
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2651: extern volatile unsigned char APFCON0 __attribute__((address(0x11D)));
-[v _APFCON0 `Vuc ~T0 @X0 0 e@285 ]
-"5319
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5319: extern volatile unsigned char IOCAP __attribute__((address(0x391)));
-[v _IOCAP `Vuc ~T0 @X0 0 e@913 ]
-"5377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5377: extern volatile unsigned char IOCAN __attribute__((address(0x392)));
-[v _IOCAN `Vuc ~T0 @X0 0 e@914 ]
-"5435
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5435: extern volatile unsigned char IOCAF __attribute__((address(0x393)));
-[v _IOCAF `Vuc ~T0 @X0 0 e@915 ]
-[v F2386 `(v ~T0 @X0 0 tf ]
-"294 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 294: void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2386 ]
-"316
-[; ;mcc_generated_files/system/src/../pins.h: 316: void SW1_DefaultInterruptHandler(void);
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"148 mcc_generated_files/nvm/src/../nvm.h
+[; ;mcc_generated_files/nvm/src/../nvm.h: 148: void NVM_StatusClear(void);
+[v _NVM_StatusClear `(v ~T0 @X0 0 ef ]
+"2946 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2946:     struct {
+[s S158 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S158 . RD WR WREN WRERR FREE LWLO CFGS EEPGD ]
+"2945
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2945: typedef union {
+[u S157 `S158 1 ]
+[n S157 . . ]
+"2957
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2957: extern volatile EECON1bits_t EECON1bits __attribute__((address(0x195)));
+[v _EECON1bits `VS157 ~T0 @X0 0 e@405 ]
+"52 mcc_generated_files/nvm/src/nvm.c
+[; ;mcc_generated_files/nvm/src/nvm.c: 52: nvm_status_t NVM_StatusGet(void)
+[c E2386 0 1 .. ]
+[n E2386 . NVM_OK NVM_ERROR  ]
 "357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 357:     struct {
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -79,53 +32,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"5441
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5441:     struct {
-[s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S279 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 ]
-"5449
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5449:     struct {
-[s S280 :6 `uc 1 ]
-[n S280 . IOCAF ]
-"5440
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5440: typedef union {
-[u S278 `S279 1 `S280 1 ]
-[n S278 . . . ]
-"5453
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5453: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x393)));
-[v _IOCAFbits `VS278 ~T0 @X0 0 e@915 ]
-"284 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 284: void SW1_ISR(void);
-[v _SW1_ISR `(v ~T0 @X0 0 ef ]
-[v F2679 `(v ~T0 @X0 0 tf ]
-[v F2681 `(v ~T0 @X0 0 tf ]
-[v F2683 `(v ~T0 @X0 0 tf ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
-"435 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 435:     struct {
-[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S34 . RA0 RA1 RA2 RA3 RA4 RA5 ]
-"434
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 434: typedef union {
-[u S33 `S34 1 ]
-[n S33 . . ]
-"444
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
-[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
-"1951
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
-[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S106 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"1950
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1950: typedef union {
-[u S105 `S106 1 ]
-[n S105 . . ]
-"1960
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
+"2855
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2855: extern volatile unsigned char EEADRH __attribute__((address(0x192)));
+[v _EEADRH `Vuc ~T0 @X0 0 e@402 ]
+"2835
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2835: extern volatile unsigned char EEADRL __attribute__((address(0x191)));
+[v _EEADRL `Vuc ~T0 @X0 0 e@401 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"2920 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2920: extern volatile unsigned char EEDATH __attribute__((address(0x194)));
+[v _EEDATH `Vuc ~T0 @X0 0 e@404 ]
+"2882
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2882: extern volatile unsigned char EEDATL __attribute__((address(0x193)));
+[v _EEDATL `Vuc ~T0 @X0 0 e@403 ]
+"6960
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 6960: extern volatile __bit LWLO __attribute__((address(0xCAD)));
+[v _LWLO `Vb ~T0 @X0 0 e@3245 ]
+"3002
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3002: extern volatile unsigned char EECON2 __attribute__((address(0x196)));
+[v _EECON2 `Vuc ~T0 @X0 0 e@406 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -567,162 +494,563 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 6239: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"38 mcc_generated_files/system/src/pins.c
-[; ;mcc_generated_files/system/src/pins.c: 38: void (*SW1_InterruptHandler)(void);
-[v _SW1_InterruptHandler `*F2674 ~T0 @X0 1 e ]
+"39 mcc_generated_files/nvm/src/nvm.c
+[; ;mcc_generated_files/nvm/src/nvm.c: 39: __near volatile static uint8_t unlockKeyLow;
+[v _unlockKeyLow `VNuc ~T0 @X0 1 s ]
 "40
-[; ;mcc_generated_files/system/src/pins.c: 40: void PIN_MANAGER_Initialize(void)
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"41
-[; ;mcc_generated_files/system/src/pins.c: 41: {
+[; ;mcc_generated_files/nvm/src/nvm.c: 40: __near volatile static uint8_t unlockKeyHigh;
+[v _unlockKeyHigh `VNuc ~T0 @X0 1 s ]
+"42
+[; ;mcc_generated_files/nvm/src/nvm.c: 42: void NVM_Initialize(void)
+[v _NVM_Initialize `(v ~T0 @X0 1 ef ]
+"43
+[; ;mcc_generated_files/nvm/src/nvm.c: 43: {
 {
-[e :U _PIN_MANAGER_Initialize ]
+[e :U _NVM_Initialize ]
 [f ]
+"44
+[; ;mcc_generated_files/nvm/src/nvm.c: 44:     NVM_StatusClear();
+[e ( _NVM_StatusClear ..  ]
 "45
-[; ;mcc_generated_files/system/src/pins.c: 45:     LATA = 0x0;
-[e = _LATA -> -> 0 `i `uc ]
-"46
-[; ;mcc_generated_files/system/src/pins.c: 46:     LATC = 0x18;
-[e = _LATC -> -> 24 `i `uc ]
-"51
-[; ;mcc_generated_files/system/src/pins.c: 51:     TRISA = 0xF;
-[e = _TRISA -> -> 15 `i `uc ]
-"52
-[; ;mcc_generated_files/system/src/pins.c: 52:     TRISC = 0x2;
-[e = _TRISC -> -> 2 `i `uc ]
-"57
-[; ;mcc_generated_files/system/src/pins.c: 57:     ANSELA = 0x0;
-[e = _ANSELA -> -> 0 `i `uc ]
-"58
-[; ;mcc_generated_files/system/src/pins.c: 58:     ANSELC = 0x0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/system/src/pins.c: 63:     WPUA = 0xA;
-[e = _WPUA -> -> 10 `i `uc ]
-"64
-[; ;mcc_generated_files/system/src/pins.c: 64:     WPUC = 0x0;
-[e = _WPUC -> -> 0 `i `uc ]
-"65
-[; ;mcc_generated_files/system/src/pins.c: 65:     OPTION_REGbits.nWPUEN = 0x0;
-[e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
-"77
-[; ;mcc_generated_files/system/src/pins.c: 77:     INLVLA = 0x0;
-[e = _INLVLA -> -> 0 `i `uc ]
-"78
-[; ;mcc_generated_files/system/src/pins.c: 78:     INLVLC = 0x0;
-[e = _INLVLC -> -> 0 `i `uc ]
-"87
-[; ;mcc_generated_files/system/src/pins.c: 87:     APFCON0 = 0x0;
-[e = _APFCON0 -> -> 0 `i `uc ]
-"92
-[; ;mcc_generated_files/system/src/pins.c: 92:     IOCAP = 0x0;
-[e = _IOCAP -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/system/src/pins.c: 93:     IOCAN = 0x2;
-[e = _IOCAN -> -> 2 `i `uc ]
-"94
-[; ;mcc_generated_files/system/src/pins.c: 94:     IOCAF = 0x0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"96
-[; ;mcc_generated_files/system/src/pins.c: 96:     SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
-[e ( _SW1_SetInterruptHandler (1 &U _SW1_DefaultInterruptHandler ]
-"99
-[; ;mcc_generated_files/system/src/pins.c: 99:     INTCONbits.IOCIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"100
-[; ;mcc_generated_files/system/src/pins.c: 100: }
-[e :UE 333 ]
+[; ;mcc_generated_files/nvm/src/nvm.c: 45: }
+[e :UE 331 ]
 }
-"102
-[; ;mcc_generated_files/system/src/pins.c: 102: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"103
-[; ;mcc_generated_files/system/src/pins.c: 103: {
+"47
+[; ;mcc_generated_files/nvm/src/nvm.c: 47: _Bool NVM_IsBusy(void)
+[v _NVM_IsBusy `(a ~T0 @X0 1 ef ]
+"48
+[; ;mcc_generated_files/nvm/src/nvm.c: 48: {
 {
-[e :U _PIN_MANAGER_IOC ]
+[e :U _NVM_IsBusy ]
 [f ]
-"105
-[; ;mcc_generated_files/system/src/pins.c: 105:     if(IOCAFbits.IOCAF1 == 1)
-[e $ ! == -> . . _IOCAFbits 0 1 `i -> 1 `i 335  ]
-"106
-[; ;mcc_generated_files/system/src/pins.c: 106:     {
+"49
+[; ;mcc_generated_files/nvm/src/nvm.c: 49:     return (EECON1bits.WR || EECON1bits.RD);
+[e ) -> -> || != -> . . _EECON1bits 0 1 `i -> 0 `i != -> . . _EECON1bits 0 0 `i -> 0 `i `i `a ]
+[e $UE 332  ]
+"50
+[; ;mcc_generated_files/nvm/src/nvm.c: 50: }
+[e :UE 332 ]
+}
+"52
+[; ;mcc_generated_files/nvm/src/nvm.c: 52: nvm_status_t NVM_StatusGet(void)
+[v _NVM_StatusGet `(E2386 ~T0 @X0 1 ef ]
+"53
+[; ;mcc_generated_files/nvm/src/nvm.c: 53: {
 {
-"107
-[; ;mcc_generated_files/system/src/pins.c: 107:         SW1_ISR();
-[e ( _SW1_ISR ..  ]
-"108
-[; ;mcc_generated_files/system/src/pins.c: 108:     }
+[e :U _NVM_StatusGet ]
+[f ]
+"54
+[; ;mcc_generated_files/nvm/src/nvm.c: 54:     if (EECON1bits.WRERR == 1)
+[e $ ! == -> . . _EECON1bits 0 3 `i -> 1 `i 334  ]
+"55
+[; ;mcc_generated_files/nvm/src/nvm.c: 55:     {
+{
+"56
+[; ;mcc_generated_files/nvm/src/nvm.c: 56:         return NVM_ERROR;
+[e ) . `E2386 1 ]
+[e $UE 333  ]
+"57
+[; ;mcc_generated_files/nvm/src/nvm.c: 57:     }
+}
+[e $U 335  ]
+"58
+[; ;mcc_generated_files/nvm/src/nvm.c: 58:     else
+[e :U 334 ]
+"59
+[; ;mcc_generated_files/nvm/src/nvm.c: 59:     {
+{
+"60
+[; ;mcc_generated_files/nvm/src/nvm.c: 60:         return NVM_OK;
+[e ) . `E2386 0 ]
+[e $UE 333  ]
+"61
+[; ;mcc_generated_files/nvm/src/nvm.c: 61:     }
 }
 [e :U 335 ]
-"109
-[; ;mcc_generated_files/system/src/pins.c: 109: }
-[e :UE 334 ]
+"62
+[; ;mcc_generated_files/nvm/src/nvm.c: 62: }
+[e :UE 333 ]
 }
-"114
-[; ;mcc_generated_files/system/src/pins.c: 114: void SW1_ISR(void) {
-[v _SW1_ISR `(v ~T0 @X0 1 ef ]
+"64
+[; ;mcc_generated_files/nvm/src/nvm.c: 64: void NVM_StatusClear(void)
+[v _NVM_StatusClear `(v ~T0 @X0 1 ef ]
+"65
+[; ;mcc_generated_files/nvm/src/nvm.c: 65: {
 {
-[e :U _SW1_ISR ]
+[e :U _NVM_StatusClear ]
 [f ]
-"119
-[; ;mcc_generated_files/system/src/pins.c: 119:     if(SW1_InterruptHandler)
-[e $ ! != _SW1_InterruptHandler -> -> 0 `i `*F2679 337  ]
-"120
-[; ;mcc_generated_files/system/src/pins.c: 120:     {
-{
-"121
-[; ;mcc_generated_files/system/src/pins.c: 121:         SW1_InterruptHandler();
-[e ( *U _SW1_InterruptHandler ..  ]
-"122
-[; ;mcc_generated_files/system/src/pins.c: 122:     }
-}
-[e :U 337 ]
-"123
-[; ;mcc_generated_files/system/src/pins.c: 123:     IOCAFbits.IOCAF1 = 0;
-[e = . . _IOCAFbits 0 1 -> -> 0 `i `uc ]
-"124
-[; ;mcc_generated_files/system/src/pins.c: 124: }
+"66
+[; ;mcc_generated_files/nvm/src/nvm.c: 66:     EECON1bits.WRERR = 0;
+[e = . . _EECON1bits 0 3 -> -> 0 `i `uc ]
+"67
+[; ;mcc_generated_files/nvm/src/nvm.c: 67: }
 [e :UE 336 ]
 }
-"129
-[; ;mcc_generated_files/system/src/pins.c: 129: void SW1_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2681 ]
+"69
+[; ;mcc_generated_files/nvm/src/nvm.c: 69: void NVM_UnlockKeySet(uint16_t unlockKey)
+[v _NVM_UnlockKeySet `(v ~T0 @X0 1 ef1`us ]
+"70
+[; ;mcc_generated_files/nvm/src/nvm.c: 70: {
 {
-[e :U _SW1_SetInterruptHandler ]
-[v _InterruptHandler `*F2683 ~T0 @X0 1 r1 ]
+[e :U _NVM_UnlockKeySet ]
+"69
+[; ;mcc_generated_files/nvm/src/nvm.c: 69: void NVM_UnlockKeySet(uint16_t unlockKey)
+[v _unlockKey `us ~T0 @X0 1 r1 ]
+"70
+[; ;mcc_generated_files/nvm/src/nvm.c: 70: {
 [f ]
-"130
-[; ;mcc_generated_files/system/src/pins.c: 130:     SW1_InterruptHandler = InterruptHandler;
-[e = _SW1_InterruptHandler _InterruptHandler ]
-"131
-[; ;mcc_generated_files/system/src/pins.c: 131: }
+"71
+[; ;mcc_generated_files/nvm/src/nvm.c: 71:     unlockKeyHigh = (uint8_t) (unlockKey >> 8);
+[e = _unlockKeyHigh -> >> -> _unlockKey `ui -> 8 `i `uc ]
+"72
+[; ;mcc_generated_files/nvm/src/nvm.c: 72:     unlockKeyLow = (uint8_t) unlockKey;
+[e = _unlockKeyLow -> _unlockKey `uc ]
+"73
+[; ;mcc_generated_files/nvm/src/nvm.c: 73: }
+[e :UE 337 ]
+}
+"75
+[; ;mcc_generated_files/nvm/src/nvm.c: 75: void NVM_UnlockKeyClear(void)
+[v _NVM_UnlockKeyClear `(v ~T0 @X0 1 ef ]
+"76
+[; ;mcc_generated_files/nvm/src/nvm.c: 76: {
+{
+[e :U _NVM_UnlockKeyClear ]
+[f ]
+"77
+[; ;mcc_generated_files/nvm/src/nvm.c: 77:     unlockKeyHigh = 0x00;
+[e = _unlockKeyHigh -> -> 0 `i `uc ]
+"78
+[; ;mcc_generated_files/nvm/src/nvm.c: 78:     unlockKeyLow = 0x00;
+[e = _unlockKeyLow -> -> 0 `i `uc ]
+"79
+[; ;mcc_generated_files/nvm/src/nvm.c: 79: }
 [e :UE 338 ]
 }
-"136
-[; ;mcc_generated_files/system/src/pins.c: 136: void SW1_DefaultInterruptHandler(void){
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
+"81
+[; ;mcc_generated_files/nvm/src/nvm.c: 81: flash_data_t FLASH_Read(flash_address_t address)
+[v _FLASH_Read `(us ~T0 @X0 1 ef1`us ]
+"82
+[; ;mcc_generated_files/nvm/src/nvm.c: 82: {
 {
-[e :U _SW1_DefaultInterruptHandler ]
+[e :U _FLASH_Read ]
+"81
+[; ;mcc_generated_files/nvm/src/nvm.c: 81: flash_data_t FLASH_Read(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"82
+[; ;mcc_generated_files/nvm/src/nvm.c: 82: {
 [f ]
-"139
-[; ;mcc_generated_files/system/src/pins.c: 139:     _delay((unsigned long)((60)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"140
-[; ;mcc_generated_files/system/src/pins.c: 140:     if (PORTAbits.RA1 == 0) {
-[e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 340  ]
-{
-"141
-[; ;mcc_generated_files/system/src/pins.c: 141:         do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
-[e :U 343 ]
-{
-[e = . . _LATAbits 0 4 -> ~ -> . . _LATAbits 0 4 `i `uc ]
-}
-[e :U 342 ]
-"142
-[; ;mcc_generated_files/system/src/pins.c: 142:     }
-}
-[e :U 340 ]
-"143
-[; ;mcc_generated_files/system/src/pins.c: 143: }
+"84
+[; ;mcc_generated_files/nvm/src/nvm.c: 84:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 7 ]
+"87
+[; ;mcc_generated_files/nvm/src/nvm.c: 87:     EEADRH = (uint8_t) (address >> 8);
+[e = _EEADRH -> >> -> _address `ui -> 8 `i `uc ]
+"88
+[; ;mcc_generated_files/nvm/src/nvm.c: 88:     EEADRL = (uint8_t) address;
+[e = _EEADRL -> _address `uc ]
+"91
+[; ;mcc_generated_files/nvm/src/nvm.c: 91:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"94
+[; ;mcc_generated_files/nvm/src/nvm.c: 94:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"95
+[; ;mcc_generated_files/nvm/src/nvm.c: 95:     EECON1bits.EEPGD = 1;
+[e = . . _EECON1bits 0 7 -> -> 1 `i `uc ]
+"98
+[; ;mcc_generated_files/nvm/src/nvm.c: 98:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"99
+[; ;mcc_generated_files/nvm/src/nvm.c: 99:     __nop();
+[e ( ___nop ..  ]
+"100
+[; ;mcc_generated_files/nvm/src/nvm.c: 100:     __nop();
+[e ( ___nop ..  ]
+"103
+[; ;mcc_generated_files/nvm/src/nvm.c: 103:     INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 7 _globalInterruptBitValue ]
+"105
+[; ;mcc_generated_files/nvm/src/nvm.c: 105:     return ((flash_data_t) ((EEDATH << 8) | EEDATL));
+[e ) -> | << -> _EEDATH `i -> 8 `i -> _EEDATL `i `us ]
+[e $UE 339  ]
+"106
+[; ;mcc_generated_files/nvm/src/nvm.c: 106: }
 [e :UE 339 ]
+}
+"108
+[; ;mcc_generated_files/nvm/src/nvm.c: 108: nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer)
+[v _FLASH_RowWrite `(E2386 ~T0 @X0 1 ef2`us`*us ]
+"109
+[; ;mcc_generated_files/nvm/src/nvm.c: 109: {
+{
+[e :U _FLASH_RowWrite ]
+"108
+[; ;mcc_generated_files/nvm/src/nvm.c: 108: nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer)
+[v _address `us ~T0 @X0 1 r1 ]
+[v _dataBuffer `*us ~T0 @X0 1 r2 ]
+"109
+[; ;mcc_generated_files/nvm/src/nvm.c: 109: {
+[f ]
+"110
+[; ;mcc_generated_files/nvm/src/nvm.c: 110:     uint8_t flashDataCount = (32U);
+[v _flashDataCount `uc ~T0 @X0 1 a ]
+[e = _flashDataCount -> -> 32 `ui `uc ]
+"113
+[; ;mcc_generated_files/nvm/src/nvm.c: 113:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 7 ]
+"116
+[; ;mcc_generated_files/nvm/src/nvm.c: 116:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"117
+[; ;mcc_generated_files/nvm/src/nvm.c: 117:     EECON1bits.EEPGD = 1;
+[e = . . _EECON1bits 0 7 -> -> 1 `i `uc ]
+"120
+[; ;mcc_generated_files/nvm/src/nvm.c: 120:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"123
+[; ;mcc_generated_files/nvm/src/nvm.c: 123:     LWLO = 1;
+[e = _LWLO -> -> 1 `i `b ]
+"125
+[; ;mcc_generated_files/nvm/src/nvm.c: 125:     while (flashDataCount-- > 0U)
+[e $U 341  ]
+[e :U 342 ]
+"126
+[; ;mcc_generated_files/nvm/src/nvm.c: 126:     {
+{
+"127
+[; ;mcc_generated_files/nvm/src/nvm.c: 127:         EEADRH = (uint8_t) (address >> 8);
+[e = _EEADRH -> >> -> _address `ui -> 8 `i `uc ]
+"128
+[; ;mcc_generated_files/nvm/src/nvm.c: 128:         EEADRL = (uint8_t) address;
+[e = _EEADRL -> _address `uc ]
+"129
+[; ;mcc_generated_files/nvm/src/nvm.c: 129:         address++;
+[e ++ _address -> -> 1 `i `us ]
+"131
+[; ;mcc_generated_files/nvm/src/nvm.c: 131:         EEDATH = (uint8_t) (*dataBuffer >> 8);
+[e = _EEDATH -> >> -> *U _dataBuffer `ui -> 8 `i `uc ]
+"132
+[; ;mcc_generated_files/nvm/src/nvm.c: 132:         EEDATL = (uint8_t) (*dataBuffer);
+[e = _EEDATL -> *U _dataBuffer `uc ]
+"133
+[; ;mcc_generated_files/nvm/src/nvm.c: 133:         dataBuffer++;
+[e ++ _dataBuffer * -> -> 1 `i `x -> -> # *U _dataBuffer `i `x ]
+"136
+[; ;mcc_generated_files/nvm/src/nvm.c: 136:         if (flashDataCount == 0U)
+[e $ ! == -> _flashDataCount `ui -> 0 `ui 344  ]
+"137
+[; ;mcc_generated_files/nvm/src/nvm.c: 137:         {
+{
+"139
+[; ;mcc_generated_files/nvm/src/nvm.c: 139:             LWLO = 0;
+[e = _LWLO -> -> 0 `i `b ]
+"140
+[; ;mcc_generated_files/nvm/src/nvm.c: 140:         }
+}
+[e :U 344 ]
+"143
+[; ;mcc_generated_files/nvm/src/nvm.c: 143:         INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"146
+[; ;mcc_generated_files/nvm/src/nvm.c: 146:         EECON2 = unlockKeyLow;
+[e = _EECON2 _unlockKeyLow ]
+"147
+[; ;mcc_generated_files/nvm/src/nvm.c: 147:         EECON2 = unlockKeyHigh;
+[e = _EECON2 _unlockKeyHigh ]
+"148
+[; ;mcc_generated_files/nvm/src/nvm.c: 148:         EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"149
+[; ;mcc_generated_files/nvm/src/nvm.c: 149:         __nop();
+[e ( ___nop ..  ]
+"150
+[; ;mcc_generated_files/nvm/src/nvm.c: 150:         __nop();
+[e ( ___nop ..  ]
+"153
+[; ;mcc_generated_files/nvm/src/nvm.c: 153:         INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 7 _globalInterruptBitValue ]
+"154
+[; ;mcc_generated_files/nvm/src/nvm.c: 154:     }
+}
+[e :U 341 ]
+"125
+[; ;mcc_generated_files/nvm/src/nvm.c: 125:     while (flashDataCount-- > 0U)
+[e $ > -> -- _flashDataCount -> -> 1 `i `uc `ui -> 0 `ui 342  ]
+[e :U 343 ]
+"157
+[; ;mcc_generated_files/nvm/src/nvm.c: 157:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"159
+[; ;mcc_generated_files/nvm/src/nvm.c: 159:     if (EECON1bits.WRERR == 1)
+[e $ ! == -> . . _EECON1bits 0 3 `i -> 1 `i 345  ]
+"160
+[; ;mcc_generated_files/nvm/src/nvm.c: 160:     {
+{
+"161
+[; ;mcc_generated_files/nvm/src/nvm.c: 161:         return NVM_ERROR;
+[e ) . `E2386 1 ]
+[e $UE 340  ]
+"162
+[; ;mcc_generated_files/nvm/src/nvm.c: 162:     }
+}
+[e $U 346  ]
+"163
+[; ;mcc_generated_files/nvm/src/nvm.c: 163:     else
+[e :U 345 ]
+"164
+[; ;mcc_generated_files/nvm/src/nvm.c: 164:     {
+{
+"165
+[; ;mcc_generated_files/nvm/src/nvm.c: 165:         return NVM_OK;
+[e ) . `E2386 0 ]
+[e $UE 340  ]
+"166
+[; ;mcc_generated_files/nvm/src/nvm.c: 166:     }
+}
+[e :U 346 ]
+"167
+[; ;mcc_generated_files/nvm/src/nvm.c: 167: }
+[e :UE 340 ]
+}
+"169
+[; ;mcc_generated_files/nvm/src/nvm.c: 169: nvm_status_t FLASH_PageErase(flash_address_t address)
+[v _FLASH_PageErase `(E2386 ~T0 @X0 1 ef1`us ]
+"170
+[; ;mcc_generated_files/nvm/src/nvm.c: 170: {
+{
+[e :U _FLASH_PageErase ]
+"169
+[; ;mcc_generated_files/nvm/src/nvm.c: 169: nvm_status_t FLASH_PageErase(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"170
+[; ;mcc_generated_files/nvm/src/nvm.c: 170: {
+[f ]
+"172
+[; ;mcc_generated_files/nvm/src/nvm.c: 172:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 7 ]
+"175
+[; ;mcc_generated_files/nvm/src/nvm.c: 175:     EEADRH = (uint8_t) (address >> 8);
+[e = _EEADRH -> >> -> _address `ui -> 8 `i `uc ]
+"176
+[; ;mcc_generated_files/nvm/src/nvm.c: 176:     EEADRL = (uint8_t) address;
+[e = _EEADRL -> _address `uc ]
+"179
+[; ;mcc_generated_files/nvm/src/nvm.c: 179:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"180
+[; ;mcc_generated_files/nvm/src/nvm.c: 180:     EECON1bits.EEPGD = 1;
+[e = . . _EECON1bits 0 7 -> -> 1 `i `uc ]
+"183
+[; ;mcc_generated_files/nvm/src/nvm.c: 183:     EECON1bits.FREE = 1;
+[e = . . _EECON1bits 0 4 -> -> 1 `i `uc ]
+"186
+[; ;mcc_generated_files/nvm/src/nvm.c: 186:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"189
+[; ;mcc_generated_files/nvm/src/nvm.c: 189:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"192
+[; ;mcc_generated_files/nvm/src/nvm.c: 192:     EECON2 = unlockKeyLow;
+[e = _EECON2 _unlockKeyLow ]
+"193
+[; ;mcc_generated_files/nvm/src/nvm.c: 193:     EECON2 = unlockKeyHigh;
+[e = _EECON2 _unlockKeyHigh ]
+"194
+[; ;mcc_generated_files/nvm/src/nvm.c: 194:     EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"195
+[; ;mcc_generated_files/nvm/src/nvm.c: 195:     __nop();
+[e ( ___nop ..  ]
+"196
+[; ;mcc_generated_files/nvm/src/nvm.c: 196:     __nop();
+[e ( ___nop ..  ]
+"199
+[; ;mcc_generated_files/nvm/src/nvm.c: 199:     INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 7 _globalInterruptBitValue ]
+"202
+[; ;mcc_generated_files/nvm/src/nvm.c: 202:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"204
+[; ;mcc_generated_files/nvm/src/nvm.c: 204:     if (EECON1bits.WRERR == 1)
+[e $ ! == -> . . _EECON1bits 0 3 `i -> 1 `i 348  ]
+"205
+[; ;mcc_generated_files/nvm/src/nvm.c: 205:     {
+{
+"206
+[; ;mcc_generated_files/nvm/src/nvm.c: 206:         return NVM_ERROR;
+[e ) . `E2386 1 ]
+[e $UE 347  ]
+"207
+[; ;mcc_generated_files/nvm/src/nvm.c: 207:     }
+}
+[e $U 349  ]
+"208
+[; ;mcc_generated_files/nvm/src/nvm.c: 208:     else
+[e :U 348 ]
+"209
+[; ;mcc_generated_files/nvm/src/nvm.c: 209:     {
+{
+"210
+[; ;mcc_generated_files/nvm/src/nvm.c: 210:         return NVM_OK;
+[e ) . `E2386 0 ]
+[e $UE 347  ]
+"211
+[; ;mcc_generated_files/nvm/src/nvm.c: 211:     }
+}
+[e :U 349 ]
+"212
+[; ;mcc_generated_files/nvm/src/nvm.c: 212: }
+[e :UE 347 ]
+}
+"214
+[; ;mcc_generated_files/nvm/src/nvm.c: 214: flash_address_t FLASH_PageAddressGet(flash_address_t address)
+[v _FLASH_PageAddressGet `(us ~T0 @X0 1 ef1`us ]
+"215
+[; ;mcc_generated_files/nvm/src/nvm.c: 215: {
+{
+[e :U _FLASH_PageAddressGet ]
+"214
+[; ;mcc_generated_files/nvm/src/nvm.c: 214: flash_address_t FLASH_PageAddressGet(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"215
+[; ;mcc_generated_files/nvm/src/nvm.c: 215: {
+[f ]
+"216
+[; ;mcc_generated_files/nvm/src/nvm.c: 216:     return (flash_address_t) (address & (((0x2000U) - 1U) ^ ((32U) - 1U)));
+[e ) -> & -> _address `ui ^ - -> 8192 `ui -> 1 `ui - -> 32 `ui -> 1 `ui `us ]
+[e $UE 350  ]
+"217
+[; ;mcc_generated_files/nvm/src/nvm.c: 217: }
+[e :UE 350 ]
+}
+"219
+[; ;mcc_generated_files/nvm/src/nvm.c: 219: uint16_t FLASH_PageOffsetGet(flash_address_t address)
+[v _FLASH_PageOffsetGet `(us ~T0 @X0 1 ef1`us ]
+"220
+[; ;mcc_generated_files/nvm/src/nvm.c: 220: {
+{
+[e :U _FLASH_PageOffsetGet ]
+"219
+[; ;mcc_generated_files/nvm/src/nvm.c: 219: uint16_t FLASH_PageOffsetGet(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"220
+[; ;mcc_generated_files/nvm/src/nvm.c: 220: {
+[f ]
+"221
+[; ;mcc_generated_files/nvm/src/nvm.c: 221:     return (uint16_t) (address & ((32U) - 1U));
+[e ) -> & -> _address `ui - -> 32 `ui -> 1 `ui `us ]
+[e $UE 351  ]
+"222
+[; ;mcc_generated_files/nvm/src/nvm.c: 222: }
+[e :UE 351 ]
+}
+"224
+[; ;mcc_generated_files/nvm/src/nvm.c: 224: eeprom_data_t EEPROM_Read(eeprom_address_t address)
+[v _EEPROM_Read `(uc ~T0 @X0 1 ef1`us ]
+"225
+[; ;mcc_generated_files/nvm/src/nvm.c: 225: {
+{
+[e :U _EEPROM_Read ]
+"224
+[; ;mcc_generated_files/nvm/src/nvm.c: 224: eeprom_data_t EEPROM_Read(eeprom_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"225
+[; ;mcc_generated_files/nvm/src/nvm.c: 225: {
+[f ]
+"227
+[; ;mcc_generated_files/nvm/src/nvm.c: 227:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"228
+[; ;mcc_generated_files/nvm/src/nvm.c: 228:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
+"231
+[; ;mcc_generated_files/nvm/src/nvm.c: 231:     EEADRH = (uint8_t) (address >> 8);
+[e = _EEADRH -> >> -> _address `ui -> 8 `i `uc ]
+"232
+[; ;mcc_generated_files/nvm/src/nvm.c: 232:     EEADRL = (uint8_t) address;
+[e = _EEADRL -> _address `uc ]
+"235
+[; ;mcc_generated_files/nvm/src/nvm.c: 235:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"236
+[; ;mcc_generated_files/nvm/src/nvm.c: 236:     __nop();
+[e ( ___nop ..  ]
+"237
+[; ;mcc_generated_files/nvm/src/nvm.c: 237:     __nop();
+[e ( ___nop ..  ]
+"239
+[; ;mcc_generated_files/nvm/src/nvm.c: 239:     return EEDATL;
+[e ) _EEDATL ]
+[e $UE 352  ]
+"240
+[; ;mcc_generated_files/nvm/src/nvm.c: 240: }
+[e :UE 352 ]
+}
+"242
+[; ;mcc_generated_files/nvm/src/nvm.c: 242: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data)
+[v _EEPROM_Write `(v ~T0 @X0 1 ef2`us`uc ]
+"243
+[; ;mcc_generated_files/nvm/src/nvm.c: 243: {
+{
+[e :U _EEPROM_Write ]
+"242
+[; ;mcc_generated_files/nvm/src/nvm.c: 242: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data)
+[v _address `us ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"243
+[; ;mcc_generated_files/nvm/src/nvm.c: 243: {
+[f ]
+"245
+[; ;mcc_generated_files/nvm/src/nvm.c: 245:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 7 ]
+"248
+[; ;mcc_generated_files/nvm/src/nvm.c: 248:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"249
+[; ;mcc_generated_files/nvm/src/nvm.c: 249:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
+"252
+[; ;mcc_generated_files/nvm/src/nvm.c: 252:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
+"255
+[; ;mcc_generated_files/nvm/src/nvm.c: 255:     EEADRH = (uint8_t) (address >> 8);
+[e = _EEADRH -> >> -> _address `ui -> 8 `i `uc ]
+"256
+[; ;mcc_generated_files/nvm/src/nvm.c: 256:     EEADRL = (uint8_t) address;
+[e = _EEADRL -> _address `uc ]
+"259
+[; ;mcc_generated_files/nvm/src/nvm.c: 259:     EEDATL = data;
+[e = _EEDATL _data ]
+"262
+[; ;mcc_generated_files/nvm/src/nvm.c: 262:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"265
+[; ;mcc_generated_files/nvm/src/nvm.c: 265:     EECON2 = unlockKeyLow;
+[e = _EECON2 _unlockKeyLow ]
+"266
+[; ;mcc_generated_files/nvm/src/nvm.c: 266:     EECON2 = unlockKeyHigh;
+[e = _EECON2 _unlockKeyHigh ]
+"267
+[; ;mcc_generated_files/nvm/src/nvm.c: 267:     EECON1bits.WR = 1;
+[e = . . _EECON1bits 0 1 -> -> 1 `i `uc ]
+"268
+[; ;mcc_generated_files/nvm/src/nvm.c: 268:     __nop();
+[e ( ___nop ..  ]
+"269
+[; ;mcc_generated_files/nvm/src/nvm.c: 269:     __nop();
+[e ( ___nop ..  ]
+"272
+[; ;mcc_generated_files/nvm/src/nvm.c: 272:     INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 7 _globalInterruptBitValue ]
+"275
+[; ;mcc_generated_files/nvm/src/nvm.c: 275:     EECON1bits.WREN = 0;
+[e = . . _EECON1bits 0 2 -> -> 0 `i `uc ]
+"276
+[; ;mcc_generated_files/nvm/src/nvm.c: 276: }
+[e :UE 353 ]
 }

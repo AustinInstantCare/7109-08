@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/interrupt.c"
+# 1 "mcc_generated_files/eeprom-lib/src/eeprom.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,46 +6,122 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/interrupt.c" 2
-# 34 "mcc_generated_files/system/src/interrupt.c"
-# 1 "mcc_generated_files/system/src/../../system/interrupt.h" 1
-# 85 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INTERRUPT_Initialize (void);
-# 139 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_ISR(void);
-# 148 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_CallBack(void);
-# 157 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-# 166 "mcc_generated_files/system/src/../../system/interrupt.h"
-extern void (*INT_InterruptHandler)(void);
-# 175 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_DefaultInterruptHandler(void);
-# 35 "mcc_generated_files/system/src/interrupt.c" 2
-# 1 "mcc_generated_files/system/src/../../system/system.h" 1
-# 39 "mcc_generated_files/system/src/../../system/system.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
+# 1 "mcc_generated_files/eeprom-lib/src/eeprom.c" 2
+# 33 "mcc_generated_files/eeprom-lib/src/eeprom.c"
+# 1 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h" 1
+# 36 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h"
+# 1 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h" 1
+# 36 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
+# 37 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 1 3
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+typedef long int32_t;
 
 
 
 
 
+typedef long long int64_t;
+# 194 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 235 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 149 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
+# 38 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
@@ -54,10 +130,6 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
 typedef unsigned size_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
@@ -130,14 +202,48 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 2 3
+# 39 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h" 2
 
 
 
 
 
 
+typedef struct EEPROM_INTERFACE
+{
 
+    _Bool (*SequentialWrite)(uint32_t address, uint8_t *data, size_t dataLength);
+    _Bool (*SequentialRead)(uint32_t address, uint8_t *data, size_t dataLength);
+    _Bool (*PageWrite)(uint32_t address, uint8_t *data);
+    _Bool (*PageRead)(uint32_t address, uint8_t *data);
+    _Bool (*ByteWrite)(uint32_t address, uint8_t *data);
+    _Bool (*ByteRead)(uint32_t address, uint8_t *data);
+    _Bool (*IsBusy)(void);
+} EEPROM_INTERFACE_t;
+# 37 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h" 2
+
+
+
+
+
+extern const EEPROM_INTERFACE_t eeprom_interface;
+# 52 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h"
+_Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data);
+# 62 "mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h"
+_Bool EEPROM_ByteRead(uint32_t address, uint8_t *data);
+# 34 "mcc_generated_files/eeprom-lib/src/eeprom.c" 2
+
+# 1 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h" 1
+# 36 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
@@ -145,91 +251,7 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 1 3
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 133 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned short uintptr_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef short intptr_t;
-# 164 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef signed char int8_t;
 
-
-
-
-typedef short int16_t;
-# 179 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 194 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 215 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 235 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 27 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 148 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 149 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdint.h" 2 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -4213,103 +4235,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 40 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 1 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 421 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-
-
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 41 "mcc_generated_files/system/src/../../system/system.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
-# 43 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/config_bits.h" 1
-# 39 "mcc_generated_files/system/src/../../system/config_bits.h"
-# 1 "mcc_generated_files/system/src/../../system/../system/clock.h" 1
-# 50 "mcc_generated_files/system/src/../../system/../system/clock.h"
-void CLOCK_Initialize(void);
-# 40 "mcc_generated_files/system/src/../../system/config_bits.h" 2
-# 44 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 268 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void PIN_MANAGER_Initialize (void);
-
-
-
-
-
-
-
-void PIN_MANAGER_IOC(void);
-
-
-
-
-
-
-
-void SW1_ISR(void);
-# 294 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 305 "mcc_generated_files/system/src/../../system/../system/pins.h"
-extern void (*SW1_InterruptHandler)(void);
-# 316 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void SW1_DefaultInterruptHandler(void);
-# 45 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../nvm/nvm.h" 1
-# 87 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 37 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h" 2
+# 87 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 typedef uint16_t flash_data_t;
 
 
@@ -4346,9 +4273,9 @@ typedef enum
 
 
 void NVM_Initialize(void);
-# 131 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 131 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 _Bool NVM_IsBusy(void);
-# 140 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 140 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 nvm_status_t NVM_StatusGet(void);
 
 
@@ -4382,9 +4309,9 @@ void NVM_UnlockKeyClear(void);
 
 
 flash_data_t FLASH_Read(flash_address_t address);
-# 186 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 186 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer);
-# 196 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 196 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 nvm_status_t FLASH_PageErase(flash_address_t address);
 
 
@@ -4402,161 +4329,45 @@ flash_address_t FLASH_PageAddressGet(flash_address_t address);
 
 
 uint16_t FLASH_PageOffsetGet(flash_address_t address);
-# 224 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 224 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 eeprom_data_t EEPROM_Read(eeprom_address_t address);
-# 237 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 237 "mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
-# 46 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../spi/mssp.h" 1
-# 38 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-# 1 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h" 1
-# 39 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 40 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h" 2
+# 36 "mcc_generated_files/eeprom-lib/src/eeprom.c" 2
 
 
-
-
-
-
-struct SPI_INTERFACE
-{
-    void (*Initialize)(void);
-    void (*Deinitialize)(void);
-    _Bool (*Open)(uint8_t spiConfigIndex);
-    void (*Close)(void);
-    void (*BufferExchange)(void *bufferData, size_t bufferSize);
-    void (*BufferRead)(void *bufferData, size_t bufferSize);
-    void (*BufferWrite)(void *bufferData, size_t bufferSize);
-    uint8_t (*ByteExchange)(uint8_t byteData);
-    uint8_t (*ByteRead)(void);
-    void (*ByteWrite)(uint8_t byteData);
-    _Bool (*IsRxReady)(void);
-    _Bool (*IsTxReady)(void);
-    void (*RxCompleteCallbackRegister)(void (*callbackHandler)(void));
-    void (*TxCompleteCallbackRegister)(void (*callbackHandler)(void));
+const EEPROM_INTERFACE_t eeprom_interface = {
+    .SequentialWrite = ((void*)0),
+    .SequentialRead = ((void*)0),
+    .PageWrite = ((void*)0),
+    .PageRead = ((void*)0),
+    .ByteWrite = EEPROM_ByteWrite,
+    .ByteRead = EEPROM_ByteRead,
+    .IsBusy = NVM_IsBusy,
 };
-# 39 "mcc_generated_files/system/src/../../system/../spi/mssp.h" 2
 
-
-
-
-
-
-extern const struct SPI_INTERFACE SPI1_Host;
-# 115 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-typedef enum {
-    ADXL345,
-    SI4055,
-    MSSP_DEFAULT
-} spi1_configuration_name_t;
-
-
-
-
-
-
-
-void SPI1_Initialize(void);
-
-
-
-
-
-
-
-void SPI1_Deinitialize(void);
-# 145 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_Open(uint8_t spiConfigIndex);
-
-
-
-
-
-
-
-void SPI1_Close(void);
-# 162 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
-# 171 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
-# 180 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferRead(void *bufferData, size_t bufferSize);
-
-
-
-
-
-
-
-uint8_t SPI1_ByteExchange(uint8_t byteData);
-# 198 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_ByteWrite(uint8_t byteData);
-
-
-
-
-
-
-
-uint8_t SPI1_ByteRead(void);
-# 215 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_IsRxReady(void);
-# 224 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_IsTxReady(void);
-# 47 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../system/watchdog.h" 1
-# 52 "mcc_generated_files/system/src/../../system/../system/watchdog.h"
-void WDT_Initialize(void);
-# 48 "mcc_generated_files/system/src/../../system/system.h" 2
-# 58 "mcc_generated_files/system/src/../../system/system.h"
-void SYSTEM_Initialize(void);
-# 36 "mcc_generated_files/system/src/interrupt.c" 2
-
-
-void (*INT_InterruptHandler)(void);
-
-void INTERRUPT_Initialize (void)
+_Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data)
 {
-
-
-    (INTCONbits.INTF = 0);
-    (OPTION_REGbits.INTEDG = 1);
-
-    INT_SetInterruptHandler(INT_DefaultInterruptHandler);
-
-
-}
-
-
-void INT_ISR(void)
-{
-    (INTCONbits.INTF = 0);
-
-
-    INT_CallBack();
-}
-
-
-void INT_CallBack(void)
-{
-
-    if(INT_InterruptHandler)
+    uint8_t getData = *data;
+    eeprom_address_t writeAddress = (eeprom_address_t) (address);
+    NVM_UnlockKeySet((0xAA55U));
+    EEPROM_Write(writeAddress, getData);
+    NVM_UnlockKeyClear();
+    while (NVM_IsBusy());
+    if (NVM_StatusGet() == NVM_OK)
     {
-        INT_InterruptHandler();
+        return 1;
+    }
+    else
+    {
+        NVM_StatusClear();
+        return 0;
     }
 }
 
-void INT_SetInterruptHandler(void (* InterruptHandler)(void)){
-    INT_InterruptHandler = InterruptHandler;
-}
-
-void INT_DefaultInterruptHandler(void){
-
-
+_Bool EEPROM_ByteRead(uint32_t address, uint8_t *data)
+{
+    eeprom_address_t readAddress = (eeprom_address_t) (address);
+    *data = EEPROM_Read(readAddress);
+    return 1;
 }

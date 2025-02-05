@@ -34,6 +34,7 @@
 */
 #include "mcc_generated_files/system/system.h"
 #include "ADXL345.h"
+#include "fall.h"
 
 /*
     Main application
@@ -60,11 +61,12 @@ int main(void)
     }
     
     ADXL345_init();
+    State_t current_state = WAITING_FOR_FREEFALL;
     
     while(1)
     {           
         PIN_MANAGER_IOC();
-        
+        MotionEventHandler(&current_state);
         SLEEP();
         NOP();
     }    

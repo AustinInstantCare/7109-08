@@ -1,131 +1,50 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F2674 `(v ~T0 @X0 0 tf ]
-"1945 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1945: extern volatile unsigned char LATA __attribute__((address(0x10C)));
-[v _LATA `Vuc ~T0 @X0 0 e@268 ]
-"1990
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1990: extern volatile unsigned char LATC __attribute__((address(0x10E)));
-[v _LATC `Vuc ~T0 @X0 0 e@270 ]
-"1108
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1108: extern volatile unsigned char TRISA __attribute__((address(0x08C)));
-[v _TRISA `Vuc ~T0 @X0 0 e@140 ]
-"1158
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1158: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
-[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
-"2735
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2735: extern volatile unsigned char ANSELA __attribute__((address(0x18C)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
-"2782
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2782: extern volatile unsigned char ANSELC __attribute__((address(0x18E)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@398 ]
-"3285
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3285: extern volatile unsigned char WPUA __attribute__((address(0x20C)));
-[v _WPUA `Vuc ~T0 @X0 0 e@524 ]
-"3343
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 3343: extern volatile unsigned char WPUC __attribute__((address(0x20E)));
-[v _WPUC `Vuc ~T0 @X0 0 e@526 ]
-"1367
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1367:     struct {
-[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S79 . PS0 PS1 PS2 PSA TMR0SE TMR0CS INTEDG nWPUEN ]
-"1377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1377:     struct {
-[s S80 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S80 . PS . T0SE T0CS ]
-"1366
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1366: typedef union {
-[u S78 `S79 1 `S80 1 ]
-[n S78 . . . ]
-"1384
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1384: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x095)));
-[v _OPTION_REGbits `VS78 ~T0 @X0 0 e@149 ]
-"5203
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5203: extern volatile unsigned char INLVLA __attribute__((address(0x38C)));
-[v _INLVLA `Vuc ~T0 @X0 0 e@908 ]
-"5261
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5261: extern volatile unsigned char INLVLC __attribute__((address(0x38E)));
-[v _INLVLC `Vuc ~T0 @X0 0 e@910 ]
-"2651
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 2651: extern volatile unsigned char APFCON0 __attribute__((address(0x11D)));
-[v _APFCON0 `Vuc ~T0 @X0 0 e@285 ]
-"5319
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5319: extern volatile unsigned char IOCAP __attribute__((address(0x391)));
-[v _IOCAP `Vuc ~T0 @X0 0 e@913 ]
-"5377
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5377: extern volatile unsigned char IOCAN __attribute__((address(0x392)));
-[v _IOCAN `Vuc ~T0 @X0 0 e@914 ]
-"5435
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5435: extern volatile unsigned char IOCAF __attribute__((address(0x393)));
-[v _IOCAF `Vuc ~T0 @X0 0 e@915 ]
-[v F2386 `(v ~T0 @X0 0 tf ]
-"294 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 294: void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2386 ]
-"316
-[; ;mcc_generated_files/system/src/../pins.h: 316: void SW1_DefaultInterruptHandler(void);
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
-"357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 357:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"367
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 367:     struct {
-[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S32 . . T0IF . T0IE ]
-"356
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 356: typedef union {
-[u S30 `S31 1 `S32 1 ]
-[n S30 . . . ]
-"374
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"5441
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5441:     struct {
-[s S279 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S279 . IOCAF0 IOCAF1 IOCAF2 IOCAF3 IOCAF4 IOCAF5 ]
-"5449
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5449:     struct {
-[s S280 :6 `uc 1 ]
-[n S280 . IOCAF ]
-"5440
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5440: typedef union {
-[u S278 `S279 1 `S280 1 ]
-[n S278 . . . ]
-"5453
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5453: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x393)));
-[v _IOCAFbits `VS278 ~T0 @X0 0 e@915 ]
-"284 mcc_generated_files/system/src/../pins.h
-[; ;mcc_generated_files/system/src/../pins.h: 284: void SW1_ISR(void);
-[v _SW1_ISR `(v ~T0 @X0 0 ef ]
-[v F2679 `(v ~T0 @X0 0 tf ]
-[v F2681 `(v ~T0 @X0 0 tf ]
-[v F2683 `(v ~T0 @X0 0 tf ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
-"435 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 435:     struct {
-[s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S34 . RA0 RA1 RA2 RA3 RA4 RA5 ]
-"434
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 434: typedef union {
-[u S33 `S34 1 ]
-[n S33 . . ]
-"444
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
-[v _PORTAbits `VS33 ~T0 @X0 0 e@12 ]
-"1951
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
-[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S106 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"1950
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1950: typedef union {
-[u S105 `S106 1 ]
-[n S105 . . ]
-"1960
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
+[v F198 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F203 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F208 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F212 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F216 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F220 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F224 `(a ~T0 @X0 0 tf ]
+"46 mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h: 46: {
+[s S6 `*F198 1 `*F203 1 `*F208 1 `*F212 1 `*F216 1 `*F220 1 `*F224 1 ]
+[n S6 EEPROM_INTERFACE SequentialWrite SequentialRead PageWrite PageRead ByteWrite ByteRead IsBusy ]
+[v F2451 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F2455 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F2459 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F2462 `(a ~T0 @X0 0 tf2`ul`*uc ]
+"52 mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h: 52: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data);
+[v _EEPROM_ByteWrite `(a ~T0 @X0 0 ef2`ul`*uc ]
+"62
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h: 62: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data);
+[v _EEPROM_ByteRead `(a ~T0 @X0 0 ef2`ul`*uc ]
+"131 mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 131: _Bool NVM_IsBusy(void);
+[v _NVM_IsBusy `(a ~T0 @X0 0 ef ]
+"156
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 156: void NVM_UnlockKeySet(uint16_t unlockKey);
+[v _NVM_UnlockKeySet `(v ~T0 @X0 0 ef1`us ]
+"237
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 237: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
+[v _EEPROM_Write `(v ~T0 @X0 0 ef2`us`uc ]
+"164
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 164: void NVM_UnlockKeyClear(void);
+[v _NVM_UnlockKeyClear `(v ~T0 @X0 0 ef ]
+"56 mcc_generated_files/eeprom-lib/src/eeprom.c
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 56:     if (NVM_StatusGet() == NVM_OK)
+[c E2423 0 1 .. ]
+[n E2423 . NVM_OK NVM_ERROR  ]
+"140 mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 140: nvm_status_t NVM_StatusGet(void);
+[v _NVM_StatusGet `(E2423 ~T0 @X0 0 ef ]
+"148
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 148: void NVM_StatusClear(void);
+[v _NVM_StatusClear `(v ~T0 @X0 0 ef ]
+"224
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 224: eeprom_data_t EEPROM_Read(eeprom_address_t address);
+[v _EEPROM_Read `(uc ~T0 @X0 0 ef1`us ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -567,162 +486,121 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6239
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 6239: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"38 mcc_generated_files/system/src/pins.c
-[; ;mcc_generated_files/system/src/pins.c: 38: void (*SW1_InterruptHandler)(void);
-[v _SW1_InterruptHandler `*F2674 ~T0 @X0 1 e ]
-"40
-[; ;mcc_generated_files/system/src/pins.c: 40: void PIN_MANAGER_Initialize(void)
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"41
-[; ;mcc_generated_files/system/src/pins.c: 41: {
+"38 mcc_generated_files/eeprom-lib/src/eeprom.c
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 38: const EEPROM_INTERFACE_t eeprom_interface = {
+[v _eeprom_interface `CS6 ~T0 @X0 1 e ]
+[i _eeprom_interface
+:U ..
+:U ..
+-> -> -> 0 `i `*v `*F2451
+-> -> -> 0 `i `*v `*F2455
+-> -> -> 0 `i `*v `*F2459
+-> -> -> 0 `i `*v `*F2462
+&U _EEPROM_ByteWrite
+&U _EEPROM_ByteRead
+&U _NVM_IsBusy
+..
+..
+]
+"48
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 48: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data)
+[v _EEPROM_ByteWrite `(a ~T0 @X0 1 ef2`ul`*uc ]
+"49
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 49: {
 {
-[e :U _PIN_MANAGER_Initialize ]
+[e :U _EEPROM_ByteWrite ]
+"48
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 48: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data)
+[v _address `ul ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+"49
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 49: {
 [f ]
-"45
-[; ;mcc_generated_files/system/src/pins.c: 45:     LATA = 0x0;
-[e = _LATA -> -> 0 `i `uc ]
-"46
-[; ;mcc_generated_files/system/src/pins.c: 46:     LATC = 0x18;
-[e = _LATC -> -> 24 `i `uc ]
+"50
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 50:     uint8_t getData = *data;
+[v _getData `uc ~T0 @X0 1 a ]
+[e = _getData *U _data ]
 "51
-[; ;mcc_generated_files/system/src/pins.c: 51:     TRISA = 0xF;
-[e = _TRISA -> -> 15 `i `uc ]
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 51:     eeprom_address_t writeAddress = (eeprom_address_t) (address);
+[v _writeAddress `us ~T0 @X0 1 a ]
+[e = _writeAddress -> _address `us ]
 "52
-[; ;mcc_generated_files/system/src/pins.c: 52:     TRISC = 0x2;
-[e = _TRISC -> -> 2 `i `uc ]
-"57
-[; ;mcc_generated_files/system/src/pins.c: 57:     ANSELA = 0x0;
-[e = _ANSELA -> -> 0 `i `uc ]
-"58
-[; ;mcc_generated_files/system/src/pins.c: 58:     ANSELC = 0x0;
-[e = _ANSELC -> -> 0 `i `uc ]
-"63
-[; ;mcc_generated_files/system/src/pins.c: 63:     WPUA = 0xA;
-[e = _WPUA -> -> 10 `i `uc ]
-"64
-[; ;mcc_generated_files/system/src/pins.c: 64:     WPUC = 0x0;
-[e = _WPUC -> -> 0 `i `uc ]
-"65
-[; ;mcc_generated_files/system/src/pins.c: 65:     OPTION_REGbits.nWPUEN = 0x0;
-[e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
-"77
-[; ;mcc_generated_files/system/src/pins.c: 77:     INLVLA = 0x0;
-[e = _INLVLA -> -> 0 `i `uc ]
-"78
-[; ;mcc_generated_files/system/src/pins.c: 78:     INLVLC = 0x0;
-[e = _INLVLC -> -> 0 `i `uc ]
-"87
-[; ;mcc_generated_files/system/src/pins.c: 87:     APFCON0 = 0x0;
-[e = _APFCON0 -> -> 0 `i `uc ]
-"92
-[; ;mcc_generated_files/system/src/pins.c: 92:     IOCAP = 0x0;
-[e = _IOCAP -> -> 0 `i `uc ]
-"93
-[; ;mcc_generated_files/system/src/pins.c: 93:     IOCAN = 0x2;
-[e = _IOCAN -> -> 2 `i `uc ]
-"94
-[; ;mcc_generated_files/system/src/pins.c: 94:     IOCAF = 0x0;
-[e = _IOCAF -> -> 0 `i `uc ]
-"96
-[; ;mcc_generated_files/system/src/pins.c: 96:     SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
-[e ( _SW1_SetInterruptHandler (1 &U _SW1_DefaultInterruptHandler ]
-"99
-[; ;mcc_generated_files/system/src/pins.c: 99:     INTCONbits.IOCIE = 1;
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"100
-[; ;mcc_generated_files/system/src/pins.c: 100: }
-[e :UE 333 ]
-}
-"102
-[; ;mcc_generated_files/system/src/pins.c: 102: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"103
-[; ;mcc_generated_files/system/src/pins.c: 103: {
-{
-[e :U _PIN_MANAGER_IOC ]
-[f ]
-"105
-[; ;mcc_generated_files/system/src/pins.c: 105:     if(IOCAFbits.IOCAF1 == 1)
-[e $ ! == -> . . _IOCAFbits 0 1 `i -> 1 `i 335  ]
-"106
-[; ;mcc_generated_files/system/src/pins.c: 106:     {
-{
-"107
-[; ;mcc_generated_files/system/src/pins.c: 107:         SW1_ISR();
-[e ( _SW1_ISR ..  ]
-"108
-[; ;mcc_generated_files/system/src/pins.c: 108:     }
-}
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 52:     NVM_UnlockKeySet((0xAA55U));
+[e ( _NVM_UnlockKeySet (1 -> -> 43605 `ui `us ]
+"53
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 53:     EEPROM_Write(writeAddress, getData);
+[e ( _EEPROM_Write (2 , _writeAddress _getData ]
+"54
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 54:     NVM_UnlockKeyClear();
+[e ( _NVM_UnlockKeyClear ..  ]
+"55
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 55:     while (NVM_IsBusy());
+[e $U 333  ]
+[e :U 334 ]
+[e :U 333 ]
+[e $ != -> ( _NVM_IsBusy ..  `i -> 0 `i 334  ]
 [e :U 335 ]
-"109
-[; ;mcc_generated_files/system/src/pins.c: 109: }
-[e :UE 334 ]
+"56
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 56:     if (NVM_StatusGet() == NVM_OK)
+[e $ ! == -> ( _NVM_StatusGet ..  `ui -> . `E2423 0 `ui 336  ]
+"57
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 57:     {
+{
+"58
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 58:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 332  ]
+"59
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 59:     }
 }
-"114
-[; ;mcc_generated_files/system/src/pins.c: 114: void SW1_ISR(void) {
-[v _SW1_ISR `(v ~T0 @X0 1 ef ]
+[e $U 337  ]
+"60
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 60:     else
+[e :U 336 ]
+"61
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 61:     {
 {
-[e :U _SW1_ISR ]
-[f ]
-"119
-[; ;mcc_generated_files/system/src/pins.c: 119:     if(SW1_InterruptHandler)
-[e $ ! != _SW1_InterruptHandler -> -> 0 `i `*F2679 337  ]
-"120
-[; ;mcc_generated_files/system/src/pins.c: 120:     {
-{
-"121
-[; ;mcc_generated_files/system/src/pins.c: 121:         SW1_InterruptHandler();
-[e ( *U _SW1_InterruptHandler ..  ]
-"122
-[; ;mcc_generated_files/system/src/pins.c: 122:     }
+"62
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 62:         NVM_StatusClear();
+[e ( _NVM_StatusClear ..  ]
+"63
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 63:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 332  ]
+"64
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 64:     }
 }
 [e :U 337 ]
-"123
-[; ;mcc_generated_files/system/src/pins.c: 123:     IOCAFbits.IOCAF1 = 0;
-[e = . . _IOCAFbits 0 1 -> -> 0 `i `uc ]
-"124
-[; ;mcc_generated_files/system/src/pins.c: 124: }
-[e :UE 336 ]
+"65
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 65: }
+[e :UE 332 ]
 }
-"129
-[; ;mcc_generated_files/system/src/pins.c: 129: void SW1_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2681 ]
+"67
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 67: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data)
+[v _EEPROM_ByteRead `(a ~T0 @X0 1 ef2`ul`*uc ]
+"68
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 68: {
 {
-[e :U _SW1_SetInterruptHandler ]
-[v _InterruptHandler `*F2683 ~T0 @X0 1 r1 ]
+[e :U _EEPROM_ByteRead ]
+"67
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 67: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data)
+[v _address `ul ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+"68
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 68: {
 [f ]
-"130
-[; ;mcc_generated_files/system/src/pins.c: 130:     SW1_InterruptHandler = InterruptHandler;
-[e = _SW1_InterruptHandler _InterruptHandler ]
-"131
-[; ;mcc_generated_files/system/src/pins.c: 131: }
+"69
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 69:     eeprom_address_t readAddress = (eeprom_address_t) (address);
+[v _readAddress `us ~T0 @X0 1 a ]
+[e = _readAddress -> _address `us ]
+"70
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 70:     *data = EEPROM_Read(readAddress);
+[e = *U _data ( _EEPROM_Read (1 _readAddress ]
+"71
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 71:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 338  ]
+"72
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 72: }
 [e :UE 338 ]
-}
-"136
-[; ;mcc_generated_files/system/src/pins.c: 136: void SW1_DefaultInterruptHandler(void){
-[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
-{
-[e :U _SW1_DefaultInterruptHandler ]
-[f ]
-"139
-[; ;mcc_generated_files/system/src/pins.c: 139:     _delay((unsigned long)((60)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 60 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"140
-[; ;mcc_generated_files/system/src/pins.c: 140:     if (PORTAbits.RA1 == 0) {
-[e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 340  ]
-{
-"141
-[; ;mcc_generated_files/system/src/pins.c: 141:         do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
-[e :U 343 ]
-{
-[e = . . _LATAbits 0 4 -> ~ -> . . _LATAbits 0 4 `i `uc ]
-}
-[e :U 342 ]
-"142
-[; ;mcc_generated_files/system/src/pins.c: 142:     }
-}
-[e :U 340 ]
-"143
-[; ;mcc_generated_files/system/src/pins.c: 143: }
-[e :UE 339 ]
 }

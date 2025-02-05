@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/interrupt.c"
+# 1 "mcc_generated_files/nvm/src/nvm.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,24 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/interrupt.c" 2
-# 34 "mcc_generated_files/system/src/interrupt.c"
-# 1 "mcc_generated_files/system/src/../../system/interrupt.h" 1
-# 85 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INTERRUPT_Initialize (void);
-# 139 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_ISR(void);
-# 148 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_CallBack(void);
-# 157 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-# 166 "mcc_generated_files/system/src/../../system/interrupt.h"
-extern void (*INT_InterruptHandler)(void);
-# 175 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_DefaultInterruptHandler(void);
-# 35 "mcc_generated_files/system/src/interrupt.c" 2
-# 1 "mcc_generated_files/system/src/../../system/system.h" 1
-# 39 "mcc_generated_files/system/src/../../system/system.h"
+# 1 "mcc_generated_files/nvm/src/nvm.c" 2
+# 32 "mcc_generated_files/nvm/src/nvm.c"
+# 1 "mcc_generated_files/nvm/src/../nvm.h" 1
+# 36 "mcc_generated_files/nvm/src/../nvm.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4213,103 +4199,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 40 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 1 3
-# 25 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 421 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/string.h" 2 3
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-
-
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 41 "mcc_generated_files/system/src/../../system/system.h" 2
-
+# 37 "mcc_generated_files/nvm/src/../nvm.h" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
-# 43 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/config_bits.h" 1
-# 39 "mcc_generated_files/system/src/../../system/config_bits.h"
-# 1 "mcc_generated_files/system/src/../../system/../system/clock.h" 1
-# 50 "mcc_generated_files/system/src/../../system/../system/clock.h"
-void CLOCK_Initialize(void);
-# 40 "mcc_generated_files/system/src/../../system/config_bits.h" 2
-# 44 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 268 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void PIN_MANAGER_Initialize (void);
-
-
-
-
-
-
-
-void PIN_MANAGER_IOC(void);
-
-
-
-
-
-
-
-void SW1_ISR(void);
-# 294 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 305 "mcc_generated_files/system/src/../../system/../system/pins.h"
-extern void (*SW1_InterruptHandler)(void);
-# 316 "mcc_generated_files/system/src/../../system/../system/pins.h"
-void SW1_DefaultInterruptHandler(void);
-# 45 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../nvm/nvm.h" 1
-# 87 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 38 "mcc_generated_files/nvm/src/../nvm.h" 2
+# 87 "mcc_generated_files/nvm/src/../nvm.h"
 typedef uint16_t flash_data_t;
 
 
@@ -4346,9 +4239,9 @@ typedef enum
 
 
 void NVM_Initialize(void);
-# 131 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 131 "mcc_generated_files/nvm/src/../nvm.h"
 _Bool NVM_IsBusy(void);
-# 140 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 140 "mcc_generated_files/nvm/src/../nvm.h"
 nvm_status_t NVM_StatusGet(void);
 
 
@@ -4382,9 +4275,9 @@ void NVM_UnlockKeyClear(void);
 
 
 flash_data_t FLASH_Read(flash_address_t address);
-# 186 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 186 "mcc_generated_files/nvm/src/../nvm.h"
 nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer);
-# 196 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 196 "mcc_generated_files/nvm/src/../nvm.h"
 nvm_status_t FLASH_PageErase(flash_address_t address);
 
 
@@ -4402,161 +4295,252 @@ flash_address_t FLASH_PageAddressGet(flash_address_t address);
 
 
 uint16_t FLASH_PageOffsetGet(flash_address_t address);
-# 224 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 224 "mcc_generated_files/nvm/src/../nvm.h"
 eeprom_data_t EEPROM_Read(eeprom_address_t address);
-# 237 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
+# 237 "mcc_generated_files/nvm/src/../nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
-# 46 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../spi/mssp.h" 1
-# 38 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-# 1 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h" 1
-# 39 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 40 "mcc_generated_files/system/src/../../system/../spi/spi_interface.h" 2
+# 33 "mcc_generated_files/nvm/src/nvm.c" 2
 
 
 
 
 
 
-struct SPI_INTERFACE
+__near volatile static uint8_t unlockKeyLow;
+__near volatile static uint8_t unlockKeyHigh;
+
+void NVM_Initialize(void)
 {
-    void (*Initialize)(void);
-    void (*Deinitialize)(void);
-    _Bool (*Open)(uint8_t spiConfigIndex);
-    void (*Close)(void);
-    void (*BufferExchange)(void *bufferData, size_t bufferSize);
-    void (*BufferRead)(void *bufferData, size_t bufferSize);
-    void (*BufferWrite)(void *bufferData, size_t bufferSize);
-    uint8_t (*ByteExchange)(uint8_t byteData);
-    uint8_t (*ByteRead)(void);
-    void (*ByteWrite)(uint8_t byteData);
-    _Bool (*IsRxReady)(void);
-    _Bool (*IsTxReady)(void);
-    void (*RxCompleteCallbackRegister)(void (*callbackHandler)(void));
-    void (*TxCompleteCallbackRegister)(void (*callbackHandler)(void));
-};
-# 39 "mcc_generated_files/system/src/../../system/../spi/mssp.h" 2
-
-
-
-
-
-
-extern const struct SPI_INTERFACE SPI1_Host;
-# 115 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-typedef enum {
-    ADXL345,
-    SI4055,
-    MSSP_DEFAULT
-} spi1_configuration_name_t;
-
-
-
-
-
-
-
-void SPI1_Initialize(void);
-
-
-
-
-
-
-
-void SPI1_Deinitialize(void);
-# 145 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_Open(uint8_t spiConfigIndex);
-
-
-
-
-
-
-
-void SPI1_Close(void);
-# 162 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
-# 171 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferWrite(void *bufferData, size_t bufferSize);
-# 180 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_BufferRead(void *bufferData, size_t bufferSize);
-
-
-
-
-
-
-
-uint8_t SPI1_ByteExchange(uint8_t byteData);
-# 198 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-void SPI1_ByteWrite(uint8_t byteData);
-
-
-
-
-
-
-
-uint8_t SPI1_ByteRead(void);
-# 215 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_IsRxReady(void);
-# 224 "mcc_generated_files/system/src/../../system/../spi/mssp.h"
-_Bool SPI1_IsTxReady(void);
-# 47 "mcc_generated_files/system/src/../../system/system.h" 2
-# 1 "mcc_generated_files/system/src/../../system/../system/watchdog.h" 1
-# 52 "mcc_generated_files/system/src/../../system/../system/watchdog.h"
-void WDT_Initialize(void);
-# 48 "mcc_generated_files/system/src/../../system/system.h" 2
-# 58 "mcc_generated_files/system/src/../../system/system.h"
-void SYSTEM_Initialize(void);
-# 36 "mcc_generated_files/system/src/interrupt.c" 2
-
-
-void (*INT_InterruptHandler)(void);
-
-void INTERRUPT_Initialize (void)
-{
-
-
-    (INTCONbits.INTF = 0);
-    (OPTION_REGbits.INTEDG = 1);
-
-    INT_SetInterruptHandler(INT_DefaultInterruptHandler);
-
-
+    NVM_StatusClear();
 }
 
-
-void INT_ISR(void)
+_Bool NVM_IsBusy(void)
 {
-    (INTCONbits.INTF = 0);
-
-
-    INT_CallBack();
+    return (EECON1bits.WR || EECON1bits.RD);
 }
 
-
-void INT_CallBack(void)
+nvm_status_t NVM_StatusGet(void)
 {
-
-    if(INT_InterruptHandler)
+    if (EECON1bits.WRERR == 1)
     {
-        INT_InterruptHandler();
+        return NVM_ERROR;
+    }
+    else
+    {
+        return NVM_OK;
     }
 }
 
-void INT_SetInterruptHandler(void (* InterruptHandler)(void)){
-    INT_InterruptHandler = InterruptHandler;
+void NVM_StatusClear(void)
+{
+    EECON1bits.WRERR = 0;
 }
 
-void INT_DefaultInterruptHandler(void){
+void NVM_UnlockKeySet(uint16_t unlockKey)
+{
+    unlockKeyHigh = (uint8_t) (unlockKey >> 8);
+    unlockKeyLow = (uint8_t) unlockKey;
+}
+
+void NVM_UnlockKeyClear(void)
+{
+    unlockKeyHigh = 0x00;
+    unlockKeyLow = 0x00;
+}
+
+flash_data_t FLASH_Read(flash_address_t address)
+{
+
+    uint8_t globalInterruptBitValue = INTCONbits.GIE;
 
 
+    EEADRH = (uint8_t) (address >> 8);
+    EEADRL = (uint8_t) address;
+
+
+    INTCONbits.GIE = 0;
+
+
+    EECON1bits.CFGS = 0;
+    EECON1bits.EEPGD = 1;
+
+
+    EECON1bits.RD = 1;
+    __nop();
+    __nop();
+
+
+    INTCONbits.GIE = globalInterruptBitValue;
+
+    return ((flash_data_t) ((EEDATH << 8) | EEDATL));
+}
+
+nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer)
+{
+    uint8_t flashDataCount = (32U);
+
+
+    uint8_t globalInterruptBitValue = INTCONbits.GIE;
+
+
+    EECON1bits.CFGS = 0;
+    EECON1bits.EEPGD = 1;
+
+
+    EECON1bits.WREN = 1;
+
+
+    LWLO = 1;
+
+    while (flashDataCount-- > 0U)
+    {
+        EEADRH = (uint8_t) (address >> 8);
+        EEADRL = (uint8_t) address;
+        address++;
+
+        EEDATH = (uint8_t) (*dataBuffer >> 8);
+        EEDATL = (uint8_t) (*dataBuffer);
+        dataBuffer++;
+
+
+        if (flashDataCount == 0U)
+        {
+
+            LWLO = 0;
+        }
+
+
+        INTCONbits.GIE = 0;
+
+
+        EECON2 = unlockKeyLow;
+        EECON2 = unlockKeyHigh;
+        EECON1bits.WR = 1;
+        __nop();
+        __nop();
+
+
+        INTCONbits.GIE = globalInterruptBitValue;
+    }
+
+
+    EECON1bits.WREN = 0;
+
+    if (EECON1bits.WRERR == 1)
+    {
+        return NVM_ERROR;
+    }
+    else
+    {
+        return NVM_OK;
+    }
+}
+
+nvm_status_t FLASH_PageErase(flash_address_t address)
+{
+
+    uint8_t globalInterruptBitValue = INTCONbits.GIE;
+
+
+    EEADRH = (uint8_t) (address >> 8);
+    EEADRL = (uint8_t) address;
+
+
+    EECON1bits.CFGS = 0;
+    EECON1bits.EEPGD = 1;
+
+
+    EECON1bits.FREE = 1;
+
+
+    EECON1bits.WREN = 1;
+
+
+    INTCONbits.GIE = 0;
+
+
+    EECON2 = unlockKeyLow;
+    EECON2 = unlockKeyHigh;
+    EECON1bits.WR = 1;
+    __nop();
+    __nop();
+
+
+    INTCONbits.GIE = globalInterruptBitValue;
+
+
+    EECON1bits.WREN = 0;
+
+    if (EECON1bits.WRERR == 1)
+    {
+        return NVM_ERROR;
+    }
+    else
+    {
+        return NVM_OK;
+    }
+}
+
+flash_address_t FLASH_PageAddressGet(flash_address_t address)
+{
+    return (flash_address_t) (address & (((0x2000U) - 1U) ^ ((32U) - 1U)));
+}
+
+uint16_t FLASH_PageOffsetGet(flash_address_t address)
+{
+    return (uint16_t) (address & ((32U) - 1U));
+}
+
+eeprom_data_t EEPROM_Read(eeprom_address_t address)
+{
+
+    EECON1bits.CFGS = 0;
+    EECON1bits.EEPGD = 0;
+
+
+    EEADRH = (uint8_t) (address >> 8);
+    EEADRL = (uint8_t) address;
+
+
+    EECON1bits.RD = 1;
+    __nop();
+    __nop();
+
+    return EEDATL;
+}
+
+void EEPROM_Write(eeprom_address_t address, eeprom_data_t data)
+{
+
+    uint8_t globalInterruptBitValue = INTCONbits.GIE;
+
+
+    EECON1bits.CFGS = 0;
+    EECON1bits.EEPGD = 0;
+
+
+    EECON1bits.WREN = 1;
+
+
+    EEADRH = (uint8_t) (address >> 8);
+    EEADRL = (uint8_t) address;
+
+
+    EEDATL = data;
+
+
+    INTCONbits.GIE = 0;
+
+
+    EECON2 = unlockKeyLow;
+    EECON2 = unlockKeyHigh;
+    EECON1bits.WR = 1;
+    __nop();
+    __nop();
+
+
+    INTCONbits.GIE = globalInterruptBitValue;
+
+
+    EECON1bits.WREN = 0;
 }

@@ -70,10 +70,12 @@ struct Message {
 
 bool ADXL345_init(void);
 bool ADXL345_validation(void);
-bool ADXL345_ClearInterrupt(void);
-bool SetupForFreefall(void);
-bool setupForImpact(void);
-bool setupForInactivity(void);
+void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis);
+void ADXL345_ClearInterrupt(void);
+void setupForFreefall(void);
+void setupForImpact(void);
+void setupForInactivity(void);
+bool orientation_Up(void);
 
 #endif	/* ADXL345_H */
 
