@@ -61,12 +61,38 @@ int main(void)
     }
     
     ADXL345_init();
+    
+    if (EEPROM_Read(EE_CAL_STATUS_ADDR) != CAL_DONE) {
+        while(!calibrate());
+        for (int i = 0; i < 3; i++) {
+            GRN_LED_SetHigh();
+            RED_LED_SetHigh();
+            __delay_ms(100);
+            GRN_LED_SetLow();
+            RED_LED_SetLow();
+        }
+    } else {
+        uint8_t X_val = EEPROM_READ(EE_X_OFFSET_ADDR);
+        uint8_t Y_val = EEPROM_READ(EE_Y_OFFSET_ADDR);
+        uint8_t Z_val = EEPROM_READ(EE_Z_OFFSET_ADDR);
+        saveOffsets(X_val, Y_val, Z_val);
+    }
+    
+    
     State_t current_state = WAITING_FOR_FREEFALL;
     
     while(1)
     {           
         PIN_MANAGER_IOC();
         MotionEventHandler(&current_state);
+        if (current_state == FALL_DETECTED) {
+            current_state = WAITING_FOR_FREEFALL;
+            for (int i = 0; i < 3; i++) {
+                GRN_LED_SetHigh();
+                __delay_ms(100);
+                GRN_LED_SetLow();
+            }
+        }
         SLEEP();
         NOP();
     }    

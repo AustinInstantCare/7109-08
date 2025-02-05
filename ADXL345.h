@@ -76,6 +76,7 @@ void setupForFreefall(void);
 void setupForImpact(void);
 void setupForInactivity(void);
 bool orientation_Up(void);
+bool calibrate(void);
 
 #endif	/* ADXL345_H */
 
