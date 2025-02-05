@@ -20,14 +20,13 @@
  */
 
 /* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
+ * File: ADXL345.h
+ * Author: Austin
+ * Comments: All relevant functions necessary to communicate with an ADXL345
+ * Revision history:
+ *  2/4/2025 - initial creation
  */
-
-// This is a guard condition so that contents of this file are not included
-// more than once.  
+  
 #ifndef ADXL345_H
 #define	ADXL345_H
 
@@ -69,10 +68,12 @@ struct Message {
     uint8_t data[25];
 };
 
-bool ADXL345_validation(void);
 bool ADXL345_init(void);
+bool ADXL345_validation(void);
+bool ADXL345_ClearInterrupt(void);
 bool SetupForFreefall(void);
 bool setupForImpact(void);
+bool setupForInactivity(void);
 
 #endif	/* ADXL345_H */
 

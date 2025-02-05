@@ -26,19 +26,6 @@ const uint8_t fall_init[4] = {0x18, 0x03, 0xFF, 0x7F};
 const uint8_t impact_init[4] = {0x30, 0x03, 0x01, 0x7F};
 const uint8_t no_motion_init[4] = {0x08, 0x03, 0x02, 0xFF};
 
-bool ADXL345_validation(void) {
-    bool passed = false;
-    if (SPI1_Open(ADXL345)) {
-        CS_ACC_SetLow();
-        if (SPI1_ByteExchange(DEVICE_ID) == 0xE5) {
-            passed = true;
-        }
-        CS_ACC_SetHigh();
-    }
-    SPI1_Close();
-    return passed;
-}
-
 bool ADXL345_init(void) {
     if (!SPI1_Open(ADXL345)) {
         return false;
@@ -63,7 +50,33 @@ bool ADXL345_init(void) {
     return true;
 }
 
-bool SetupForFreefall(void) {
+bool ADXL345_validation(void) {
+    bool passed = false;
+    if (SPI1_Open(ADXL345)) {
+        CS_ACC_SetLow();
+        if (SPI1_ByteExchange(DEVICE_ID) == 0xE5) {
+            passed = true;
+        }
+        CS_ACC_SetHigh();
+    }
+    SPI1_Close();
+    return passed;
+}
+
+bool ADXL345_ClearInterrupt(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return false;
+    }
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    SPI1_Close();
+}
+
+bool setupForFreefall(void) {
     if (!SPI1_Open(ADXL345)) {
         return false;
     }
@@ -164,5 +177,50 @@ bool setupForImpact(void) {
 }
 
 bool setupForInactivity(void) {
+    if (!SPI1_Open(ADXL345)) {
+        return false;
+    }
     
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    /* Setup impact parameters
+     * Addr: 0x24 (Activity Threshold) = 0.5 g
+     * Addr: 0x25 (Inactivity Threshold) = 0.1875 g
+     * Addr: 0x26 (Inactivity Time) = 2 sec
+     * Addr: 0x27 (Axis enable control) = 0b11111111
+     */
+    struct Message msg;
+    msg.registerAddr = THRESH_ACT;
+    memset(msg.data, 0, sizeof(msg.data));
+    memcpy(msg.data, no_motion_init, sizeof(no_motion_init));
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, sizeof(no_motion_init) + 1);
+    CS_ACC_SetHigh();
+    
+    // Low power enabled & data rate of 12.5 Hz
+    msg.registerAddr = BW_RATE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x17;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Set interrupt to trigger on inactivity
+    msg.registerAddr = INT_ENABLE;
+    memset(msg.data, 0, sizeof(msg.data));
+    msg.data[0] = 0x08;
+    CS_ACC_SetLow();
+    SPI1_BufferWrite(&msg, 2);
+    CS_ACC_SetHigh();
+    
+    // Clear any pending interrupts
+    CS_ACC_SetLow();
+    SPI1_ByteExchange(INT_SOURCE);
+    CS_ACC_SetHigh();
+    
+    SPI1_Close();
+    return true;
 }

@@ -42,6 +42,7 @@
 #include <stdbool.h>
 #include "config_bits.h"
 #include "../system/pins.h"
+#include "../nvm/nvm.h"
 #include "../spi/mssp.h"
 #include "../system/watchdog.h"
 #include "../system/interrupt.h"

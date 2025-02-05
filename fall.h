@@ -1,0 +1,57 @@
+/* Microchip Technology Inc. and its subsidiaries.  You may use this software 
+ * and any derivatives exclusively with Microchip products. 
+ * 
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS".  NO WARRANTIES, WHETHER 
+ * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
+ * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A 
+ * PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION 
+ * WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION. 
+ *
+ * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+ * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
+ * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
+ * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE 
+ * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS 
+ * IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF 
+ * ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *
+ * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
+ * TERMS. 
+ */
+
+/* 
+ * File: fall.h   
+ * Author: Austin
+ * Comments: Refactor of fall algorithm from 7109-08-B02
+ * Revision history:
+ *  02/04/2025 - Initial Version
+ */
+
+// This is a guard condition so that contents of this file are not included
+// more than once.  
+#ifndef FALL_H
+#define	FALL_H
+
+#include "mcc_generated_files/system/system.h"
+#include "ADXL345.h"
+
+#define WAITING_FOR_IMPACT_TIMEOUT      25 // 25 * 20ms = 500ms
+#define WAITING_FOR_INACTIVITY_TIMEOUT  225 // 225 * 20ms = 4.5 sec
+#define WAITING_FOR_FALL_CANCELATION    500 // 500 * 20ms = 10 sec
+#define ORIENTATION_CHECK_TIMEOUT       5 // 5 * 20ms = 100 ms
+#define GOOD_ORIENTATION_TIMEOUT        10 // 10 * 100ms = 1 sec
+
+// Define states
+typedef enum {
+    WAITING_FOR_FREEFALL,
+    WAITING_FOR_IMPACT,
+    WAITING_FOR_INACTIVITY,
+    WAITING_FOR_TIMEOUT,
+    FALL_DETECTED
+} State_t;
+
+// Function prototypes
+void MotionEventHandler(State_t *state);
+
+#endif	/* FALL_H */
+
