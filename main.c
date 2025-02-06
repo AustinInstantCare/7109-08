@@ -46,10 +46,7 @@ int main(void)
 {
     SYSTEM_Initialize();
     SPI1_Initialize();
-    
-    CS_ACC_SetHigh();
-    CS_RF_SetHigh();
-    
+        
     if (ADXL345_validation()) {
         GRN_LED_SetHigh();
         __delay_ms(250);
@@ -60,7 +57,17 @@ int main(void)
         RED_LED_SetLow();
     }
     
-    ADXL345_init();
+    __delay_ms(250);
+    
+    if (ADXL345_init()) {
+        GRN_LED_SetHigh();
+        __delay_ms(250);
+        GRN_LED_SetLow();
+    } else {
+        RED_LED_SetHigh();
+        __delay_ms(250);
+        RED_LED_SetLow();
+    }
     
     if (EEPROM_Read(EE_CAL_STATUS_ADDR) != CAL_DONE) {
         while(!calibrate());
@@ -77,7 +84,6 @@ int main(void)
         uint8_t Z_val = EEPROM_READ(EE_Z_OFFSET_ADDR);
         saveOffsets(X_val, Y_val, Z_val);
     }
-    
     
     State_t current_state = WAITING_FOR_FREEFALL;
     

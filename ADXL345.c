@@ -36,13 +36,13 @@ bool ADXL345_init(void) {
     }
     
     struct Message msg;
-    msg.registerAddr = THRESH_ACT;
+    msg.registerAddr = THRESH_ACT | 0x40;
     memset(msg.data, 0, sizeof(msg.data));
     memcpy(msg.data, ADXL345_init_settings, sizeof(ADXL345_init_settings));
     CS_ACC_SetLow();
     SPI1_BufferWrite(&msg, sizeof(ADXL345_init_settings) + 1);
     CS_ACC_SetHigh();
-
+    
     msg.registerAddr = DATA_FORMAT;
     memset(msg.data, 0, sizeof(msg.data));
     msg.data[0] = 0x0B;
@@ -58,8 +58,14 @@ bool ADXL345_validation(void) {
     bool passed = false;
     if (SPI1_Open(ADXL345)) {
         CS_ACC_SetLow();
-        if (SPI1_ByteExchange(DEVICE_ID) == 0xE5) {
+        uint8_t temp[2] = {DEVICE_ID, DEVICE_ID};
+        SPI1_BufferExchange(&temp, sizeof(temp));
+        if (temp[0] == 0xE5) {
             passed = true;
+        } else {
+            GRN_LED_SetHigh();
+            __delay_ms(250);
+            GRN_LED_SetLow();
         }
         CS_ACC_SetHigh();
     }
@@ -74,7 +80,6 @@ void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
     
     struct Message msg;
     msg.registerAddr = OFSX;
-    memset(msg.data, 0, sizeof(msg.data));
     msg.data[0] = x_axis;
     CS_ACC_SetLow();
     SPI1_BufferWrite(&msg, 2);
@@ -125,7 +130,7 @@ void setupForFreefall(void) {
      * Addr: 0x27 (Axis enable control) = 0b01111111
      */
     struct Message msg;
-    msg.registerAddr = THRESH_ACT;
+    msg.registerAddr = THRESH_ACT | 0x40;
     memset(msg.data, 0, sizeof(msg.data));
     memcpy(msg.data, fall_init, sizeof(fall_init));
     CS_ACC_SetLow();
@@ -173,7 +178,7 @@ void setupForImpact(void) {
      * Addr: 0x27 (Axis enable control) = 0b01111111
      */
     struct Message msg;
-    msg.registerAddr = THRESH_ACT;
+    msg.registerAddr = THRESH_ACT | 0x40;
     memset(msg.data, 0, sizeof(msg.data));
     memcpy(msg.data, impact_init, sizeof(impact_init));
     CS_ACC_SetLow();
@@ -221,7 +226,7 @@ void setupForInactivity(void) {
      * Addr: 0x27 (Axis enable control) = 0b11111111
      */
     struct Message msg;
-    msg.registerAddr = THRESH_ACT;
+    msg.registerAddr = THRESH_ACT | 0x40;
     memset(msg.data, 0, sizeof(msg.data));
     memcpy(msg.data, no_motion_init, sizeof(no_motion_init));
     CS_ACC_SetLow();
