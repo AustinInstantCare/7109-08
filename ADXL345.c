@@ -55,22 +55,19 @@ bool ADXL345_init(void) {
 }
 
 bool ADXL345_validation(void) {
-    bool passed = false;
     if (SPI1_Open(ADXL345)) {
         CS_ACC_SetLow();
-        uint8_t temp[2] = {DEVICE_ID, DEVICE_ID};
+        uint8_t temp[2] = {DEVICE_ID | 0x80, DEVICE_ID};
         SPI1_BufferExchange(&temp, sizeof(temp));
-        if (temp[0] == 0xE5) {
-            passed = true;
-        } else {
-            GRN_LED_SetHigh();
-            __delay_ms(250);
-            GRN_LED_SetLow();
-        }
-        CS_ACC_SetHigh();
+        if (temp[1] == 0xE5) {
+            CS_ACC_SetHigh();
+            SPI1_Close();
+            return true;
+        }      
     }
+    CS_ACC_SetHigh();
     SPI1_Close();
-    return passed;
+    return false;
 }
 
 void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
@@ -275,7 +272,9 @@ bool orientation_Up(void) {
     
     // Read accelerometer data
     CS_ACC_SetLow();
-    SPI1_ByteWrite(DATAX0);
+    uint8_t addr_val = DATAX0 | 0x80; // read
+    addr_val = addr_val | 0x40; // burst
+    SPI1_ByteWrite(addr_val);
     SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
     CS_ACC_SetHigh();
     SPI1_Close();
@@ -315,7 +314,7 @@ bool calibrate(void) {
     CS_ACC_SetHigh();
     
     /* Blink Green */
-    while(!SW1_GetValue()) {
+    while(SW1_GetValue()) {
         GRN_LED_SetHigh();
         __delay_ms(100);
         CLRWDT();
@@ -331,8 +330,10 @@ bool calibrate(void) {
     for(int i = 0; i < NUM_SAMPLES; i++) {
         // Read accelerometer data
         CS_ACC_SetLow();
-        SPI1_ByteWrite(DATAX0);
-        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        uint8_t addr_val = DATAX0 | 0x80; // read
+        addr_val = addr_val | 0x40; // burst
+        SPI1_ByteWrite(addr_val);
+        SPI1_BufferRead((uint8_t *)acc_data, 6);
         CS_ACC_SetHigh();
         
         sum_X += acc_data[1];
@@ -371,7 +372,7 @@ bool calibrate(void) {
     sum_Z = 0; // reset sum for next test
     
     /* Blink RED */
-    while(!SW1_GetValue()) {
+    while(SW1_GetValue()) {
         RED_LED_SetHigh();
         __delay_ms(100);
         CLRWDT();
@@ -387,7 +388,9 @@ bool calibrate(void) {
     for(int i = 0; i < NUM_SAMPLES; i++) {
         // Read accelerometer data
         CS_ACC_SetLow();
-        SPI1_ByteWrite(DATAX0);
+        uint8_t addr_val = DATAX0 | 0x80; // read
+        addr_val = addr_val | 0x40; // burst
+        SPI1_ByteWrite(addr_val);
         SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
         CS_ACC_SetHigh();
         

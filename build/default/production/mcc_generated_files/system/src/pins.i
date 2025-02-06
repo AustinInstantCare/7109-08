@@ -4561,7 +4561,7 @@ void PIN_MANAGER_Initialize(void)
     IOCAN = 0x2;
     IOCAF = 0x0;
 
-
+    SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
 
 
     INTCONbits.IOCIE = 1;
@@ -4572,7 +4572,7 @@ void PIN_MANAGER_IOC(void)
 
     if(IOCAFbits.IOCAF1 == 1)
     {
-
+        SW1_ISR();
     }
 }
 

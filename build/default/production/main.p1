@@ -56,8 +56,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "73 ./ADXL345.h
 [; ;./ADXL345.h: 73: void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis);
 [v _saveOffsets `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"88 main.c
-[; ;main.c: 88:     State_t current_state = WAITING_FOR_FREEFALL;
+"91 main.c
+[; ;main.c: 91:     State_t current_state = WAITING_FOR_FREEFALL;
 [c E2688 0 1 2 3 4 .. ]
 [n E2688 . WAITING_FOR_FREEFALL WAITING_FOR_IMPACT WAITING_FOR_INACTIVITY WAITING_FOR_TIMEOUT FALL_DETECTED  ]
 "276 ./mcc_generated_files/system/../system/pins.h
@@ -582,69 +582,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 342 ]
 "60
-[; ;main.c: 60:     _delay((unsigned long)((250)*(4000000/4000.0)));
+[; ;main.c: 60:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"61
+[; ;main.c: 61:     _delay((unsigned long)((250)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "62
-[; ;main.c: 62:     if (ADXL345_init()) {
+[; ;main.c: 62:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"64
+[; ;main.c: 64:     if (ADXL345_init()) {
 [e $ ! != -> ( _ADXL345_init ..  `i -> 0 `i 349  ]
 {
-"63
-[; ;main.c: 63:         do { LATAbits.LATA4 = 1; } while(0);
+"65
+[; ;main.c: 65:         do { LATAbits.LATA4 = 1; } while(0);
 [e :U 352 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 351 ]
-"64
-[; ;main.c: 64:         _delay((unsigned long)((250)*(4000000/4000.0)));
+"66
+[; ;main.c: 66:         _delay((unsigned long)((250)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"65
-[; ;main.c: 65:         do { LATAbits.LATA4 = 0; } while(0);
+"67
+[; ;main.c: 67:         do { LATAbits.LATA4 = 0; } while(0);
 [e :U 355 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 354 ]
-"66
-[; ;main.c: 66:     } else {
+"68
+[; ;main.c: 68:     } else {
 }
 [e $U 356  ]
 [e :U 349 ]
 {
-"67
-[; ;main.c: 67:         do { LATAbits.LATA5 = 1; } while(0);
+"69
+[; ;main.c: 69:         do { LATAbits.LATA5 = 1; } while(0);
 [e :U 359 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 358 ]
-"68
-[; ;main.c: 68:         _delay((unsigned long)((250)*(4000000/4000.0)));
+"70
+[; ;main.c: 70:         _delay((unsigned long)((250)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"69
-[; ;main.c: 69:         do { LATAbits.LATA5 = 0; } while(0);
+"71
+[; ;main.c: 71:         do { LATAbits.LATA5 = 0; } while(0);
 [e :U 362 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 361 ]
-"70
-[; ;main.c: 70:     }
+"72
+[; ;main.c: 72:     }
 }
 [e :U 356 ]
-"72
-[; ;main.c: 72:     if (EEPROM_Read(0x10) != 0x57) {
+"74
+[; ;main.c: 74:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"75
+[; ;main.c: 75:     if (EEPROM_Read(0x10) != 0x57) {
 [e $ ! != -> ( _EEPROM_Read (1 -> -> 16 `i `us `i -> 87 `i 363  ]
 {
-"73
-[; ;main.c: 73:         while(!calibrate());
+"76
+[; ;main.c: 76:         while(!calibrate());
 [e $U 364  ]
 [e :U 365 ]
 [e :U 364 ]
 [e $ ! != -> ( _calibrate ..  `i -> 0 `i 365  ]
 [e :U 366 ]
-"74
-[; ;main.c: 74:         for (int i = 0; i < 3; i++) {
+"77
+[; ;main.c: 77:         for (int i = 0; i < 3; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -652,94 +661,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 368  ]
 [e :U 367 ]
 {
-"75
-[; ;main.c: 75:             do { LATAbits.LATA4 = 1; } while(0);
+"78
+[; ;main.c: 78:             do { LATAbits.LATA4 = 1; } while(0);
 [e :U 372 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 371 ]
-"76
-[; ;main.c: 76:             do { LATAbits.LATA5 = 1; } while(0);
+"79
+[; ;main.c: 79:             do { LATAbits.LATA5 = 1; } while(0);
 [e :U 375 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 374 ]
-"77
-[; ;main.c: 77:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"80
+[; ;main.c: 80:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:             do { LATAbits.LATA4 = 0; } while(0);
+"81
+[; ;main.c: 81:             do { LATAbits.LATA4 = 0; } while(0);
 [e :U 378 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 377 ]
-"79
-[; ;main.c: 79:             do { LATAbits.LATA5 = 0; } while(0);
+"82
+[; ;main.c: 82:             do { LATAbits.LATA5 = 0; } while(0);
 [e :U 381 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 380 ]
-"80
-[; ;main.c: 80:         }
+"83
+[; ;main.c: 83:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 367  ]
 [e :U 368 ]
 }
-"81
-[; ;main.c: 81:     } else {
+"84
+[; ;main.c: 84:     } else {
 }
 [e $U 382  ]
 [e :U 363 ]
 {
-"82
-[; ;main.c: 82:         uint8_t X_val = ( EEADR = 0x02, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+"85
+[; ;main.c: 85:         uint8_t X_val = ( EEADR = 0x02, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
 [v _X_val `uc ~T0 @X0 1 a ]
 [e = _X_val ; ; ; = _EEADR -> -> 2 `i `us =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA ]
-"83
-[; ;main.c: 83:         uint8_t Y_val = ( EEADR = 0x04, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+"86
+[; ;main.c: 86:         uint8_t Y_val = ( EEADR = 0x04, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
 [v _Y_val `uc ~T0 @X0 1 a ]
 [e = _Y_val ; ; ; = _EEADR -> -> 4 `i `us =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA ]
-"84
-[; ;main.c: 84:         uint8_t Z_val = ( EEADR = 0x06, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
+"87
+[; ;main.c: 87:         uint8_t Z_val = ( EEADR = 0x06, EECON1 &= 0x3F, EECON1bits.RD = 1, EEDATA);
 [v _Z_val `uc ~T0 @X0 1 a ]
 [e = _Z_val ; ; ; = _EEADR -> -> 6 `i `us =& _EECON1 -> -> 63 `i `Vuc = . . _EECON1bits 0 0 -> -> 1 `i `uc _EEDATA ]
-"85
-[; ;main.c: 85:         saveOffsets(X_val, Y_val, Z_val);
+"88
+[; ;main.c: 88:         saveOffsets(X_val, Y_val, Z_val);
 [e ( _saveOffsets (3 , , _X_val _Y_val _Z_val ]
-"86
-[; ;main.c: 86:     }
+"89
+[; ;main.c: 89:     }
 }
 [e :U 382 ]
-"88
-[; ;main.c: 88:     State_t current_state = WAITING_FOR_FREEFALL;
+"91
+[; ;main.c: 91:     State_t current_state = WAITING_FOR_FREEFALL;
 [v _current_state `E2688 ~T0 @X0 1 a ]
 [e = _current_state . `E2688 0 ]
-"90
-[; ;main.c: 90:     while(1)
-[e :U 384 ]
-"91
-[; ;main.c: 91:     {
-{
-"92
-[; ;main.c: 92:         PIN_MANAGER_IOC();
-[e ( _PIN_MANAGER_IOC ..  ]
 "93
-[; ;main.c: 93:         MotionEventHandler(&current_state);
-[e ( _MotionEventHandler (1 &U _current_state ]
+[; ;main.c: 93:     while(1)
+[e :U 384 ]
 "94
-[; ;main.c: 94:         if (current_state == FALL_DETECTED) {
-[e $ ! == -> _current_state `ui -> . `E2688 4 `ui 386  ]
+[; ;main.c: 94:     {
 {
 "95
-[; ;main.c: 95:             current_state = WAITING_FOR_FREEFALL;
-[e = _current_state . `E2688 0 ]
+[; ;main.c: 95:         PIN_MANAGER_IOC();
+[e ( _PIN_MANAGER_IOC ..  ]
 "96
-[; ;main.c: 96:             for (int i = 0; i < 3; i++) {
+[; ;main.c: 96:         MotionEventHandler(&current_state);
+[e ( _MotionEventHandler (1 &U _current_state ]
+"97
+[; ;main.c: 97:         if (current_state == FALL_DETECTED) {
+[e $ ! == -> _current_state `ui -> . `E2688 4 `ui 386  ]
+{
+"98
+[; ;main.c: 98:             current_state = WAITING_FOR_FREEFALL;
+[e = _current_state . `E2688 0 ]
+"99
+[; ;main.c: 99:             for (int i = 0; i < 3; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -747,47 +756,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 388  ]
 [e :U 387 ]
 {
-"97
-[; ;main.c: 97:                 do { LATAbits.LATA4 = 1; } while(0);
+"100
+[; ;main.c: 100:                 do { LATAbits.LATA4 = 1; } while(0);
 [e :U 392 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 391 ]
-"98
-[; ;main.c: 98:                 _delay((unsigned long)((100)*(4000000/4000.0)));
+"101
+[; ;main.c: 101:                 _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"99
-[; ;main.c: 99:                 do { LATAbits.LATA4 = 0; } while(0);
+"102
+[; ;main.c: 102:                 do { LATAbits.LATA4 = 0; } while(0);
 [e :U 395 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 394 ]
-"100
-[; ;main.c: 100:             }
+"103
+[; ;main.c: 103:             }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 3 `i 387  ]
 [e :U 388 ]
 }
-"101
-[; ;main.c: 101:         }
+"104
+[; ;main.c: 104:         }
 }
 [e :U 386 ]
-"102
-[; ;main.c: 102:         __asm("sleep");
+"105
+[; ;main.c: 105:         __asm("sleep");
 [; <" sleep ;# ">
-"103
-[; ;main.c: 103:         __nop();
+"106
+[; ;main.c: 106:         __nop();
 [e ( ___nop ..  ]
-"104
-[; ;main.c: 104:     }
+"107
+[; ;main.c: 107:     }
 }
 [e :U 383 ]
 [e $U 384  ]
 [e :U 385 ]
-"105
-[; ;main.c: 105: }
+"108
+[; ;main.c: 108: }
 [e :UE 334 ]
 }

@@ -36,6 +36,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "162
 [; ;./mcc_generated_files/system/../spi/mssp.h: 162: void SPI1_BufferExchange(void *bufferData, size_t bufferSize);
 [v _SPI1_BufferExchange `(v ~T0 @X0 0 ef2`*v`ui ]
+"188
+[; ;./mcc_generated_files/system/../spi/mssp.h: 188: uint8_t SPI1_ByteExchange(uint8_t byteData);
+[v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
+[v F202 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
+[v __delay `JF202 ~T0 @X0 0 e ]
+[p i __delay ]
+"198 ./mcc_generated_files/system/../spi/mssp.h
+[; ;./mcc_generated_files/system/../spi/mssp.h: 198: void SPI1_ByteWrite(uint8_t byteData);
+[v _SPI1_ByteWrite `(v ~T0 @X0 0 ef1`uc ]
+"180
+[; ;./mcc_generated_files/system/../spi/mssp.h: 180: void SPI1_BufferRead(void *bufferData, size_t bufferSize);
+[v _SPI1_BufferRead `(v ~T0 @X0 0 ef2`*v`ui ]
 "1951 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1951:     struct {
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -47,20 +60,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1960
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 1960: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
 [v _LATAbits `VS105 ~T0 @X0 0 e@268 ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
-[p i __delay ]
-"188 ./mcc_generated_files/system/../spi/mssp.h
-[; ;./mcc_generated_files/system/../spi/mssp.h: 188: uint8_t SPI1_ByteExchange(uint8_t byteData);
-[v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
-"198
-[; ;./mcc_generated_files/system/../spi/mssp.h: 198: void SPI1_ByteWrite(uint8_t byteData);
-[v _SPI1_ByteWrite `(v ~T0 @X0 0 ef1`uc ]
-"180
-[; ;./mcc_generated_files/system/../spi/mssp.h: 180: void SPI1_BufferRead(void *bufferData, size_t bufferSize);
-[v _SPI1_BufferRead `(v ~T0 @X0 0 ef2`*v`ui ]
-"435 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
+"435
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 435:     struct {
 [s S34 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S34 . RA0 RA1 RA2 RA3 RA4 RA5 ]
@@ -668,92 +668,76 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _ADXL345_validation ]
 [f ]
 "58
-[; ;ADXL345.c: 58:     _Bool passed = 0;
-[v _passed `a ~T0 @X0 1 a ]
-[e = _passed -> -> 0 `i `a ]
-"59
-[; ;ADXL345.c: 59:     if (SPI1_Open(ADXL345)) {
+[; ;ADXL345.c: 58:     if (SPI1_Open(ADXL345)) {
 [e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 351  ]
 {
-"60
-[; ;ADXL345.c: 60:         do { LATCbits.LATC4 = 0; } while(0);
+"59
+[; ;ADXL345.c: 59:         do { LATCbits.LATC4 = 0; } while(0);
 [e :U 354 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 353 ]
-[v F2697 `uc ~T0 @X0 -> 2 `i s ]
-[i F2697
+[v F2696 `uc ~T0 @X0 -> 2 `i s ]
+[i F2696
 :U ..
-"61
-[; ;ADXL345.c: 61:         uint8_t temp[2] = {0x00, 0x00};
--> -> 0 `i `uc
+"60
+[; ;ADXL345.c: 60:         uint8_t temp[2] = {0x00 | 0x80, 0x00};
+-> | -> 0 `i -> 128 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _temp `uc ~T0 @X0 -> 2 `i a ]
-[e = _temp F2697 ]
-"62
-[; ;ADXL345.c: 62:         SPI1_BufferExchange(&temp, sizeof(temp));
+[e = _temp F2696 ]
+"61
+[; ;ADXL345.c: 61:         SPI1_BufferExchange(&temp, sizeof(temp));
 [e ( _SPI1_BufferExchange (2 , -> &U _temp `*v -> # _temp `ui ]
+"62
+[; ;ADXL345.c: 62:         if (temp[1] == 0xE5) {
+[e $ ! == -> *U + &U _temp * -> -> -> 1 `i `ui `ux -> -> # *U &U _temp `ui `ux `i -> 229 `i 355  ]
+{
 "63
-[; ;ADXL345.c: 63:         if (temp[0] == 0xE5) {
-[e $ ! == -> *U + &U _temp * -> -> -> 0 `i `ui `ux -> -> # *U &U _temp `ui `ux `i -> 229 `i 355  ]
-{
-"64
-[; ;ADXL345.c: 64:             passed = 1;
-[e = _passed -> -> 1 `i `a ]
-"65
-[; ;ADXL345.c: 65:         } else {
-}
-[e $U 356  ]
-[e :U 355 ]
-{
-"66
-[; ;ADXL345.c: 66:             do { LATAbits.LATA4 = 1; } while(0);
-[e :U 359 ]
-{
-[e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
-}
+[; ;ADXL345.c: 63:             do { LATCbits.LATC4 = 1; } while(0);
 [e :U 358 ]
-"67
-[; ;ADXL345.c: 67:             _delay((unsigned long)((250)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"68
-[; ;ADXL345.c: 68:             do { LATAbits.LATA4 = 0; } while(0);
-[e :U 362 ]
-{
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-}
-[e :U 361 ]
-"69
-[; ;ADXL345.c: 69:         }
-}
-[e :U 356 ]
-"70
-[; ;ADXL345.c: 70:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 365 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 364 ]
-"71
-[; ;ADXL345.c: 71:     }
+[e :U 357 ]
+"64
+[; ;ADXL345.c: 64:             SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"65
+[; ;ADXL345.c: 65:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 350  ]
+"66
+[; ;ADXL345.c: 66:         }
+}
+[e :U 355 ]
+"67
+[; ;ADXL345.c: 67:     }
 }
 [e :U 351 ]
-"72
-[; ;ADXL345.c: 72:     SPI1_Close();
+"68
+[; ;ADXL345.c: 68:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 361 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 360 ]
+"69
+[; ;ADXL345.c: 69:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"73
-[; ;ADXL345.c: 73:     return passed;
-[e ) _passed ]
+"70
+[; ;ADXL345.c: 70:     return 0;
+[e ) -> -> 0 `i `a ]
 [e $UE 350  ]
-"74
-[; ;ADXL345.c: 74: }
+"71
+[; ;ADXL345.c: 71: }
 [e :UE 350 ]
 }
-"76
-[; ;ADXL345.c: 76: void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
+"73
+[; ;ADXL345.c: 73: void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
 [v _saveOffsets `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _saveOffsets ]
@@ -761,1142 +745,1163 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _y_axis `uc ~T0 @X0 1 r2 ]
 [v _z_axis `uc ~T0 @X0 1 r3 ]
 [f ]
-"77
-[; ;ADXL345.c: 77:     while (!SPI1_Open(ADXL345)) {
-[e $U 367  ]
+"74
+[; ;ADXL345.c: 74:     while (!SPI1_Open(ADXL345)) {
+[e $U 363  ]
+[e :U 364 ]
+{
+"75
+[; ;ADXL345.c: 75:         SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"76
+[; ;ADXL345.c: 76:     }
+}
+[e :U 363 ]
+"74
+[; ;ADXL345.c: 74:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 364  ]
+[e :U 365 ]
+"78
+[; ;ADXL345.c: 78:     struct Message msg;
+[v _msg `S333 ~T0 @X0 1 a ]
+"79
+[; ;ADXL345.c: 79:     msg.registerAddr = 0x1E;
+[e = . _msg 0 -> -> 30 `i `uc ]
+"80
+[; ;ADXL345.c: 80:     msg.data[0] = x_axis;
+[e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux _x_axis ]
+"81
+[; ;ADXL345.c: 81:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 368 ]
 {
-"78
-[; ;ADXL345.c: 78:         SPI1_Close();
-[e ( _SPI1_Close ..  ]
-"79
-[; ;ADXL345.c: 79:     }
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 367 ]
-"77
-[; ;ADXL345.c: 77:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 368  ]
-[e :U 369 ]
-"81
-[; ;ADXL345.c: 81:     struct Message msg;
-[v _msg `S333 ~T0 @X0 1 a ]
 "82
-[; ;ADXL345.c: 82:     msg.registerAddr = 0x1E;
-[e = . _msg 0 -> -> 30 `i `uc ]
+[; ;ADXL345.c: 82:     SPI1_BufferWrite(&msg, 2);
+[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
 "83
-[; ;ADXL345.c: 83:     msg.data[0] = x_axis;
-[e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux _x_axis ]
-"84
-[; ;ADXL345.c: 84:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 372 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
+[; ;ADXL345.c: 83:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 371 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 370 ]
 "85
-[; ;ADXL345.c: 85:     SPI1_BufferWrite(&msg, 2);
-[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"86
-[; ;ADXL345.c: 86:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 375 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 374 ]
-"88
-[; ;ADXL345.c: 88:     msg.registerAddr = 0x1F;
+[; ;ADXL345.c: 85:     msg.registerAddr = 0x1F;
 [e = . _msg 0 -> -> 31 `i `uc ]
-"89
-[; ;ADXL345.c: 89:     msg.data[0] = y_axis;
+"86
+[; ;ADXL345.c: 86:     msg.data[0] = y_axis;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux _y_axis ]
-"90
-[; ;ADXL345.c: 90:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 378 ]
+"87
+[; ;ADXL345.c: 87:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 374 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
+[e :U 373 ]
+"88
+[; ;ADXL345.c: 88:     SPI1_BufferWrite(&msg, 2);
+[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+"89
+[; ;ADXL345.c: 89:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 377 ]
-"91
-[; ;ADXL345.c: 91:     SPI1_BufferWrite(&msg, 2);
-[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"92
-[; ;ADXL345.c: 92:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 381 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 380 ]
-"94
-[; ;ADXL345.c: 94:     msg.registerAddr = 0x20;
+[e :U 376 ]
+"91
+[; ;ADXL345.c: 91:     msg.registerAddr = 0x20;
 [e = . _msg 0 -> -> 32 `i `uc ]
-"95
-[; ;ADXL345.c: 95:     msg.data[0] = z_axis;
+"92
+[; ;ADXL345.c: 92:     msg.data[0] = z_axis;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux _z_axis ]
-"96
-[; ;ADXL345.c: 96:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 384 ]
+"93
+[; ;ADXL345.c: 93:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 380 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 383 ]
-"97
-[; ;ADXL345.c: 97:     SPI1_BufferWrite(&msg, 2);
+[e :U 379 ]
+"94
+[; ;ADXL345.c: 94:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"98
-[; ;ADXL345.c: 98:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 387 ]
+"95
+[; ;ADXL345.c: 95:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 383 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 386 ]
-"100
-[; ;ADXL345.c: 100:     SPI1_Close();
+[e :U 382 ]
+"97
+[; ;ADXL345.c: 97:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"101
-[; ;ADXL345.c: 101: }
-[e :UE 366 ]
+"98
+[; ;ADXL345.c: 98: }
+[e :UE 362 ]
 }
-"103
-[; ;ADXL345.c: 103: void ADXL345_ClearInterrupt(void) {
+"100
+[; ;ADXL345.c: 100: void ADXL345_ClearInterrupt(void) {
 [v _ADXL345_ClearInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _ADXL345_ClearInterrupt ]
 [f ]
-"104
-[; ;ADXL345.c: 104:     while (!SPI1_Open(ADXL345)) {
-[e $U 389  ]
-[e :U 390 ]
+"101
+[; ;ADXL345.c: 101:     while (!SPI1_Open(ADXL345)) {
+[e $U 385  ]
+[e :U 386 ]
 {
-"105
-[; ;ADXL345.c: 105:         SPI1_Close();
+"102
+[; ;ADXL345.c: 102:         SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"106
-[; ;ADXL345.c: 106:     }
+"103
+[; ;ADXL345.c: 103:     }
 }
-[e :U 389 ]
-"104
-[; ;ADXL345.c: 104:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 390  ]
-[e :U 391 ]
-"109
-[; ;ADXL345.c: 109:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 394 ]
+[e :U 385 ]
+"101
+[; ;ADXL345.c: 101:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 386  ]
+[e :U 387 ]
+"106
+[; ;ADXL345.c: 106:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 390 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 393 ]
-"110
-[; ;ADXL345.c: 110:     SPI1_ByteExchange(0x30);
+[e :U 389 ]
+"107
+[; ;ADXL345.c: 107:     SPI1_ByteExchange(0x30);
 [e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"111
-[; ;ADXL345.c: 111:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 397 ]
+"108
+[; ;ADXL345.c: 108:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 393 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 396 ]
-"113
-[; ;ADXL345.c: 113:     SPI1_Close();
+[e :U 392 ]
+"110
+[; ;ADXL345.c: 110:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"114
-[; ;ADXL345.c: 114: }
-[e :UE 388 ]
+"111
+[; ;ADXL345.c: 111: }
+[e :UE 384 ]
 }
-"116
-[; ;ADXL345.c: 116: void setupForFreefall(void) {
+"113
+[; ;ADXL345.c: 113: void setupForFreefall(void) {
 [v _setupForFreefall `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupForFreefall ]
 [f ]
-"117
-[; ;ADXL345.c: 117:     while (!SPI1_Open(ADXL345)) {
-[e $U 399  ]
+"114
+[; ;ADXL345.c: 114:     while (!SPI1_Open(ADXL345)) {
+[e $U 395  ]
+[e :U 396 ]
+{
+"115
+[; ;ADXL345.c: 115:         SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"116
+[; ;ADXL345.c: 116:     }
+}
+[e :U 395 ]
+"114
+[; ;ADXL345.c: 114:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 396  ]
+[e :U 397 ]
+"119
+[; ;ADXL345.c: 119:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 400 ]
 {
-"118
-[; ;ADXL345.c: 118:         SPI1_Close();
-[e ( _SPI1_Close ..  ]
-"119
-[; ;ADXL345.c: 119:     }
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 399 ]
-"117
-[; ;ADXL345.c: 117:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 400  ]
-[e :U 401 ]
-"122
-[; ;ADXL345.c: 122:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 404 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
+"120
+[; ;ADXL345.c: 120:     SPI1_ByteExchange(0x30);
+[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
+"121
+[; ;ADXL345.c: 121:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 403 ]
-"123
-[; ;ADXL345.c: 123:     SPI1_ByteExchange(0x30);
-[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"124
-[; ;ADXL345.c: 124:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 407 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 406 ]
-"132
-[; ;ADXL345.c: 132:     struct Message msg;
+[e :U 402 ]
+"129
+[; ;ADXL345.c: 129:     struct Message msg;
 [v _msg `S333 ~T0 @X0 1 a ]
-"133
-[; ;ADXL345.c: 133:     msg.registerAddr = 0x24 | 0x40;
+"130
+[; ;ADXL345.c: 130:     msg.registerAddr = 0x24 | 0x40;
 [e = . _msg 0 -> | -> 36 `i -> 64 `i `uc ]
-"134
-[; ;ADXL345.c: 134:     memset(msg.data, 0, sizeof(msg.data));
+"131
+[; ;ADXL345.c: 131:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"135
-[; ;ADXL345.c: 135:     memcpy(msg.data, fall_init, sizeof(fall_init));
+"132
+[; ;ADXL345.c: 132:     memcpy(msg.data, fall_init, sizeof(fall_init));
 [e ( _memcpy (3 , , -> &U . _msg 1 `*v -> &U _fall_init `*Cv -> # _fall_init `ui ]
-"136
-[; ;ADXL345.c: 136:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 410 ]
+"133
+[; ;ADXL345.c: 133:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 406 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 409 ]
-"137
-[; ;ADXL345.c: 137:     SPI1_BufferWrite(&msg, sizeof(fall_init) + 1);
+[e :U 405 ]
+"134
+[; ;ADXL345.c: 134:     SPI1_BufferWrite(&msg, sizeof(fall_init) + 1);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v + -> # _fall_init `ui -> -> 1 `i `ui ]
+"135
+[; ;ADXL345.c: 135:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 409 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 408 ]
 "138
-[; ;ADXL345.c: 138:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 413 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 412 ]
-"141
-[; ;ADXL345.c: 141:     msg.registerAddr = 0x2C;
+[; ;ADXL345.c: 138:     msg.registerAddr = 0x2C;
 [e = . _msg 0 -> -> 44 `i `uc ]
-"142
-[; ;ADXL345.c: 142:     memset(msg.data, 0, sizeof(msg.data));
+"139
+[; ;ADXL345.c: 139:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"143
-[; ;ADXL345.c: 143:     msg.data[0] = 0x17;
+"140
+[; ;ADXL345.c: 140:     msg.data[0] = 0x17;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 23 `i `uc ]
-"144
-[; ;ADXL345.c: 144:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 416 ]
+"141
+[; ;ADXL345.c: 141:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 412 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
+[e :U 411 ]
+"142
+[; ;ADXL345.c: 142:     SPI1_BufferWrite(&msg, 2);
+[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+"143
+[; ;ADXL345.c: 143:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 415 ]
-"145
-[; ;ADXL345.c: 145:     SPI1_BufferWrite(&msg, 2);
-[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 414 ]
 "146
-[; ;ADXL345.c: 146:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 419 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 418 ]
-"149
-[; ;ADXL345.c: 149:     msg.registerAddr = 0x2E;
+[; ;ADXL345.c: 146:     msg.registerAddr = 0x2E;
 [e = . _msg 0 -> -> 46 `i `uc ]
-"150
-[; ;ADXL345.c: 150:     memset(msg.data, 0, sizeof(msg.data));
+"147
+[; ;ADXL345.c: 147:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"151
-[; ;ADXL345.c: 151:     msg.data[0] = 0x10;
+"148
+[; ;ADXL345.c: 148:     msg.data[0] = 0x10;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 16 `i `uc ]
-"152
-[; ;ADXL345.c: 152:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 422 ]
+"149
+[; ;ADXL345.c: 149:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 418 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 421 ]
-"153
-[; ;ADXL345.c: 153:     SPI1_BufferWrite(&msg, 2);
+[e :U 417 ]
+"150
+[; ;ADXL345.c: 150:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"154
-[; ;ADXL345.c: 154:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 425 ]
+"151
+[; ;ADXL345.c: 151:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 421 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
+[e :U 420 ]
+"154
+[; ;ADXL345.c: 154:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 424 ]
-"157
-[; ;ADXL345.c: 157:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 428 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 427 ]
-"158
-[; ;ADXL345.c: 158:     SPI1_ByteExchange(0x30);
+[e :U 423 ]
+"155
+[; ;ADXL345.c: 155:     SPI1_ByteExchange(0x30);
 [e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"159
-[; ;ADXL345.c: 159:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 431 ]
+"156
+[; ;ADXL345.c: 156:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 427 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 430 ]
-"161
-[; ;ADXL345.c: 161:     SPI1_Close();
+[e :U 426 ]
+"158
+[; ;ADXL345.c: 158:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"162
-[; ;ADXL345.c: 162: }
-[e :UE 398 ]
+"159
+[; ;ADXL345.c: 159: }
+[e :UE 394 ]
 }
-"164
-[; ;ADXL345.c: 164: void setupForImpact(void) {
+"161
+[; ;ADXL345.c: 161: void setupForImpact(void) {
 [v _setupForImpact `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupForImpact ]
 [f ]
-"165
-[; ;ADXL345.c: 165:     while (!SPI1_Open(ADXL345)) {
-[e $U 433  ]
+"162
+[; ;ADXL345.c: 162:     while (!SPI1_Open(ADXL345)) {
+[e $U 429  ]
+[e :U 430 ]
+{
+"163
+[; ;ADXL345.c: 163:         SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"164
+[; ;ADXL345.c: 164:     }
+}
+[e :U 429 ]
+"162
+[; ;ADXL345.c: 162:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 430  ]
+[e :U 431 ]
+"167
+[; ;ADXL345.c: 167:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 434 ]
 {
-"166
-[; ;ADXL345.c: 166:         SPI1_Close();
-[e ( _SPI1_Close ..  ]
-"167
-[; ;ADXL345.c: 167:     }
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 433 ]
-"165
-[; ;ADXL345.c: 165:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 434  ]
-[e :U 435 ]
-"170
-[; ;ADXL345.c: 170:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 438 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
+"168
+[; ;ADXL345.c: 168:     SPI1_ByteExchange(0x30);
+[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
+"169
+[; ;ADXL345.c: 169:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 437 ]
-"171
-[; ;ADXL345.c: 171:     SPI1_ByteExchange(0x30);
-[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"172
-[; ;ADXL345.c: 172:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 441 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 440 ]
-"180
-[; ;ADXL345.c: 180:     struct Message msg;
+[e :U 436 ]
+"177
+[; ;ADXL345.c: 177:     struct Message msg;
 [v _msg `S333 ~T0 @X0 1 a ]
-"181
-[; ;ADXL345.c: 181:     msg.registerAddr = 0x24 | 0x40;
+"178
+[; ;ADXL345.c: 178:     msg.registerAddr = 0x24 | 0x40;
 [e = . _msg 0 -> | -> 36 `i -> 64 `i `uc ]
-"182
-[; ;ADXL345.c: 182:     memset(msg.data, 0, sizeof(msg.data));
+"179
+[; ;ADXL345.c: 179:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"183
-[; ;ADXL345.c: 183:     memcpy(msg.data, impact_init, sizeof(impact_init));
+"180
+[; ;ADXL345.c: 180:     memcpy(msg.data, impact_init, sizeof(impact_init));
 [e ( _memcpy (3 , , -> &U . _msg 1 `*v -> &U _impact_init `*Cv -> # _impact_init `ui ]
-"184
-[; ;ADXL345.c: 184:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 444 ]
+"181
+[; ;ADXL345.c: 181:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 440 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 443 ]
-"185
-[; ;ADXL345.c: 185:     SPI1_BufferWrite(&msg, sizeof(impact_init) + 1);
+[e :U 439 ]
+"182
+[; ;ADXL345.c: 182:     SPI1_BufferWrite(&msg, sizeof(impact_init) + 1);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v + -> # _impact_init `ui -> -> 1 `i `ui ]
+"183
+[; ;ADXL345.c: 183:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 443 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 442 ]
 "186
-[; ;ADXL345.c: 186:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 447 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 446 ]
-"189
-[; ;ADXL345.c: 189:     msg.registerAddr = 0x2C;
+[; ;ADXL345.c: 186:     msg.registerAddr = 0x2C;
 [e = . _msg 0 -> -> 44 `i `uc ]
-"190
-[; ;ADXL345.c: 190:     memset(msg.data, 0, sizeof(msg.data));
+"187
+[; ;ADXL345.c: 187:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"191
-[; ;ADXL345.c: 191:     msg.data[0] = 0x1A;
+"188
+[; ;ADXL345.c: 188:     msg.data[0] = 0x1A;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 26 `i `uc ]
-"192
-[; ;ADXL345.c: 192:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 450 ]
+"189
+[; ;ADXL345.c: 189:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 446 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
+[e :U 445 ]
+"190
+[; ;ADXL345.c: 190:     SPI1_BufferWrite(&msg, 2);
+[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+"191
+[; ;ADXL345.c: 191:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 449 ]
-"193
-[; ;ADXL345.c: 193:     SPI1_BufferWrite(&msg, 2);
-[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 448 ]
 "194
-[; ;ADXL345.c: 194:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 453 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 452 ]
-"197
-[; ;ADXL345.c: 197:     msg.registerAddr = 0x2E;
+[; ;ADXL345.c: 194:     msg.registerAddr = 0x2E;
 [e = . _msg 0 -> -> 46 `i `uc ]
-"198
-[; ;ADXL345.c: 198:     memset(msg.data, 0, sizeof(msg.data));
+"195
+[; ;ADXL345.c: 195:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"199
-[; ;ADXL345.c: 199:     msg.data[0] = 0x04;
+"196
+[; ;ADXL345.c: 196:     msg.data[0] = 0x04;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 4 `i `uc ]
-"200
-[; ;ADXL345.c: 200:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 456 ]
+"197
+[; ;ADXL345.c: 197:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 452 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 455 ]
-"201
-[; ;ADXL345.c: 201:     SPI1_BufferWrite(&msg, 2);
+[e :U 451 ]
+"198
+[; ;ADXL345.c: 198:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"202
-[; ;ADXL345.c: 202:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 459 ]
+"199
+[; ;ADXL345.c: 199:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 455 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
+[e :U 454 ]
+"202
+[; ;ADXL345.c: 202:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 458 ]
-"205
-[; ;ADXL345.c: 205:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 462 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 461 ]
-"206
-[; ;ADXL345.c: 206:     SPI1_ByteExchange(0x30);
+[e :U 457 ]
+"203
+[; ;ADXL345.c: 203:     SPI1_ByteExchange(0x30);
 [e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"207
-[; ;ADXL345.c: 207:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 465 ]
+"204
+[; ;ADXL345.c: 204:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 461 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 464 ]
-"209
-[; ;ADXL345.c: 209:     SPI1_Close();
+[e :U 460 ]
+"206
+[; ;ADXL345.c: 206:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"210
-[; ;ADXL345.c: 210: }
-[e :UE 432 ]
+"207
+[; ;ADXL345.c: 207: }
+[e :UE 428 ]
 }
-"212
-[; ;ADXL345.c: 212: void setupForInactivity(void) {
+"209
+[; ;ADXL345.c: 209: void setupForInactivity(void) {
 [v _setupForInactivity `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupForInactivity ]
 [f ]
-"213
-[; ;ADXL345.c: 213:     while (!SPI1_Open(ADXL345)) {
-[e $U 467  ]
+"210
+[; ;ADXL345.c: 210:     while (!SPI1_Open(ADXL345)) {
+[e $U 463  ]
+[e :U 464 ]
+{
+"211
+[; ;ADXL345.c: 211:         SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"212
+[; ;ADXL345.c: 212:     }
+}
+[e :U 463 ]
+"210
+[; ;ADXL345.c: 210:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 464  ]
+[e :U 465 ]
+"215
+[; ;ADXL345.c: 215:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 468 ]
 {
-"214
-[; ;ADXL345.c: 214:         SPI1_Close();
-[e ( _SPI1_Close ..  ]
-"215
-[; ;ADXL345.c: 215:     }
+[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 467 ]
-"213
-[; ;ADXL345.c: 213:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 468  ]
-[e :U 469 ]
-"218
-[; ;ADXL345.c: 218:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 472 ]
-{
-[e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
-}
+"216
+[; ;ADXL345.c: 216:     SPI1_ByteExchange(0x30);
+[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
+"217
+[; ;ADXL345.c: 217:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 471 ]
-"219
-[; ;ADXL345.c: 219:     SPI1_ByteExchange(0x30);
-[e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"220
-[; ;ADXL345.c: 220:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 475 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 474 ]
-"228
-[; ;ADXL345.c: 228:     struct Message msg;
+[e :U 470 ]
+"225
+[; ;ADXL345.c: 225:     struct Message msg;
 [v _msg `S333 ~T0 @X0 1 a ]
-"229
-[; ;ADXL345.c: 229:     msg.registerAddr = 0x24 | 0x40;
+"226
+[; ;ADXL345.c: 226:     msg.registerAddr = 0x24 | 0x40;
 [e = . _msg 0 -> | -> 36 `i -> 64 `i `uc ]
-"230
-[; ;ADXL345.c: 230:     memset(msg.data, 0, sizeof(msg.data));
+"227
+[; ;ADXL345.c: 227:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"231
-[; ;ADXL345.c: 231:     memcpy(msg.data, no_motion_init, sizeof(no_motion_init));
+"228
+[; ;ADXL345.c: 228:     memcpy(msg.data, no_motion_init, sizeof(no_motion_init));
 [e ( _memcpy (3 , , -> &U . _msg 1 `*v -> &U _no_motion_init `*Cv -> # _no_motion_init `ui ]
-"232
-[; ;ADXL345.c: 232:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 478 ]
+"229
+[; ;ADXL345.c: 229:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 474 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 477 ]
-"233
-[; ;ADXL345.c: 233:     SPI1_BufferWrite(&msg, sizeof(no_motion_init) + 1);
+[e :U 473 ]
+"230
+[; ;ADXL345.c: 230:     SPI1_BufferWrite(&msg, sizeof(no_motion_init) + 1);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v + -> # _no_motion_init `ui -> -> 1 `i `ui ]
+"231
+[; ;ADXL345.c: 231:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 477 ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 476 ]
 "234
-[; ;ADXL345.c: 234:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 481 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 480 ]
-"237
-[; ;ADXL345.c: 237:     msg.registerAddr = 0x2C;
+[; ;ADXL345.c: 234:     msg.registerAddr = 0x2C;
 [e = . _msg 0 -> -> 44 `i `uc ]
-"238
-[; ;ADXL345.c: 238:     memset(msg.data, 0, sizeof(msg.data));
+"235
+[; ;ADXL345.c: 235:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"239
-[; ;ADXL345.c: 239:     msg.data[0] = 0x17;
+"236
+[; ;ADXL345.c: 236:     msg.data[0] = 0x17;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 23 `i `uc ]
-"240
-[; ;ADXL345.c: 240:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 484 ]
+"237
+[; ;ADXL345.c: 237:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 480 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
+[e :U 479 ]
+"238
+[; ;ADXL345.c: 238:     SPI1_BufferWrite(&msg, 2);
+[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+"239
+[; ;ADXL345.c: 239:     do { LATCbits.LATC4 = 1; } while(0);
 [e :U 483 ]
-"241
-[; ;ADXL345.c: 241:     SPI1_BufferWrite(&msg, 2);
-[e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
+{
+[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
+}
+[e :U 482 ]
 "242
-[; ;ADXL345.c: 242:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 487 ]
-{
-[e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
-}
-[e :U 486 ]
-"245
-[; ;ADXL345.c: 245:     msg.registerAddr = 0x2E;
+[; ;ADXL345.c: 242:     msg.registerAddr = 0x2E;
 [e = . _msg 0 -> -> 46 `i `uc ]
-"246
-[; ;ADXL345.c: 246:     memset(msg.data, 0, sizeof(msg.data));
+"243
+[; ;ADXL345.c: 243:     memset(msg.data, 0, sizeof(msg.data));
 [e ( _memset (3 , , -> &U . _msg 1 `*v -> 0 `i * -> # *U &U . _msg 1 `ui -> -> 25 `i `ui ]
-"247
-[; ;ADXL345.c: 247:     msg.data[0] = 0x08;
+"244
+[; ;ADXL345.c: 244:     msg.data[0] = 0x08;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 8 `i `uc ]
-"248
-[; ;ADXL345.c: 248:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 490 ]
+"245
+[; ;ADXL345.c: 245:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 486 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 489 ]
-"249
-[; ;ADXL345.c: 249:     SPI1_BufferWrite(&msg, 2);
+[e :U 485 ]
+"246
+[; ;ADXL345.c: 246:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"250
-[; ;ADXL345.c: 250:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 493 ]
+"247
+[; ;ADXL345.c: 247:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 489 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
+[e :U 488 ]
+"250
+[; ;ADXL345.c: 250:     do { LATCbits.LATC4 = 0; } while(0);
 [e :U 492 ]
-"253
-[; ;ADXL345.c: 253:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 496 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 495 ]
-"254
-[; ;ADXL345.c: 254:     SPI1_ByteExchange(0x30);
+[e :U 491 ]
+"251
+[; ;ADXL345.c: 251:     SPI1_ByteExchange(0x30);
 [e ( _SPI1_ByteExchange (1 -> -> 48 `i `uc ]
-"255
-[; ;ADXL345.c: 255:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 499 ]
+"252
+[; ;ADXL345.c: 252:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 495 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 498 ]
-"257
-[; ;ADXL345.c: 257:     SPI1_Close();
+[e :U 494 ]
+"254
+[; ;ADXL345.c: 254:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"258
-[; ;ADXL345.c: 258: }
-[e :UE 466 ]
+"255
+[; ;ADXL345.c: 255: }
+[e :UE 462 ]
 }
-"260
-[; ;ADXL345.c: 260: _Bool orientation_Up(void) {
+"257
+[; ;ADXL345.c: 257: _Bool orientation_Up(void) {
 [v _orientation_Up `(a ~T0 @X0 1 ef ]
 {
 [e :U _orientation_Up ]
 [f ]
-"261
-[; ;ADXL345.c: 261:     while (!SPI1_Open(ADXL345)) {
-[e $U 501  ]
-[e :U 502 ]
+"258
+[; ;ADXL345.c: 258:     while (!SPI1_Open(ADXL345)) {
+[e $U 497  ]
+[e :U 498 ]
 {
-"262
-[; ;ADXL345.c: 262:         SPI1_Close();
+"259
+[; ;ADXL345.c: 259:         SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"263
-[; ;ADXL345.c: 263:     }
+"260
+[; ;ADXL345.c: 260:     }
 }
-[e :U 501 ]
-"261
-[; ;ADXL345.c: 261:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 502  ]
-[e :U 503 ]
-[v F2713 `c ~T0 @X0 -> 6 `i s ]
-[i F2713
+[e :U 497 ]
+"258
+[; ;ADXL345.c: 258:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 498  ]
+[e :U 499 ]
+[v F2712 `c ~T0 @X0 -> 6 `i s ]
+[i F2712
 :U ..
-"264
-[; ;ADXL345.c: 264:     int8_t acc_data[6] = {0};
+"261
+[; ;ADXL345.c: 261:     int8_t acc_data[6] = {0};
 -> -> 0 `i `c
 ..
 ]
 [v _acc_data `c ~T0 @X0 -> 6 `i a ]
-[e = _acc_data F2713 ]
-"265
-[; ;ADXL345.c: 265:     int16_t g_deltaX, g_deltaY, g_deltaZ;
+[e = _acc_data F2712 ]
+"262
+[; ;ADXL345.c: 262:     int16_t g_deltaX, g_deltaY, g_deltaZ;
 [v _g_deltaX `s ~T0 @X0 1 a ]
 [v _g_deltaY `s ~T0 @X0 1 a ]
 [v _g_deltaZ `s ~T0 @X0 1 a ]
-"267
-[; ;ADXL345.c: 267:     struct Message msg;
+"264
+[; ;ADXL345.c: 264:     struct Message msg;
 [v _msg `S333 ~T0 @X0 1 a ]
-"268
-[; ;ADXL345.c: 268:     msg.registerAddr = 0x31;
+"265
+[; ;ADXL345.c: 265:     msg.registerAddr = 0x31;
 [e = . _msg 0 -> -> 49 `i `uc ]
-"269
-[; ;ADXL345.c: 269:     msg.data[0] = 0x0C;
+"266
+[; ;ADXL345.c: 266:     msg.data[0] = 0x0C;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 12 `i `uc ]
-"270
-[; ;ADXL345.c: 270:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 506 ]
+"267
+[; ;ADXL345.c: 267:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 502 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 505 ]
-"271
-[; ;ADXL345.c: 271:     SPI1_BufferWrite(&msg, 2);
+[e :U 501 ]
+"268
+[; ;ADXL345.c: 268:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"272
-[; ;ADXL345.c: 272:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 509 ]
+"269
+[; ;ADXL345.c: 269:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 505 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 508 ]
-"274
-[; ;ADXL345.c: 274:     _delay((unsigned long)((10)*(4000000/4000.0)));
+[e :U 504 ]
+"271
+[; ;ADXL345.c: 271:     _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"277
-[; ;ADXL345.c: 277:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 512 ]
+"274
+[; ;ADXL345.c: 274:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 508 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 511 ]
+[e :U 507 ]
+"275
+[; ;ADXL345.c: 275:     uint8_t addr_val = 0x32 | 0x80;
+[v _addr_val `uc ~T0 @X0 1 a ]
+[e = _addr_val -> | -> 50 `i -> 128 `i `uc ]
+"276
+[; ;ADXL345.c: 276:     addr_val = addr_val | 0x40;
+[e = _addr_val -> | -> _addr_val `i -> 64 `i `uc ]
+"277
+[; ;ADXL345.c: 277:     SPI1_ByteWrite(addr_val);
+[e ( _SPI1_ByteWrite (1 _addr_val ]
 "278
-[; ;ADXL345.c: 278:     SPI1_ByteWrite(0x32);
-[e ( _SPI1_ByteWrite (1 -> -> 50 `i `uc ]
-"279
-[; ;ADXL345.c: 279:     SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+[; ;ADXL345.c: 278:     SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
 [e ( _SPI1_BufferRead (2 , -> -> &U _acc_data `*uc `*v -> # _acc_data `ui ]
-"280
-[; ;ADXL345.c: 280:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 515 ]
+"279
+[; ;ADXL345.c: 279:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 511 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 514 ]
-"281
-[; ;ADXL345.c: 281:     SPI1_Close();
+[e :U 510 ]
+"280
+[; ;ADXL345.c: 280:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"284
-[; ;ADXL345.c: 284:     g_deltaX = (int8_t)acc_data[1] - 0x40;
+"283
+[; ;ADXL345.c: 283:     g_deltaX = (int8_t)acc_data[1] - 0x40;
 [e = _g_deltaX -> - -> *U + &U _acc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _acc_data `ui `ux `i -> 64 `i `s ]
-"285
-[; ;ADXL345.c: 285:     g_deltaY = (int8_t)acc_data[3];
+"284
+[; ;ADXL345.c: 284:     g_deltaY = (int8_t)acc_data[3];
 [e = _g_deltaY -> *U + &U _acc_data * -> -> -> 3 `i `ui `ux -> -> # *U &U _acc_data `ui `ux `s ]
-"286
-[; ;ADXL345.c: 286:     g_deltaZ = (int8_t)acc_data[5];
+"285
+[; ;ADXL345.c: 285:     g_deltaZ = (int8_t)acc_data[5];
 [e = _g_deltaZ -> *U + &U _acc_data * -> -> -> 5 `i `ui `ux -> -> # *U &U _acc_data `ui `ux `s ]
-"289
-[; ;ADXL345.c: 289:     g_deltaX *= g_deltaX;
+"288
+[; ;ADXL345.c: 288:     g_deltaX *= g_deltaX;
 [e =* _g_deltaX -> _g_deltaX `s ]
-"290
-[; ;ADXL345.c: 290:     g_deltaY *= g_deltaY;
+"289
+[; ;ADXL345.c: 289:     g_deltaY *= g_deltaY;
 [e =* _g_deltaY -> _g_deltaY `s ]
-"291
-[; ;ADXL345.c: 291:     g_deltaZ *= g_deltaZ;
+"290
+[; ;ADXL345.c: 290:     g_deltaZ *= g_deltaZ;
 [e =* _g_deltaZ -> _g_deltaZ `s ]
-"292
-[; ;ADXL345.c: 292:     int g_magnitude = g_deltaX + g_deltaY + g_deltaZ;
+"291
+[; ;ADXL345.c: 291:     int g_magnitude = g_deltaX + g_deltaY + g_deltaZ;
 [v _g_magnitude `i ~T0 @X0 1 a ]
 [e = _g_magnitude + + -> _g_deltaX `i -> _g_deltaY `i -> _g_deltaZ `i ]
+"292
+[; ;ADXL345.c: 292:     if (g_magnitude < acceleration_squared_threshold) {
+[e $ ! < -> _g_magnitude `ui -> _acceleration_squared_threshold `ui 512  ]
+{
 "293
-[; ;ADXL345.c: 293:     if (g_magnitude < acceleration_squared_threshold) {
-[e $ ! < -> _g_magnitude `ui -> _acceleration_squared_threshold `ui 516  ]
-{
-"294
-[; ;ADXL345.c: 294:         return 1;
+[; ;ADXL345.c: 293:         return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 500  ]
-"295
-[; ;ADXL345.c: 295:     } else {
+[e $UE 496  ]
+"294
+[; ;ADXL345.c: 294:     } else {
 }
-[e $U 517  ]
-[e :U 516 ]
+[e $U 513  ]
+[e :U 512 ]
 {
-"296
-[; ;ADXL345.c: 296:         return 0;
+"295
+[; ;ADXL345.c: 295:         return 0;
 [e ) -> -> 0 `i `a ]
-[e $UE 500  ]
+[e $UE 496  ]
+"296
+[; ;ADXL345.c: 296:     }
+}
+[e :U 513 ]
 "297
-[; ;ADXL345.c: 297:     }
+[; ;ADXL345.c: 297: }
+[e :UE 496 ]
 }
-[e :U 517 ]
-"298
-[; ;ADXL345.c: 298: }
-[e :UE 500 ]
-}
-"300
-[; ;ADXL345.c: 300: _Bool calibrate(void) {
+"299
+[; ;ADXL345.c: 299: _Bool calibrate(void) {
 [v _calibrate `(a ~T0 @X0 1 ef ]
 {
 [e :U _calibrate ]
 [f ]
-"301
-[; ;ADXL345.c: 301:     int offset_0g_X, offset_0g_Y, offset_0g_Z;
+"300
+[; ;ADXL345.c: 300:     int offset_0g_X, offset_0g_Y, offset_0g_Z;
 [v _offset_0g_X `i ~T0 @X0 1 a ]
 [v _offset_0g_Y `i ~T0 @X0 1 a ]
 [v _offset_0g_Z `i ~T0 @X0 1 a ]
 [v F2724 `i ~T0 @X0 -> 6 `i s ]
 [i F2724
 :U ..
-"302
-[; ;ADXL345.c: 302:     int acc_data[6] = {0};
+"301
+[; ;ADXL345.c: 301:     int acc_data[6] = {0};
 -> 0 `i
 ..
 ]
 [v _acc_data `i ~T0 @X0 -> 6 `i a ]
 [e = _acc_data F2724 ]
-"303
-[; ;ADXL345.c: 303:     int sum_X = 0, sum_Y = 0, sum_Z = 0;
+"302
+[; ;ADXL345.c: 302:     int sum_X = 0, sum_Y = 0, sum_Z = 0;
 [v _sum_X `i ~T0 @X0 1 a ]
 [e = _sum_X -> 0 `i ]
 [v _sum_Y `i ~T0 @X0 1 a ]
 [e = _sum_Y -> 0 `i ]
 [v _sum_Z `i ~T0 @X0 1 a ]
 [e = _sum_Z -> 0 `i ]
-"304
-[; ;ADXL345.c: 304:     int sum_X_avg, sum_Y_avg, sum_Z_avg;
+"303
+[; ;ADXL345.c: 303:     int sum_X_avg, sum_Y_avg, sum_Z_avg;
 [v _sum_X_avg `i ~T0 @X0 1 a ]
 [v _sum_Y_avg `i ~T0 @X0 1 a ]
 [v _sum_Z_avg `i ~T0 @X0 1 a ]
-"306
-[; ;ADXL345.c: 306:     while (!SPI1_Open(ADXL345)) {
-[e $U 519  ]
-[e :U 520 ]
+"305
+[; ;ADXL345.c: 305:     while (!SPI1_Open(ADXL345)) {
+[e $U 515  ]
+[e :U 516 ]
 {
-"307
-[; ;ADXL345.c: 307:         SPI1_Close();
-[e ( _SPI1_Close ..  ]
-"308
-[; ;ADXL345.c: 308:     }
-}
-[e :U 519 ]
 "306
-[; ;ADXL345.c: 306:     while (!SPI1_Open(ADXL345)) {
-[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 520  ]
-[e :U 521 ]
-"310
-[; ;ADXL345.c: 310:     struct Message msg;
+[; ;ADXL345.c: 306:         SPI1_Close();
+[e ( _SPI1_Close ..  ]
+"307
+[; ;ADXL345.c: 307:     }
+}
+[e :U 515 ]
+"305
+[; ;ADXL345.c: 305:     while (!SPI1_Open(ADXL345)) {
+[e $ ! != -> ( _SPI1_Open (1 -> . `E2635 0 `uc `i -> 0 `i 516  ]
+[e :U 517 ]
+"309
+[; ;ADXL345.c: 309:     struct Message msg;
 [v _msg `S333 ~T0 @X0 1 a ]
-"311
-[; ;ADXL345.c: 311:     msg.registerAddr = 0x31;
+"310
+[; ;ADXL345.c: 310:     msg.registerAddr = 0x31;
 [e = . _msg 0 -> -> 49 `i `uc ]
-"312
-[; ;ADXL345.c: 312:     msg.data[0] = 0x0C;
+"311
+[; ;ADXL345.c: 311:     msg.data[0] = 0x0C;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 12 `i `uc ]
-"313
-[; ;ADXL345.c: 313:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 524 ]
+"312
+[; ;ADXL345.c: 312:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 520 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 523 ]
-"314
-[; ;ADXL345.c: 314:     SPI1_BufferWrite(&msg, 2);
+[e :U 519 ]
+"313
+[; ;ADXL345.c: 313:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"315
-[; ;ADXL345.c: 315:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 527 ]
+"314
+[; ;ADXL345.c: 314:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 523 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 526 ]
-"318
-[; ;ADXL345.c: 318:     while(!PORTAbits.RA1) {
-[e $U 528  ]
-[e :U 529 ]
+[e :U 522 ]
+"317
+[; ;ADXL345.c: 317:     while(PORTAbits.RA1) {
+[e $U 524  ]
+[e :U 525 ]
 {
-"319
-[; ;ADXL345.c: 319:         do { LATAbits.LATA4 = 1; } while(0);
-[e :U 533 ]
+"318
+[; ;ADXL345.c: 318:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 529 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 532 ]
-"320
-[; ;ADXL345.c: 320:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e :U 528 ]
+"319
+[; ;ADXL345.c: 319:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"321
-[; ;ADXL345.c: 321:         __asm("clrwdt");
+"320
+[; ;ADXL345.c: 320:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"322
-[; ;ADXL345.c: 322:         do { LATAbits.LATA4 = 0; } while(0);
-[e :U 536 ]
+"321
+[; ;ADXL345.c: 321:         do { LATAbits.LATA4 = 0; } while(0);
+[e :U 532 ]
 {
 [e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 535 ]
-"323
-[; ;ADXL345.c: 323:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e :U 531 ]
+"322
+[; ;ADXL345.c: 322:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"323
+[; ;ADXL345.c: 323:         __asm("clrwdt");
+[; <" clrwdt ;# ">
 "324
-[; ;ADXL345.c: 324:         __asm("clrwdt");
-[; <" clrwdt ;# ">
-"325
-[; ;ADXL345.c: 325:     }
+[; ;ADXL345.c: 324:     }
 }
-[e :U 528 ]
-"318
-[; ;ADXL345.c: 318:     while(!PORTAbits.RA1) {
-[e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 529  ]
-[e :U 530 ]
+[e :U 524 ]
+"317
+[; ;ADXL345.c: 317:     while(PORTAbits.RA1) {
+[e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 525  ]
+[e :U 526 ]
+"326
+[; ;ADXL345.c: 326:     __asm("clrwdt");
+[; <" clrwdt ;# ">
 "327
-[; ;ADXL345.c: 327:     __asm("clrwdt");
-[; <" clrwdt ;# ">
-"328
-[; ;ADXL345.c: 328:     _delay((unsigned long)((1500)*(4000000/4000.0)));
+[; ;ADXL345.c: 327:     _delay((unsigned long)((1500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"329
-[; ;ADXL345.c: 329:     __asm("clrwdt");
+"328
+[; ;ADXL345.c: 328:     __asm("clrwdt");
 [; <" clrwdt ;# ">
-"331
-[; ;ADXL345.c: 331:     for(int i = 0; i < 128; i++) {
+"330
+[; ;ADXL345.c: 330:     for(int i = 0; i < 128; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 128 `i 537  ]
-[e $U 538  ]
-[e :U 537 ]
+[e $ < _i -> 128 `i 533  ]
+[e $U 534  ]
+[e :U 533 ]
 {
-"333
-[; ;ADXL345.c: 333:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 542 ]
+"332
+[; ;ADXL345.c: 332:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 538 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 541 ]
+[e :U 537 ]
+"333
+[; ;ADXL345.c: 333:         uint8_t addr_val = 0x32 | 0x80;
+[v _addr_val `uc ~T0 @X0 1 a ]
+[e = _addr_val -> | -> 50 `i -> 128 `i `uc ]
 "334
-[; ;ADXL345.c: 334:         SPI1_ByteWrite(0x32);
-[e ( _SPI1_ByteWrite (1 -> -> 50 `i `uc ]
+[; ;ADXL345.c: 334:         addr_val = addr_val | 0x40;
+[e = _addr_val -> | -> _addr_val `i -> 64 `i `uc ]
 "335
-[; ;ADXL345.c: 335:         SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
-[e ( _SPI1_BufferRead (2 , -> -> &U _acc_data `*uc `*v -> # _acc_data `ui ]
+[; ;ADXL345.c: 335:         SPI1_ByteWrite(addr_val);
+[e ( _SPI1_ByteWrite (1 _addr_val ]
 "336
-[; ;ADXL345.c: 336:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 545 ]
+[; ;ADXL345.c: 336:         SPI1_BufferRead((uint8_t *)acc_data, 6);
+[e ( _SPI1_BufferRead (2 , -> -> &U _acc_data `*uc `*v -> -> 6 `i `ui ]
+"337
+[; ;ADXL345.c: 337:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 541 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 544 ]
-"338
-[; ;ADXL345.c: 338:         sum_X += acc_data[1];
-[e =+ _sum_X *U + &U _acc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
+[e :U 540 ]
 "339
-[; ;ADXL345.c: 339:         sum_Y += acc_data[3];
-[e =+ _sum_Y *U + &U _acc_data * -> -> -> 3 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
+[; ;ADXL345.c: 339:         sum_X += acc_data[1];
+[e =+ _sum_X *U + &U _acc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
 "340
-[; ;ADXL345.c: 340:         sum_Z += acc_data[5];
+[; ;ADXL345.c: 340:         sum_Y += acc_data[3];
+[e =+ _sum_Y *U + &U _acc_data * -> -> -> 3 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
+"341
+[; ;ADXL345.c: 341:         sum_Z += acc_data[5];
 [e =+ _sum_Z *U + &U _acc_data * -> -> -> 5 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
-"342
-[; ;ADXL345.c: 342:         _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "343
-[; ;ADXL345.c: 343:         __asm("clrwdt");
-[; <" clrwdt ;# ">
+[; ;ADXL345.c: 343:         _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "344
-[; ;ADXL345.c: 344:     }
+[; ;ADXL345.c: 344:         __asm("clrwdt");
+[; <" clrwdt ;# ">
+"345
+[; ;ADXL345.c: 345:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 128 `i 537  ]
-[e :U 538 ]
+[e $ < _i -> 128 `i 533  ]
+[e :U 534 ]
 }
-"347
-[; ;ADXL345.c: 347:     if (sum_Z == 0) return 0;
-[e $ ! == _sum_Z -> 0 `i 546  ]
+"348
+[; ;ADXL345.c: 348:     if (sum_Z == 0) return 0;
+[e $ ! == _sum_Z -> 0 `i 542  ]
 [e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 546 ]
-"350
-[; ;ADXL345.c: 350:     sum_X_avg = sum_X >> 7;
-[e = _sum_X_avg >> _sum_X -> 7 `i ]
+[e $UE 514  ]
+[e :U 542 ]
 "351
-[; ;ADXL345.c: 351:     sum_Y_avg = sum_Y >> 7;
+[; ;ADXL345.c: 351:     sum_X_avg = sum_X >> 7;
+[e = _sum_X_avg >> _sum_X -> 7 `i ]
+"352
+[; ;ADXL345.c: 352:     sum_Y_avg = sum_Y >> 7;
 [e = _sum_Y_avg >> _sum_Y -> 7 `i ]
-"355
-[; ;ADXL345.c: 355:     if (sum_X_avg & 0x80) {
-[e $ ! != & _sum_X_avg -> 128 `i -> 0 `i 547  ]
-{
 "356
-[; ;ADXL345.c: 356:         if (~(sum_X_avg) + 1 >= 0x10) return 0;
-[e $ ! >= + ~ _sum_X_avg -> 1 `i -> 16 `i 548  ]
-[e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 548 ]
+[; ;ADXL345.c: 356:     if (sum_X_avg & 0x80) {
+[e $ ! != & _sum_X_avg -> 128 `i -> 0 `i 543  ]
+{
 "357
-[; ;ADXL345.c: 357:     } else {
+[; ;ADXL345.c: 357:         if (~(sum_X_avg) + 1 >= 0x10) return 0;
+[e $ ! >= + ~ _sum_X_avg -> 1 `i -> 16 `i 544  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 514  ]
+[e :U 544 ]
+"358
+[; ;ADXL345.c: 358:     } else {
+}
+[e $U 545  ]
+[e :U 543 ]
+{
+"359
+[; ;ADXL345.c: 359:         if (sum_X_avg >= 0x10) return 0;
+[e $ ! >= _sum_X_avg -> 16 `i 546  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 514  ]
+[e :U 546 ]
+"360
+[; ;ADXL345.c: 360:     }
+}
+[e :U 545 ]
+"362
+[; ;ADXL345.c: 362:     if (sum_Y_avg & 0x80) {
+[e $ ! != & _sum_Y_avg -> 128 `i -> 0 `i 547  ]
+{
+"363
+[; ;ADXL345.c: 363:         if (~(sum_Y_avg) + 1 >= 0x10) return 0;
+[e $ ! >= + ~ _sum_Y_avg -> 1 `i -> 16 `i 548  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 514  ]
+[e :U 548 ]
+"364
+[; ;ADXL345.c: 364:     } else {
 }
 [e $U 549  ]
 [e :U 547 ]
 {
-"358
-[; ;ADXL345.c: 358:         if (sum_X_avg >= 0x10) return 0;
-[e $ ! >= _sum_X_avg -> 16 `i 550  ]
+"365
+[; ;ADXL345.c: 365:         if (sum_Y_avg >= 0x10) return 0;
+[e $ ! >= _sum_Y_avg -> 16 `i 550  ]
 [e ) -> -> 0 `i `a ]
-[e $UE 518  ]
+[e $UE 514  ]
 [e :U 550 ]
-"359
-[; ;ADXL345.c: 359:     }
+"366
+[; ;ADXL345.c: 366:     }
 }
 [e :U 549 ]
-"361
-[; ;ADXL345.c: 361:     if (sum_Y_avg & 0x80) {
-[e $ ! != & _sum_Y_avg -> 128 `i -> 0 `i 551  ]
-{
-"362
-[; ;ADXL345.c: 362:         if (~(sum_Y_avg) + 1 >= 0x10) return 0;
-[e $ ! >= + ~ _sum_Y_avg -> 1 `i -> 16 `i 552  ]
-[e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 552 ]
-"363
-[; ;ADXL345.c: 363:     } else {
-}
-[e $U 553  ]
-[e :U 551 ]
-{
-"364
-[; ;ADXL345.c: 364:         if (sum_Y_avg >= 0x10) return 0;
-[e $ ! >= _sum_Y_avg -> 16 `i 554  ]
-[e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 554 ]
-"365
-[; ;ADXL345.c: 365:     }
-}
-[e :U 553 ]
-"367
-[; ;ADXL345.c: 367:     offset_0g_X = -sum_X_avg;
-[e = _offset_0g_X -U _sum_X_avg ]
 "368
-[; ;ADXL345.c: 368:     offset_0g_Y = -sum_Y_avg;
+[; ;ADXL345.c: 368:     offset_0g_X = -sum_X_avg;
+[e = _offset_0g_X -U _sum_X_avg ]
+"369
+[; ;ADXL345.c: 369:     offset_0g_Y = -sum_Y_avg;
 [e = _offset_0g_Y -U _sum_Y_avg ]
-"370
-[; ;ADXL345.c: 370:     sum_Z_avg = sum_Z >> 7;
-[e = _sum_Z_avg >> _sum_Z -> 7 `i ]
 "371
-[; ;ADXL345.c: 371:     sum_Z = 0;
+[; ;ADXL345.c: 371:     sum_Z_avg = sum_Z >> 7;
+[e = _sum_Z_avg >> _sum_Z -> 7 `i ]
+"372
+[; ;ADXL345.c: 372:     sum_Z = 0;
 [e = _sum_Z -> 0 `i ]
-"374
-[; ;ADXL345.c: 374:     while(!PORTAbits.RA1) {
-[e $U 555  ]
-[e :U 556 ]
-{
 "375
-[; ;ADXL345.c: 375:         do { LATAbits.LATA5 = 1; } while(0);
-[e :U 560 ]
+[; ;ADXL345.c: 375:     while(PORTAbits.RA1) {
+[e $U 551  ]
+[e :U 552 ]
+{
+"376
+[; ;ADXL345.c: 376:         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 556 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 559 ]
-"376
-[; ;ADXL345.c: 376:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e :U 555 ]
 "377
-[; ;ADXL345.c: 377:         __asm("clrwdt");
-[; <" clrwdt ;# ">
+[; ;ADXL345.c: 377:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "378
-[; ;ADXL345.c: 378:         do { LATAbits.LATA5 = 0; } while(0);
-[e :U 563 ]
+[; ;ADXL345.c: 378:         __asm("clrwdt");
+[; <" clrwdt ;# ">
+"379
+[; ;ADXL345.c: 379:         do { LATAbits.LATA5 = 0; } while(0);
+[e :U 559 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 562 ]
-"379
-[; ;ADXL345.c: 379:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e :U 558 ]
 "380
-[; ;ADXL345.c: 380:         __asm("clrwdt");
-[; <" clrwdt ;# ">
+[; ;ADXL345.c: 380:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "381
-[; ;ADXL345.c: 381:     }
+[; ;ADXL345.c: 381:         __asm("clrwdt");
+[; <" clrwdt ;# ">
+"382
+[; ;ADXL345.c: 382:     }
 }
-[e :U 555 ]
-"374
-[; ;ADXL345.c: 374:     while(!PORTAbits.RA1) {
-[e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 556  ]
-[e :U 557 ]
-"383
-[; ;ADXL345.c: 383:     __asm("clrwdt");
-[; <" clrwdt ;# ">
+[e :U 551 ]
+"375
+[; ;ADXL345.c: 375:     while(PORTAbits.RA1) {
+[e $ != -> . . _PORTAbits 0 1 `i -> 0 `i 552  ]
+[e :U 553 ]
 "384
-[; ;ADXL345.c: 384:     _delay((unsigned long)((1500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"385
-[; ;ADXL345.c: 385:     __asm("clrwdt");
+[; ;ADXL345.c: 384:     __asm("clrwdt");
 [; <" clrwdt ;# ">
-"387
-[; ;ADXL345.c: 387:     for(int i = 0; i < 128; i++) {
+"385
+[; ;ADXL345.c: 385:     _delay((unsigned long)((1500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"386
+[; ;ADXL345.c: 386:     __asm("clrwdt");
+[; <" clrwdt ;# ">
+"388
+[; ;ADXL345.c: 388:     for(int i = 0; i < 128; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 128 `i 564  ]
-[e $U 565  ]
-[e :U 564 ]
+[e $ < _i -> 128 `i 560  ]
+[e $U 561  ]
+[e :U 560 ]
 {
-"389
-[; ;ADXL345.c: 389:         do { LATCbits.LATC4 = 0; } while(0);
-[e :U 569 ]
+"390
+[; ;ADXL345.c: 390:         do { LATCbits.LATC4 = 0; } while(0);
+[e :U 565 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 568 ]
-"390
-[; ;ADXL345.c: 390:         SPI1_ByteWrite(0x32);
-[e ( _SPI1_ByteWrite (1 -> -> 50 `i `uc ]
+[e :U 564 ]
 "391
-[; ;ADXL345.c: 391:         SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
-[e ( _SPI1_BufferRead (2 , -> -> &U _acc_data `*uc `*v -> # _acc_data `ui ]
+[; ;ADXL345.c: 391:         uint8_t addr_val = 0x32 | 0x80;
+[v _addr_val `uc ~T0 @X0 1 a ]
+[e = _addr_val -> | -> 50 `i -> 128 `i `uc ]
 "392
-[; ;ADXL345.c: 392:         do { LATCbits.LATC4 = 1; } while(0);
-[e :U 572 ]
+[; ;ADXL345.c: 392:         addr_val = addr_val | 0x40;
+[e = _addr_val -> | -> _addr_val `i -> 64 `i `uc ]
+"393
+[; ;ADXL345.c: 393:         SPI1_ByteWrite(addr_val);
+[e ( _SPI1_ByteWrite (1 _addr_val ]
+"394
+[; ;ADXL345.c: 394:         SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+[e ( _SPI1_BufferRead (2 , -> -> &U _acc_data `*uc `*v -> # _acc_data `ui ]
+"395
+[; ;ADXL345.c: 395:         do { LATCbits.LATC4 = 1; } while(0);
+[e :U 568 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 571 ]
-"394
-[; ;ADXL345.c: 394:         sum_Z += acc_data[5];
-[e =+ _sum_Z *U + &U _acc_data * -> -> -> 5 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
-"396
-[; ;ADXL345.c: 396:         _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e :U 567 ]
 "397
-[; ;ADXL345.c: 397:         __asm("clrwdt");
+[; ;ADXL345.c: 397:         sum_Z += acc_data[5];
+[e =+ _sum_Z *U + &U _acc_data * -> -> -> 5 `i `ui `ux -> -> # *U &U _acc_data `ui `ux ]
+"399
+[; ;ADXL345.c: 399:         _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"400
+[; ;ADXL345.c: 400:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"398
-[; ;ADXL345.c: 398:     }
+"401
+[; ;ADXL345.c: 401:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 128 `i 564  ]
-[e :U 565 ]
+[e $ < _i -> 128 `i 560  ]
+[e :U 561 ]
 }
-"400
-[; ;ADXL345.c: 400:     int16_t Z_n1g = sum_Z >> 7;
+"403
+[; ;ADXL345.c: 403:     int16_t Z_n1g = sum_Z >> 7;
 [v _Z_n1g `s ~T0 @X0 1 a ]
 [e = _Z_n1g -> >> _sum_Z -> 7 `i `s ]
-"401
-[; ;ADXL345.c: 401:     sum_Z_avg = (Z_n1g + sum_Z_avg) >> 1;
+"404
+[; ;ADXL345.c: 404:     sum_Z_avg = (Z_n1g + sum_Z_avg) >> 1;
 [e = _sum_Z_avg >> + -> _Z_n1g `i _sum_Z_avg -> 1 `i ]
-"405
-[; ;ADXL345.c: 405:     if (sum_Z_avg & 0x80) {
-[e $ ! != & _sum_Z_avg -> 128 `i -> 0 `i 573  ]
-{
-"406
-[; ;ADXL345.c: 406:         if (~(sum_Z_avg) + 1 >= 0x20) return 0;
-[e $ ! >= + ~ _sum_Z_avg -> 1 `i -> 32 `i 574  ]
-[e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 574 ]
-"407
-[; ;ADXL345.c: 407:     } else {
-}
-[e $U 575  ]
-[e :U 573 ]
-{
 "408
-[; ;ADXL345.c: 408:         if (sum_Z_avg >= 0x20) return 0;
-[e $ ! >= _sum_Z_avg -> 32 `i 576  ]
-[e ) -> -> 0 `i `a ]
-[e $UE 518  ]
-[e :U 576 ]
+[; ;ADXL345.c: 408:     if (sum_Z_avg & 0x80) {
+[e $ ! != & _sum_Z_avg -> 128 `i -> 0 `i 569  ]
+{
 "409
-[; ;ADXL345.c: 409:     }
+[; ;ADXL345.c: 409:         if (~(sum_Z_avg) + 1 >= 0x20) return 0;
+[e $ ! >= + ~ _sum_Z_avg -> 1 `i -> 32 `i 570  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 514  ]
+[e :U 570 ]
+"410
+[; ;ADXL345.c: 410:     } else {
 }
-[e :U 575 ]
+[e $U 571  ]
+[e :U 569 ]
+{
 "411
-[; ;ADXL345.c: 411:     offset_0g_Z = -sum_Z_avg;
+[; ;ADXL345.c: 411:         if (sum_Z_avg >= 0x20) return 0;
+[e $ ! >= _sum_Z_avg -> 32 `i 572  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 514  ]
+[e :U 572 ]
+"412
+[; ;ADXL345.c: 412:     }
+}
+[e :U 571 ]
+"414
+[; ;ADXL345.c: 414:     offset_0g_Z = -sum_Z_avg;
 [e = _offset_0g_Z -U _sum_Z_avg ]
-"413
-[; ;ADXL345.c: 413:     saveOffsets((uint8_t)offset_0g_X, (uint8_t)offset_0g_Y, (uint8_t)offset_0g_Z);
-[e ( _saveOffsets (3 , , -> _offset_0g_X `uc -> _offset_0g_Y `uc -> _offset_0g_Z `uc ]
 "416
-[; ;ADXL345.c: 416:     EEPROM_Write(0x02, (uint8_t)offset_0g_X);
+[; ;ADXL345.c: 416:     saveOffsets((uint8_t)offset_0g_X, (uint8_t)offset_0g_Y, (uint8_t)offset_0g_Z);
+[e ( _saveOffsets (3 , , -> _offset_0g_X `uc -> _offset_0g_Y `uc -> _offset_0g_Z `uc ]
+"419
+[; ;ADXL345.c: 419:     EEPROM_Write(0x02, (uint8_t)offset_0g_X);
 [e ( _EEPROM_Write (2 , -> -> 2 `i `us -> _offset_0g_X `uc ]
-"417
-[; ;ADXL345.c: 417:     EEPROM_Write(0x04, (uint8_t)offset_0g_Y);
-[e ( _EEPROM_Write (2 , -> -> 4 `i `us -> _offset_0g_Y `uc ]
-"418
-[; ;ADXL345.c: 418:     EEPROM_Write(0x06, (uint8_t)offset_0g_Z);
-[e ( _EEPROM_Write (2 , -> -> 6 `i `us -> _offset_0g_Z `uc ]
 "420
-[; ;ADXL345.c: 420:     EEPROM_Write(0x10, 0x57);
-[e ( _EEPROM_Write (2 , -> -> 16 `i `us -> -> 87 `i `uc ]
-"422
-[; ;ADXL345.c: 422:     msg.registerAddr = 0x31;
-[e = . _msg 0 -> -> 49 `i `uc ]
+[; ;ADXL345.c: 420:     EEPROM_Write(0x04, (uint8_t)offset_0g_Y);
+[e ( _EEPROM_Write (2 , -> -> 4 `i `us -> _offset_0g_Y `uc ]
+"421
+[; ;ADXL345.c: 421:     EEPROM_Write(0x06, (uint8_t)offset_0g_Z);
+[e ( _EEPROM_Write (2 , -> -> 6 `i `us -> _offset_0g_Z `uc ]
 "423
-[; ;ADXL345.c: 423:     msg.data[0] = 0x0B;
+[; ;ADXL345.c: 423:     EEPROM_Write(0x10, 0x57);
+[e ( _EEPROM_Write (2 , -> -> 16 `i `us -> -> 87 `i `uc ]
+"425
+[; ;ADXL345.c: 425:     msg.registerAddr = 0x31;
+[e = . _msg 0 -> -> 49 `i `uc ]
+"426
+[; ;ADXL345.c: 426:     msg.data[0] = 0x0B;
 [e = *U + &U . _msg 1 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _msg 1 `ui `ux -> -> 11 `i `uc ]
-"424
-[; ;ADXL345.c: 424:     do { LATCbits.LATC4 = 0; } while(0);
-[e :U 579 ]
+"427
+[; ;ADXL345.c: 427:     do { LATCbits.LATC4 = 0; } while(0);
+[e :U 575 ]
 {
 [e = . . _LATCbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 578 ]
-"425
-[; ;ADXL345.c: 425:     SPI1_BufferWrite(&msg, 2);
+[e :U 574 ]
+"428
+[; ;ADXL345.c: 428:     SPI1_BufferWrite(&msg, 2);
 [e ( _SPI1_BufferWrite (2 , -> &U _msg `*v -> -> 2 `i `ui ]
-"426
-[; ;ADXL345.c: 426:     do { LATCbits.LATC4 = 1; } while(0);
-[e :U 582 ]
+"429
+[; ;ADXL345.c: 429:     do { LATCbits.LATC4 = 1; } while(0);
+[e :U 578 ]
 {
 [e = . . _LATCbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 581 ]
-"428
-[; ;ADXL345.c: 428:     SPI1_Close();
+[e :U 577 ]
+"431
+[; ;ADXL345.c: 431:     SPI1_Close();
 [e ( _SPI1_Close ..  ]
-"429
-[; ;ADXL345.c: 429:     return 1;
+"432
+[; ;ADXL345.c: 432:     return 1;
 [e ) -> -> 1 `i `a ]
-[e $UE 518  ]
-"430
-[; ;ADXL345.c: 430: }
-[e :UE 518 ]
+[e $UE 514  ]
+"433
+[; ;ADXL345.c: 433: }
+[e :UE 514 ]
 }

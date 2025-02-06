@@ -4569,7 +4569,9 @@ int main(void)
         do { LATAbits.LATA5 = 0; } while(0);
     }
 
+    __asm("clrwdt");
     _delay((unsigned long)((250)*(4000000/4000.0)));
+    __asm("clrwdt");
 
     if (ADXL345_init()) {
         do { LATAbits.LATA4 = 1; } while(0);
@@ -4581,6 +4583,7 @@ int main(void)
         do { LATAbits.LATA5 = 0; } while(0);
     }
 
+    __asm("clrwdt");
     if (EEPROM_Read(0x10) != 0x57) {
         while(!calibrate());
         for (int i = 0; i < 3; i++) {

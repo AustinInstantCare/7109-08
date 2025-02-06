@@ -4590,22 +4590,19 @@ _Bool ADXL345_init(void) {
 }
 
 _Bool ADXL345_validation(void) {
-    _Bool passed = 0;
     if (SPI1_Open(ADXL345)) {
         do { LATCbits.LATC4 = 0; } while(0);
-        uint8_t temp[2] = {0x00, 0x00};
+        uint8_t temp[2] = {0x00 | 0x80, 0x00};
         SPI1_BufferExchange(&temp, sizeof(temp));
-        if (temp[0] == 0xE5) {
-            passed = 1;
-        } else {
-            do { LATAbits.LATA4 = 1; } while(0);
-            _delay((unsigned long)((250)*(4000000/4000.0)));
-            do { LATAbits.LATA4 = 0; } while(0);
+        if (temp[1] == 0xE5) {
+            do { LATCbits.LATC4 = 1; } while(0);
+            SPI1_Close();
+            return 1;
         }
-        do { LATCbits.LATC4 = 1; } while(0);
     }
+    do { LATCbits.LATC4 = 1; } while(0);
     SPI1_Close();
-    return passed;
+    return 0;
 }
 
 void saveOffsets(uint8_t x_axis, uint8_t y_axis, uint8_t z_axis) {
@@ -4810,7 +4807,9 @@ _Bool orientation_Up(void) {
 
 
     do { LATCbits.LATC4 = 0; } while(0);
-    SPI1_ByteWrite(0x32);
+    uint8_t addr_val = 0x32 | 0x80;
+    addr_val = addr_val | 0x40;
+    SPI1_ByteWrite(addr_val);
     SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
     do { LATCbits.LATC4 = 1; } while(0);
     SPI1_Close();
@@ -4850,7 +4849,7 @@ _Bool calibrate(void) {
     do { LATCbits.LATC4 = 1; } while(0);
 
 
-    while(!PORTAbits.RA1) {
+    while(PORTAbits.RA1) {
         do { LATAbits.LATA4 = 1; } while(0);
         _delay((unsigned long)((100)*(4000000/4000.0)));
         __asm("clrwdt");
@@ -4866,8 +4865,10 @@ _Bool calibrate(void) {
     for(int i = 0; i < 128; i++) {
 
         do { LATCbits.LATC4 = 0; } while(0);
-        SPI1_ByteWrite(0x32);
-        SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
+        uint8_t addr_val = 0x32 | 0x80;
+        addr_val = addr_val | 0x40;
+        SPI1_ByteWrite(addr_val);
+        SPI1_BufferRead((uint8_t *)acc_data, 6);
         do { LATCbits.LATC4 = 1; } while(0);
 
         sum_X += acc_data[1];
@@ -4906,7 +4907,7 @@ _Bool calibrate(void) {
     sum_Z = 0;
 
 
-    while(!PORTAbits.RA1) {
+    while(PORTAbits.RA1) {
         do { LATAbits.LATA5 = 1; } while(0);
         _delay((unsigned long)((100)*(4000000/4000.0)));
         __asm("clrwdt");
@@ -4922,7 +4923,9 @@ _Bool calibrate(void) {
     for(int i = 0; i < 128; i++) {
 
         do { LATCbits.LATC4 = 0; } while(0);
-        SPI1_ByteWrite(0x32);
+        uint8_t addr_val = 0x32 | 0x80;
+        addr_val = addr_val | 0x40;
+        SPI1_ByteWrite(addr_val);
         SPI1_BufferRead((uint8_t *)acc_data, sizeof(acc_data));
         do { LATCbits.LATC4 = 1; } while(0);
 

@@ -57,7 +57,9 @@ int main(void)
         RED_LED_SetLow();
     }
     
+    CLRWDT();
     __delay_ms(250);
+    CLRWDT();
     
     if (ADXL345_init()) {
         GRN_LED_SetHigh();
@@ -69,6 +71,7 @@ int main(void)
         RED_LED_SetLow();
     }
     
+    CLRWDT();
     if (EEPROM_Read(EE_CAL_STATUS_ADDR) != CAL_DONE) {
         while(!calibrate());
         for (int i = 0; i < 3; i++) {

@@ -13,7 +13,7 @@ NVM_ERROR 1
 NVM_OK 0
 NVM_ERROR 1
 ]
-"88 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\main.c
+"91 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\main.c
 [e E2688 . `uc
 WAITING_FOR_FREEFALL 0
 WAITING_FOR_IMPACT 1
@@ -39,19 +39,19 @@ FALL_DETECTED 4
 [v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
 "57
 [v _ADXL345_validation ADXL345_validation `(a  1 e 1 0 ]
-"76
+"73
 [v _saveOffsets saveOffsets `(v  1 e 1 0 ]
-"103
+"100
 [v _ADXL345_ClearInterrupt ADXL345_ClearInterrupt `(v  1 e 1 0 ]
-"116
+"113
 [v _setupForFreefall setupForFreefall `(v  1 e 1 0 ]
-"164
+"161
 [v _setupForImpact setupForImpact `(v  1 e 1 0 ]
-"212
+"209
 [v _setupForInactivity setupForInactivity `(v  1 e 1 0 ]
-"260
+"257
 [v _orientation_Up orientation_Up `(a  1 e 1 0 ]
-"300
+"299
 [v _calibrate calibrate `(a  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\memcpy.c
 [v _memcpy memcpy `(*.39v  1 e 2 0 ]
@@ -129,6 +129,12 @@ FALL_DETECTED 4
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "102
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"114
+[v _SW1_ISR SW1_ISR `(v  1 e 1 0 ]
+"129
+[v _SW1_SetInterruptHandler SW1_SetInterruptHandler `(v  1 e 1 0 ]
+"136
+[v _SW1_DefaultInterruptHandler SW1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "39 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "36 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/system/src/watchdog.c
@@ -158,7 +164,7 @@ FALL_DETECTED 4
 ]
 [u S184 . 1 `S170 1 . 1 0 `S179 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES184  1 e 1 @11 ]
-[s S706 . 1 `uc 1 RA0 1 0 :1:0 
+[s S720 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -166,8 +172,8 @@ FALL_DETECTED 4
 `uc 1 RA5 1 0 :1:5 
 ]
 "444
-[u S713 . 1 `S706 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES713  1 e 1 @12 ]
+[u S727 . 1 `S720 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES727  1 e 1 @12 ]
 [s S413 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -221,7 +227,7 @@ FALL_DETECTED 4
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1945
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S723 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S737 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -229,11 +235,11 @@ FALL_DETECTED 4
 `uc 1 LATA5 1 0 :1:5 
 ]
 "1960
-[u S730 . 1 `S723 1 . 1 0 ]
-[v _LATAbits LATAbits `VES730  1 e 1 @268 ]
+[u S744 . 1 `S737 1 . 1 0 ]
+[v _LATAbits LATAbits `VES744  1 e 1 @268 ]
 "1990
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S885 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S899 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -241,8 +247,8 @@ FALL_DETECTED 4
 `uc 1 LATC5 1 0 :1:5 
 ]
 "2005
-[u S892 . 1 `S885 1 . 1 0 ]
-[v _LATCbits LATCbits `VES892  1 e 1 @270 ]
+[u S906 . 1 `S899 1 . 1 0 ]
+[v _LATCbits LATCbits `VES906  1 e 1 @270 ]
 "2312
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2651
@@ -317,7 +323,7 @@ FALL_DETECTED 4
 [v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
 "5435
 [v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
-[s S675 . 1 `uc 1 IOCAF0 1 0 :1:0 
+[s S685 . 1 `uc 1 IOCAF0 1 0 :1:0 
 `uc 1 IOCAF1 1 0 :1:1 
 `uc 1 IOCAF2 1 0 :1:2 
 `uc 1 IOCAF3 1 0 :1:3 
@@ -325,10 +331,10 @@ FALL_DETECTED 4
 `uc 1 IOCAF5 1 0 :1:5 
 ]
 "5453
-[s S682 . 1 `uc 1 IOCAF 1 0 :6:0 
+[s S692 . 1 `uc 1 IOCAF 1 0 :6:0 
 ]
-[u S684 . 1 `S675 1 . 1 0 `S682 1 . 1 0 ]
-[v _IOCAFbits IOCAFbits `VES684  1 e 1 @915 ]
+[u S694 . 1 `S685 1 . 1 0 `S692 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES694  1 e 1 @915 ]
 "6960
 [v _LWLO LWLO `VEb  1 e 0 @3245 ]
 "11 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\fall.c
@@ -353,62 +359,66 @@ FALL_DETECTED 4
 "45 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"96
-[v main@i_861 i `i  1 a 2 50 ]
-"74
-[v main@i i `i  1 a 2 48 ]
-"84
-[v main@Z_val Z_val `uc  1 a 1 47 ]
-"83
-[v main@Y_val Y_val `uc  1 a 1 46 ]
-"82
-[v main@X_val X_val `uc  1 a 1 45 ]
-"88
-[v main@current_state current_state `E2688  1 a 1 52 ]
-"105
+"99
+[v main@i_875 i `i  1 a 2 51 ]
+"77
+[v main@i i `i  1 a 2 49 ]
+"87
+[v main@Z_val Z_val `uc  1 a 1 48 ]
+"86
+[v main@Y_val Y_val `uc  1 a 1 47 ]
+"85
+[v main@X_val X_val `uc  1 a 1 46 ]
+"91
+[v main@current_state current_state `E2688  1 a 1 53 ]
+"108
 } 0
-"300 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"299 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _calibrate calibrate `(a  1 e 1 0 ]
 {
-"387
-[v calibrate@i_995 i `i  1 a 2 26 ]
-"331
+"391
+[v calibrate@addr_val_1011 addr_val `uc  1 a 1 29 ]
+"333
+[v calibrate@addr_val addr_val `uc  1 a 1 28 ]
+"388
+[v calibrate@i_1010 i `i  1 a 2 26 ]
+"330
 [v calibrate@i i `i  1 a 2 24 ]
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"310
-[v calibrate@msg msg `S868  1 a 26 34 ]
-"302
-[v calibrate@acc_data acc_data `[6]i  1 a 12 0 ]
-"304
-[v calibrate@sum_Z_avg sum_Z_avg `i  1 a 2 60 ]
-[v calibrate@sum_Y_avg sum_Y_avg `i  1 a 2 32 ]
-[v calibrate@sum_X_avg sum_X_avg `i  1 a 2 30 ]
-"303
-[v calibrate@sum_Z sum_Z `i  1 a 2 28 ]
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"309
+[v calibrate@msg msg `S882  1 a 26 36 ]
 "301
+[v calibrate@acc_data acc_data `[6]i  1 a 12 0 ]
+"303
+[v calibrate@sum_Z_avg sum_Z_avg `i  1 a 2 62 ]
+[v calibrate@sum_Y_avg sum_Y_avg `i  1 a 2 34 ]
+[v calibrate@sum_X_avg sum_X_avg `i  1 a 2 32 ]
+"302
+[v calibrate@sum_Z sum_Z `i  1 a 2 30 ]
+"300
 [v calibrate@offset_0g_Z offset_0g_Z `i  1 a 2 22 ]
 [v calibrate@offset_0g_Y offset_0g_Y `i  1 a 2 20 ]
 [v calibrate@offset_0g_X offset_0g_X `i  1 a 2 18 ]
-"303
+"302
 [v calibrate@sum_Y sum_Y `i  1 a 2 16 ]
 [v calibrate@sum_X sum_X `i  1 a 2 14 ]
-"400
+"403
 [v calibrate@Z_n1g Z_n1g `s  1 a 2 12 ]
-"430
+"433
 } 0
-"76
+"73
 [v _saveOffsets saveOffsets `(v  1 e 1 0 ]
 {
 [v saveOffsets@x_axis x_axis `uc  1 p 1 wreg ]
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"81
-[v saveOffsets@msg msg `S868  1 a 26 1 ]
-"76
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"78
+[v saveOffsets@msg msg `S882  1 a 26 1 ]
+"73
 [v saveOffsets@x_axis x_axis `uc  1 p 1 wreg ]
 [v saveOffsets@y_axis y_axis `uc  1 p 1 10 ]
 [v saveOffsets@z_axis z_axis `uc  1 p 1 11 ]
 [v saveOffsets@x_axis x_axis `uc  1 p 1 0 ]
-"101
+"98
 } 0
 "242 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/nvm/src/nvm.c
 [v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
@@ -439,6 +449,12 @@ FALL_DETECTED 4
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "100
+} 0
+"129
+[v _SW1_SetInterruptHandler SW1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v SW1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"131
 } 0
 "42 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/nvm/src/nvm.c
 [v _NVM_Initialize NVM_Initialize `(v  1 e 1 0 ]
@@ -471,51 +487,63 @@ FALL_DETECTED 4
 {
 "109
 } 0
+"114
+[v _SW1_ISR SW1_ISR `(v  1 e 1 0 ]
+{
+"124
+} 0
+"136
+[v _SW1_DefaultInterruptHandler SW1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"143
+} 0
 "15 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\fall.c
 [v _MotionEventHandler MotionEventHandler `(v  1 e 1 0 ]
 {
-[v MotionEventHandler@state state `*.4E2688  1 p 1 40 ]
+[v MotionEventHandler@state state `*.4E2688  1 p 1 41 ]
 "92
 } 0
-"212 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"209 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _setupForInactivity setupForInactivity `(v  1 e 1 0 ]
 {
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"228
-[v setupForInactivity@msg msg `S868  1 a 26 0 ]
-"258
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"225
+[v setupForInactivity@msg msg `S882  1 a 26 0 ]
+"255
 } 0
-"164
+"161
 [v _setupForImpact setupForImpact `(v  1 e 1 0 ]
 {
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"180
-[v setupForImpact@msg msg `S868  1 a 26 0 ]
-"210
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"177
+[v setupForImpact@msg msg `S882  1 a 26 0 ]
+"207
 } 0
-"116
+"113
 [v _setupForFreefall setupForFreefall `(v  1 e 1 0 ]
 {
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"132
-[v setupForFreefall@msg msg `S868  1 a 26 0 ]
-"162
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+"129
+[v setupForFreefall@msg msg `S882  1 a 26 0 ]
+"159
 } 0
-"260
+"257
 [v _orientation_Up orientation_Up `(a  1 e 1 0 ]
 {
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
-"267
-[v orientation_Up@msg msg `S868  1 a 26 8 ]
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
 "264
+[v orientation_Up@msg msg `S882  1 a 26 8 ]
+"261
 [v orientation_Up@acc_data acc_data `[6]c  1 a 6 0 ]
-"265
-[v orientation_Up@g_deltaZ g_deltaZ `s  1 a 2 38 ]
-[v orientation_Up@g_deltaY g_deltaY `s  1 a 2 36 ]
-[v orientation_Up@g_deltaX g_deltaX `s  1 a 2 34 ]
-"292
+"262
+[v orientation_Up@g_deltaZ g_deltaZ `s  1 a 2 39 ]
+[v orientation_Up@g_deltaY g_deltaY `s  1 a 2 37 ]
+[v orientation_Up@g_deltaX g_deltaX `s  1 a 2 35 ]
+"291
 [v orientation_Up@g_magnitude g_magnitude `i  1 a 2 6 ]
-"298
+"275
+[v orientation_Up@addr_val addr_val `uc  1 a 1 34 ]
+"297
 } 0
 "172 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
@@ -535,10 +563,10 @@ FALL_DETECTED 4
 [v SPI1_BufferRead@bufferSize bufferSize `ui  1 p 2 1 ]
 "159
 } 0
-"103 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
+"100 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_ClearInterrupt ADXL345_ClearInterrupt `(v  1 e 1 0 ]
 {
-"114
+"111
 } 0
 "161 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
@@ -555,11 +583,11 @@ FALL_DETECTED 4
 "57 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_validation ADXL345_validation `(a  1 e 1 0 ]
 {
-"61
-[v ADXL345_validation@temp temp `[2]uc  1 a 2 0 ]
-"58
-[v ADXL345_validation@passed passed `a  1 a 1 2 ]
-"74
+"60
+[v ADXL345_validation@temp temp `[2]uc  1 a 2 10 ]
+"59
+[v ADXL345_validation@F2696 F2696 `[2]uc  1 s 2 F2696 ]
+"71
 } 0
 "108 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\mcc_generated_files/spi/src/mssp.c
 [v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
@@ -567,18 +595,18 @@ FALL_DETECTED 4
 "111
 [v SPI1_BufferExchange@bufferInputSize bufferInputSize `ui  1 a 2 3 ]
 "110
-[v SPI1_BufferExchange@bufferInput bufferInput `*.4uc  1 a 1 5 ]
+[v SPI1_BufferExchange@bufferInput bufferInput `*.30uc  1 a 1 5 ]
 "108
-[v SPI1_BufferExchange@bufferData bufferData `*.4v  1 p 1 0 ]
+[v SPI1_BufferExchange@bufferData bufferData `*.30v  1 p 1 0 ]
 [v SPI1_BufferExchange@bufferSize bufferSize `ui  1 p 2 1 ]
 "124
 } 0
 "33 C:\Users\User\Documents\IC\LifeLine\7109-08-refactor.X\ADXL345.c
 [v _ADXL345_init ADXL345_init `(a  1 e 1 0 ]
 {
-[s S868 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
+[s S882 Message 26 `uc 1 registerAddr 1 0 `[25]uc 1 data 25 1 ]
 "38
-[v ADXL345_init@msg msg `S868  1 a 26 0 ]
+[v ADXL345_init@msg msg `S882  1 a 26 0 ]
 "55
 } 0
 "3 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\memset.c

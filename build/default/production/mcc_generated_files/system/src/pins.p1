@@ -57,7 +57,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5435
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5435: extern volatile unsigned char IOCAF __attribute__((address(0x393)));
 [v _IOCAF `Vuc ~T0 @X0 0 e@915 ]
-"357
+[v F2386 `(v ~T0 @X0 0 tf ]
+"294 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 294: void SW1_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _SW1_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2386 ]
+"316
+[; ;mcc_generated_files/system/src/../pins.h: 316: void SW1_DefaultInterruptHandler(void);
+[v _SW1_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
+"357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 357:     struct {
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
@@ -87,9 +94,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5453
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8\pic\include\proc/pic16lf1825.h: 5453: extern volatile IOCAFbits_t IOCAFbits __attribute__((address(0x393)));
 [v _IOCAFbits `VS278 ~T0 @X0 0 e@915 ]
-[v F2678 `(v ~T0 @X0 0 tf ]
-[v F2680 `(v ~T0 @X0 0 tf ]
-[v F2682 `(v ~T0 @X0 0 tf ]
+"284 mcc_generated_files/system/src/../pins.h
+[; ;mcc_generated_files/system/src/../pins.h: 284: void SW1_ISR(void);
+[v _SW1_ISR `(v ~T0 @X0 0 ef ]
+[v F2679 `(v ~T0 @X0 0 tf ]
+[v F2681 `(v ~T0 @X0 0 tf ]
+[v F2683 `(v ~T0 @X0 0 tf ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -613,6 +623,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "94
 [; ;mcc_generated_files/system/src/pins.c: 94:     IOCAF = 0x0;
 [e = _IOCAF -> -> 0 `i `uc ]
+"96
+[; ;mcc_generated_files/system/src/pins.c: 96:     SW1_SetInterruptHandler(SW1_DefaultInterruptHandler);
+[e ( _SW1_SetInterruptHandler (1 &U _SW1_DefaultInterruptHandler ]
 "99
 [; ;mcc_generated_files/system/src/pins.c: 99:     INTCONbits.IOCIE = 1;
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
@@ -634,6 +647,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "106
 [; ;mcc_generated_files/system/src/pins.c: 106:     {
 {
+"107
+[; ;mcc_generated_files/system/src/pins.c: 107:         SW1_ISR();
+[e ( _SW1_ISR ..  ]
 "108
 [; ;mcc_generated_files/system/src/pins.c: 108:     }
 }
@@ -650,7 +666,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "119
 [; ;mcc_generated_files/system/src/pins.c: 119:     if(SW1_InterruptHandler)
-[e $ ! != _SW1_InterruptHandler -> -> 0 `i `*F2678 337  ]
+[e $ ! != _SW1_InterruptHandler -> -> 0 `i `*F2679 337  ]
 "120
 [; ;mcc_generated_files/system/src/pins.c: 120:     {
 {
@@ -670,10 +686,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "129
 [; ;mcc_generated_files/system/src/pins.c: 129: void SW1_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _SW1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2680 ]
+[v _SW1_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F2681 ]
 {
 [e :U _SW1_SetInterruptHandler ]
-[v _InterruptHandler `*F2682 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F2683 ~T0 @X0 1 r1 ]
 [f ]
 "130
 [; ;mcc_generated_files/system/src/pins.c: 130:     SW1_InterruptHandler = InterruptHandler;
