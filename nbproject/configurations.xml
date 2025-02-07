@@ -239,6 +239,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1fff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/User/Documents/IC/LifeLine/7109-08-refactor.X/debug/default/7109-08-refactor_ptg"/>
         <property key="programmerToGoImageName" value="7109-08-refactor_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

@@ -1,24 +1,24 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\User\AppData\Local\Temp\xcAsgig.\driver_tmp_3.o
+ C:\Users\User\AppData\Local\Temp\xcAsev0.\driver_tmp_3.o
  -Odist/default/production\7109-08-refactor.X.production.hex
  -logfile=dist/default/production\7109-08-refactor.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - FFFh		(C:\Users\User\AppData\Local\Temp\xcAsgig.\driver_tmp_3.o)
-  1C62h - 20A5h		(C:\Users\User\AppData\Local\Temp\xcAsgig.\driver_tmp_3.o)
-  1000Eh - 10011h		(C:\Users\User\AppData\Local\Temp\xcAsgig.\driver_tmp_3.o)
+  0h - FFFh		(C:\Users\User\AppData\Local\Temp\xcAsev0.\driver_tmp_3.o)
+  1C28h - 20A5h		(C:\Users\User\AppData\Local\Temp\xcAsev0.\driver_tmp_3.o)
+  1000Eh - 10011h		(C:\Users\User\AppData\Local\Temp\xcAsev0.\driver_tmp_3.o)
  Unused ranges:
-  1000h - 1C61h
+  1000h - 1C27h
   20A6h - 1000Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\User\AppData\Local\Temp\xcAsgig.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\User\AppData\Local\Temp\xcAsev0.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -279,7 +279,11 @@
 00000FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
-00001C60 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001C20 | -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00001C30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001C40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001C50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001C60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001C70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001C80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001C90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

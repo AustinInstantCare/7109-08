@@ -47,6 +47,8 @@ int main(void)
     SYSTEM_Initialize();
     SPI1_Initialize();
         
+    EEPROM_Write(EE_CAL_STATUS_ADDR, CAL_DONE); // skip calibration
+        
     if (ADXL345_validation()) {
         GRN_LED_SetHigh();
         __delay_ms(250);
@@ -72,20 +74,19 @@ int main(void)
     }
     
     CLRWDT();
-    if (EEPROM_Read(EE_CAL_STATUS_ADDR) != CAL_DONE) {
-        while(!calibrate());
-        for (int i = 0; i < 3; i++) {
+    if (EEPROM_Read(EE_CAL_STATUS_ADDR) == CAL_DONE) {
+        uint8_t X_val = EEPROM_READ(EE_X_OFFSET_ADDR);
+        uint8_t Y_val = EEPROM_READ(EE_Y_OFFSET_ADDR);
+        uint8_t Z_val = EEPROM_READ(EE_Z_OFFSET_ADDR);
+        saveOffsets(X_val, Y_val, Z_val);
+    } else {
+        while(!calibrate()) {
             GRN_LED_SetHigh();
             RED_LED_SetHigh();
             __delay_ms(100);
             GRN_LED_SetLow();
             RED_LED_SetLow();
-        }
-    } else {
-        uint8_t X_val = EEPROM_READ(EE_X_OFFSET_ADDR);
-        uint8_t Y_val = EEPROM_READ(EE_Y_OFFSET_ADDR);
-        uint8_t Z_val = EEPROM_READ(EE_Z_OFFSET_ADDR);
-        saveOffsets(X_val, Y_val, Z_val);
+        };
     }
     
     State_t current_state = WAITING_FOR_FREEFALL;
